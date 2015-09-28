@@ -1,0 +1,225 @@
+@font-face {
+  font-family: StickARound;
+  src: url("/fonts/Stick-A-Round.ttf"); }
+.font--sans-serif, html,
+body, .btn {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; }
+
+.font--serif, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: StickARound; }
+
+.font--stick-a-round {
+  font-family: StickARound;
+  -webkit-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
+  text-rendering: optimizeSpeed;
+  -webkit-font-variant-ligatures: no-common-ligatures; }
+
+.transition-all, a, .navbar-default, .navbar-default .navbar--brand img, .btn-default, .btn-primary {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s; }
+
+.background-cover, header {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover; }
+
+.section--brown {
+  background-color: #543021;
+  color: #FFF; }
+
+.section--orange {
+  background-color: #fda228;
+  color: #FFF; }
+
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+a {
+  color: #1d2854; }
+  a:hover, a:focus {
+    color: #10162e; }
+  a.orange {
+    color: #fda228; }
+    a.orange:hover, a.orange:focus {
+      color: #d77c02; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
+form.form--small .form-control {
+  border-radius: 3px;
+  box-shadow: none; }
+
+.text-small {
+  font-size: 12px; }
+
+section {
+  padding: 60px 0; }
+
+.no-padding {
+  padding: 0; }
+
+.navbar-default {
+  background-color: fade(#FFF, 30%);
+  border: none; }
+  .navbar-default .navbar--brand {
+    margin: auto;
+    padding: 5px;
+    text-align: center; }
+    .navbar-default .navbar--brand img {
+      height: 40px; }
+  @media (min-width: 768px) and (min-height: 600px) {
+    .navbar-default.affix-top {
+      background: transparent;
+      height: 180px; }
+      .navbar-default.affix-top .navbar--brand {
+        padding-top: 40px; }
+        .navbar-default.affix-top .navbar--brand img {
+          height: 120px; } }
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+  background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+  background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+  background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 572, color-stop(0, #2D70AF), color-stop(100, #031440));
+  background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+  background-image: radial-gradient(ellipse farthest-corner at right bottom, #2D70AF 0%, #031440 85%);
+  text-align: center;
+  color: white; }
+  header .header-content {
+    position: relative;
+    text-align: center;
+    padding: 100px 15px 100px;
+    width: 100%; }
+    header .header-content .header-content-inner p {
+      font-weight: 300;
+      color: fade(white, 70%);
+      font-size: 16px;
+      margin-bottom: 50px; }
+    header .header-content .header-content-inner form.form--email .btn {
+      -moz-box-shadow: inset 0px 1px 0px 0px #fec374;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #fec374;
+      box-shadow: inset 0px 1px 0px 0px #fec374;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #d77c02));
+      background: -moz-linear-gradient(top, #fda228 5%, #d77c02 100%);
+      background: -webkit-linear-gradient(top, #fda228 5%, #d77c02 100%);
+      background: -o-linear-gradient(top, #fda228 5%, #d77c02 100%);
+      background: -ms-linear-gradient(top, #fda228 5%, #d77c02 100%);
+      background: linear-gradient(to bottom, #fda228 5%, #d77c02 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='$orange-dark',GradientType=0);
+      background-color: #fda228;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px solid #a45f02;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 18px;
+      padding: auto 40px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.6); }
+    header .header-content .header-content-inner form.form--email .btn:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
+      background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
+      background-color: #d77c02; }
+    header .header-content .header-content-inner form.form--email .btn:active {
+      position: relative;
+      top: 1px; }
+  @media (min-width: 768px) {
+    header {
+      min-height: 100%; }
+      header .header-content {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 0 50px; }
+        header .header-content .header-content-inner {
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto; }
+          header .header-content .header-content-inner img {
+            margin-top: -90px;
+            margin-bottom: 30px; }
+          header .header-content .header-content-inner p {
+            font-size: 18px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto; }
+          header .header-content .header-content-inner form.form--email .form-control {
+            height: 58px; }
+          header .header-content .header-content-inner form.form--email .btn {
+            height: 58px; } }
+
+.text-primary {
+  color: #000; }
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.btn-default {
+  color: #fda228;
+  background-color: #FFF;
+  border-color: #FFF; }
+  .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+    color: #fda228;
+    background-color: #f2f2f2;
+    border-color: #ededed; }
+  .btn-default:active, .btn-default.active {
+    background-image: none; }
+  .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+    background-color: #FFF;
+    border-color: #FFF; }
+  .btn-default .badge {
+    color: #FFF;
+    background-color: #fda228; }
+
+.btn-primary {
+  color: #FFF;
+  background-color: #fda228;
+  border-color: #fda228; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active {
+    color: #FFF;
+    background-color: #fd970f;
+    border-color: #fd9305; }
+  .btn-primary:active, .btn-primary.active {
+    background-image: none; }
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+    background-color: #fda228;
+    border-color: #fda228; }
+  .btn-primary .badge {
+    color: #fda228;
+    background-color: #FFF; }
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.btn-xl {
+  padding: 15px 30px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+// Button Styles
+
+.btn-default {
+    @include button-variant($orange, $white, $white);
+}
+
+.btn-primary { 
+    @include button-variant($white, $orange, $orange);
+}
+
+.btn {
+    @extend .font--sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}

@@ -1,0 +1,217 @@
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+@import "buttons";
+@import "sections";
+
+
+// Global Components
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+    @extend .font--sans-serif;
+}
+
+a {
+    @extend .transition-all;
+    color: $blue;
+    &:hover,
+    &:focus {
+        color: darken($blue, 10%);
+    }
+
+    &.orange {
+        color: $orange;
+
+        &:hover,
+        &:focus {
+            color: darken($orange, 15%);
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .font--serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+form.form--small {
+    .form-control {
+        border-radius: 3px;
+        box-shadow: none;
+    }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+// Navigation
+
+.navbar-default {
+    background-color: fade($white, 30%);
+    border: none;
+
+    @extend .transition-all;    
+    .navbar--brand {
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+
+        img {
+            @extend .transition-all;
+            height: 40px;
+        }
+    }
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        &.affix-top {
+            background: transparent;
+            height: 180px;
+
+
+            .navbar--brand {
+                padding-top: 40px;
+
+                img {
+                    height: 120px;
+                }
+            }
+        }
+
+        &.affix {
+
+        }
+    }
+}
+
+// Homepage Header
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+
+    text-align: center;
+    color: white;
+    .header-content {
+        position: relative;
+        text-align: center;
+        padding: 100px 15px 100px;
+        width: 100%;
+        .header-content-inner {
+            
+            p {
+                font-weight: 300;
+                color: fade(white, 70%);
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+
+            form.form--email {
+                .form-control {
+
+                }
+
+                .btn {
+                    -moz-box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 30%);
+                    -webkit-box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 30%);
+                    box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 30%);
+                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $orange), color-stop(1, $orange-dark));
+                    background:-moz-linear-gradient(top, $orange 5%, $orange-dark 100%);
+                    background:-webkit-linear-gradient(top, $orange 5%, $orange-dark 100%);
+                    background:-o-linear-gradient(top, $orange 5%, $orange-dark 100%);
+                    background:-ms-linear-gradient(top, $orange 5%, $orange-dark 100%);
+                    background:linear-gradient(to bottom, $orange 5%, $orange-dark 100%);
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='$orange-dark',GradientType=0);
+                    background-color:$orange;
+                    -moz-border-radius:3px;
+                    -webkit-border-radius:3px;
+                    border-radius:3px;
+                    border:1px solid darken($orange-dark, 10%);
+                    cursor:pointer;
+                    color:#ffffff;
+                    font-size:18px;
+                    padding:auto 40px;
+                    text-decoration:none;
+                    text-shadow:0px 1px 0px rgba(150, 84, 6, 0.6);
+                }
+                .btn:hover {
+                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $orange-dark), color-stop(1, $orange));
+                    background:-moz-linear-gradient(top, $orange-dark 5%, $orange 100%);
+                    background:-webkit-linear-gradient(top, $orange-dark 5%, $orange 100%);
+                    background:-o-linear-gradient(top, $orange-dark 5%, $orange 100%);
+                    background:-ms-linear-gradient(top, $orange-dark 5%, $orange 100%);
+                    background:linear-gradient(to bottom, $orange-dark 5%, $orange 100%);
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
+                    background-color:$orange-dark;
+                }
+                .btn:active {
+                    position:relative;
+                    top:1px;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        min-height: 100%;
+        .header-content {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            padding: 0 50px;
+            .header-content-inner {
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+
+                img {
+                    margin-top: -90px;
+                    margin-bottom: 30px;
+                }
+
+
+                p {
+                    font-size: 18px;
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                form.form--email {
+                    .form-control {
+                        height: 58px;
+                    }
+
+                    .btn {
+                        height: 58px;
+
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Bootstrap Overrides
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
