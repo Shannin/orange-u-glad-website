@@ -9,16 +9,9 @@
 
         <title>Orange-U-Glad - Cannabis Infused Chocolate Orange</title>
 
-        <!-- remote includes -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600'>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         
-        <!-- local includes -->
-        <script src="js/main.js"></script>
-
         <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
 
@@ -37,10 +30,12 @@
                     <img src="img/coming-soon.svg">
                     <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
                     
-                    <form class="form--email">
+                    <form id="header-email-form" class="form--email" action="/api/addEmailToList"  method="POST">
+                        <input type="hidden" name="emaiList" value="7118ddea20">
+
                         <div class="row">
                           <div class="form-group col-sm-8 col-sm-offset-1">
-                            <input type="email" class="form-control input-lg" name="email" placeholder="Email">
+                            <input type="email" class="form-control error input-lg" name="email" placeholder="Email">
                         </div>
                         <div class="form-group col-sm-2">
                             <button type="submit" class="btn btn-default input-lg">Add Me!</button>
@@ -97,5 +92,10 @@
                 </div>
             </div>
         </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

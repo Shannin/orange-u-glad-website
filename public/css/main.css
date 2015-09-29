@@ -220,6 +220,20 @@ header {
           header .header-content .header-content-inner form.form--email .btn {
             height: 58px; } }
 
+form .form-control.error {
+  border-color: #FF0000;
+  background-color: white; }
+  form .form-control.error::-webkit-input-placeholder {
+    color: #ff9999; }
+  form .form-control.error:-moz-placeholder {
+    /* Firefox 18- */
+    color: red; }
+  form .form-control.error::-moz-placeholder {
+    /* Firefox 19+ */
+    color: red; }
+  form .form-control.error:-ms-input-placeholder {
+    color: red; }
+
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }

@@ -32,4 +32,28 @@
         adjustPage();
     });
 
+    $("#header-email-form").submit(function (event) {
+        event.preventDefault();
+
+        var postData = {};
+        $(this).serializeArray().forEach(function (obj) {
+            postData[obj.name] = obj.value;
+        });
+
+        if (postData['email'] === "") {
+            var emailInput = $('input[name="email"]', this);
+
+            emailInput.attr('placeholder', 'Please enter an email address');
+            emailInput.addClass('error');
+            return;
+        }
+    
+        $.post( "http://localhost:8080/api/addEmailToList", postData, function(data) {
+            if (data.error) {
+                return;
+            }
+        });
+
+    });
+
 })(jQuery); // End of use strict

@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "bootstrap-sass": "^3.3.5",
     "express": "^4.13.3",
-    "mailchimp": "^1.1.0"
+    "mailchimp": "^1.1.0",
+    "validator": "^4.0.6"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
