@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mailchimp": "^1.1.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -1,26 +1,27 @@
-// sections
+// colors
 
-section {
-    padding: 60px 0;
+.section--blue-gradient {
+    @extend .background-cover;
 
-    .section--blue-gradient {
-        @extend .background-cover;
+    background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+    background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+    background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+    background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 572, color-stop(0, #2D70AF), color-stop(100, #031440));
+    background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #2D70AF 0%, #031440 85%);
+}
 
-        background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
-        background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
-        background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
-        background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 572, color-stop(0, #2D70AF), color-stop(100, #031440));
-        background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
-        background-image: radial-gradient(ellipse farthest-corner at right bottom, #2D70AF 0%, #031440 85%);
-    }
+.section--brown {
+    background-color: $brown;
+    color: $white;
+}
 
-    .section--brown {
-        background-color: $brown;
-        color: $white;
-    }
+.section--orange {
+    background-color: $orange;
+    color: $white;
+}
 
-    .section--orange {
-        background-color: $orange;
-        color: $white;
-    }
+
+.section--padded-large {
+    padding: 60px 0px;
 }

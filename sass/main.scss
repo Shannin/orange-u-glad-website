@@ -1,6 +1,6 @@
+@import "variables";
 @import "fonts";
 @import "mixins";
-@import "variables";
 
 @import "buttons";
 @import "sections";
@@ -62,7 +62,7 @@ form.form--small {
 // Navigation
 
 .navbar-default {
-    background-color: transparentize($white, 30%);
+    background-color: transparentize($white, .3);
     border: none;
 
     @extend .transition-all;    
