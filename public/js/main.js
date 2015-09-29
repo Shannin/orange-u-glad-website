@@ -17,10 +17,10 @@
     });
 
     function adjustPage() {
-        if ($(window).scrollTop() > 100){
-            $('#mainNav').removeClass('affix-top');
+        if ($(window).scrollTop() > 150){
+            $('#mainNav').addClass('visible');
         } else {
-            $('#mainNav').addClass('affix-top');
+            $('#mainNav').removeClass('visible');
         }
     }
 

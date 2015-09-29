@@ -127,21 +127,16 @@ form.form--small .form-control {
 
 .navbar-default {
   background-color: rgba(255, 255, 255, 0.7);
-  border: none; }
+  border: none;
+  opacity: 0; }
   .navbar-default .navbar--brand {
     margin: auto;
     padding: 5px;
     text-align: center; }
     .navbar-default .navbar--brand img {
       height: 40px; }
-  @media (min-width: 768px) and (min-height: 600px) {
-    .navbar-default.affix-top {
-      background: transparent;
-      height: 180px; }
-      .navbar-default.affix-top .navbar--brand {
-        padding-top: 40px; }
-        .navbar-default.affix-top .navbar--brand img {
-          height: 120px; } }
+  .navbar-default.visible {
+    opacity: 1; }
 
 header {
   position: relative;
@@ -154,6 +149,12 @@ header {
     text-align: center;
     padding: 100px 15px 100px;
     width: 100%; }
+    header .header-content .header-content-inner img.logo {
+      width: 90%;
+      max-width: 600px; }
+    header .header-content .header-content-inner img.cta {
+      width: 60%;
+      max-width: 400px; }
     header .header-content .header-content-inner p {
       font-weight: 300;
       color: fade(white, 70%);
@@ -193,12 +194,12 @@ header {
     header .header-content .header-content-inner form.form--email .btn:active {
       position: relative;
       top: 1px; }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 600px) {
     header {
       min-height: 100%; }
       header .header-content {
         position: absolute;
-        top: 50%;
+        top: 42%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -207,9 +208,12 @@ header {
           max-width: 1000px;
           margin-left: auto;
           margin-right: auto; }
-          header .header-content .header-content-inner img {
-            margin-top: -90px;
-            margin-bottom: 30px; }
+          header .header-content .header-content-inner img.logo {
+            margin-bottom: 50px; }
+          header .header-content .header-content-inner img.cta {
+            width: 60%;
+            max-width: 400px;
+            margin-bottom: 20px; }
           header .header-content .header-content-inner p {
             font-size: 18px;
             max-width: 80%;
@@ -227,12 +231,12 @@ form .form-control.error {
     color: #ff9999; }
   form .form-control.error:-moz-placeholder {
     /* Firefox 18- */
-    color: red; }
+    color: #ff9999; }
   form .form-control.error::-moz-placeholder {
     /* Firefox 19+ */
-    color: red; }
+    color: #ff9999; }
   form .form-control.error:-ms-input-placeholder {
-    color: red; }
+    color: #ff9999; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;
