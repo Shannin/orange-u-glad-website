@@ -16,4 +16,20 @@
         event.preventDefault();
     });
 
+    function adjustPage() {
+        if ($(window).scrollTop() > 100){
+            $('#mainNav').removeClass('affix-top');
+        } else {
+            $('#mainNav').addClass('affix-top');
+        }
+    }
+
+    $(window).scroll(function(){
+        adjustPage();        
+    });
+
+    $(document).ready(function () {
+        adjustPage();
+    });
+
 })(jQuery); // End of use strict

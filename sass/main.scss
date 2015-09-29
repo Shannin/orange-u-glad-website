@@ -62,7 +62,7 @@ form.form--small {
 // Navigation
 
 .navbar-default {
-    background-color: fade($white, 30%);
+    background-color: transparentize($white, 30%);
     border: none;
 
     @extend .transition-all;    
