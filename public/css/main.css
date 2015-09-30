@@ -3,7 +3,7 @@
   src: url("/fonts/Stick-A-Round.ttf"); }
 .font--sans-serif, .btn, html,
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; }
+  font-family: 'Asap', 'Helvetica Neue', sans-serif; }
 
 .font--serif, h1,
 h2,
@@ -177,7 +177,7 @@ header {
       margin-bottom: 10px; }
     header .header-content .header-content-inner p {
       font-weight: 300;
-      color: fade(white, 70%);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 16px;
       margin-bottom: 20px; }
     header .header-content .header-content-inner form.form--email .error-box {
