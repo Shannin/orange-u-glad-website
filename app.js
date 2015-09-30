@@ -18,18 +18,18 @@ var mailchimp = MailChimpAPI(apiKey, { version : '2.0' });
 app.post('/api/addEmailToList', function(req, res) {
     var values = req.body;
 
-    if (values.emailList === "") {
+    if (values.emailList === '') {
         res.json({'success': false, 'message': 'Unknown email list'});
         return;
     }
 
-    if (values.email === "") {
+    if (values.email === '') {
         res.json({'success': false, 'message': 'Please enter an Email Address'});
         return;
     }
 
     if (!validator.isEmail(values.email)) {
-        res.json({'success': false, 'message': 'The email address entered is invalid'});
+        res.json({'success': false, 'message': 'Please enter a valid Email Address'});
         return;
     }
 
@@ -46,6 +46,7 @@ app.post('/api/addEmailToList', function(req, res) {
 
     mailchimp.call('lists', 'batch-subscribe', params, function (error, data) {
         if (error) {
+            console.log(error);
             res.json({'success': false, 'message': 'Something went wrong'});
             return;
         }

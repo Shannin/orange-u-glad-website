@@ -34,6 +34,10 @@
 
     $("#header-email-form").submit(function (event) {
         event.preventDefault();
+        var form = $(this);
+
+        var errorBox = $('.error-box', this);
+        errorBox.html('');
 
         var postData = {};
         $(this).serializeArray().forEach(function (obj) {
@@ -41,17 +45,22 @@
         });
 
         if (postData['email'] === "") {
-            var emailInput = $('input[name="email"]', this);
-
+            var emailInput = $('input[name="email"]', form);
             emailInput.attr('placeholder', 'Please enter an email address');
             emailInput.addClass('error');
+
+            errorBox.html('Please enter an email address');
             return;
         }
     
-        $.post( "http://localhost:8080/api/addEmailToList", postData, function(data) {
-            if (data.error) {
+        $.post( "/api/addEmailToList", postData, function(data) {
+            if (!data.success) {
+                errorBox.html(data.message);
                 return;
             }
+
+            $('.form--email__form', form).toggle();
+            $('.form--email__success-message', form).toggle();
         });
 
     });

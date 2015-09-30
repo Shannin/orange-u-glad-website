@@ -114,12 +114,29 @@ header {
                 font-weight: 300;
                 color: fade(white, 70%);
                 font-size: 16px;
-                margin-bottom: 50px;
+                margin-bottom: 20px;
             }
 
             form.form--email {
+                .error-box {
+                    min-height: 30px;
+                    padding-bottom: 10px;
+                    color: $red;
+                }
+
                 .form-control {
 
+                }
+
+                .form--email__success-message {
+                    padding: 10px 30px;
+                    font-size: 18px;
+
+                    text-shadow: 1px 1px 0px transparentize(black, .75);
+
+                    b {
+                        font-size: 28px;
+                    }
                 }
 
                 .btn {
@@ -159,6 +176,8 @@ header {
                     position:relative;
                     top:1px;
                 }
+
+
             }
         }
     }
@@ -194,14 +213,14 @@ header {
                 }
 
                 form.form--email {
+                    height: 110px;
+
                     .form-control {
                         height: 58px;
                     }
 
                     .btn {
                         height: 58px;
-
-                        
                     }
                 }
             }

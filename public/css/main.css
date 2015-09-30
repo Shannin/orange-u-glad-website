@@ -26,6 +26,9 @@ h6 {
 .text-primary {
   color: #000; }
 
+.text-green {
+  color: #169949; }
+
 .transition-all, .btn-default, .btn-primary, a, .navbar-default, .navbar-default .navbar--brand img {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
@@ -159,7 +162,17 @@ header {
       font-weight: 300;
       color: fade(white, 70%);
       font-size: 16px;
-      margin-bottom: 50px; }
+      margin-bottom: 20px; }
+    header .header-content .header-content-inner form.form--email .error-box {
+      min-height: 30px;
+      padding-bottom: 10px;
+      color: #FF0000; }
+    header .header-content .header-content-inner form.form--email .form--email__success-message {
+      padding: 10px 30px;
+      font-size: 18px;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25); }
+      header .header-content .header-content-inner form.form--email .form--email__success-message b {
+        font-size: 28px; }
     header .header-content .header-content-inner form.form--email .btn {
       -moz-box-shadow: inset 0px 1px 0px 0px #fec374;
       -webkit-box-shadow: inset 0px 1px 0px 0px #fec374;
@@ -219,10 +232,12 @@ header {
             max-width: 80%;
             margin-left: auto;
             margin-right: auto; }
-          header .header-content .header-content-inner form.form--email .form-control {
-            height: 58px; }
-          header .header-content .header-content-inner form.form--email .btn {
-            height: 58px; } }
+          header .header-content .header-content-inner form.form--email {
+            height: 110px; }
+            header .header-content .header-content-inner form.form--email .form-control {
+              height: 58px; }
+            header .header-content .header-content-inner form.form--email .btn {
+              height: 58px; } }
 
 form .form-control.error {
   border-color: #FF0000;
