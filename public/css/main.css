@@ -270,6 +270,8 @@ form label {
   color: white;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
   font-weight: 600; }
+form textarea {
+  resize: vertical; }
 form .form-control {
   border-color: #374ca0; }
   form .form-control.error {

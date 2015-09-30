@@ -250,6 +250,10 @@ form {
         font-weight: 600;
     }
 
+    textarea {
+        resize: vertical;
+    }
+
     .form-control {
         border-color: lighten($blue, 20%);
 
