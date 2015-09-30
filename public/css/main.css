@@ -169,10 +169,12 @@ header {
     width: 100%; }
     header .header-content .header-content-inner img.logo {
       width: 90%;
-      max-width: 600px; }
+      max-width: 600px;
+      margin-bottom: 20px; }
     header .header-content .header-content-inner img.cta {
       width: 60%;
-      max-width: 400px; }
+      max-width: 400px;
+      margin-bottom: 10px; }
     header .header-content .header-content-inner p {
       font-weight: 300;
       color: fade(white, 70%);
@@ -182,6 +184,10 @@ header {
       min-height: 30px;
       padding-bottom: 10px;
       color: #FF0000; }
+    header .header-content .header-content-inner form.form--email .form--email__form__email-input {
+      border: #1d2854 solid 3px;
+      border-radius: 12px;
+      color: #1d2854; }
     header .header-content .header-content-inner form.form--email .form--email__success-message {
       padding: 10px 30px;
       font-size: 18px;
@@ -240,8 +246,7 @@ header {
             margin-bottom: 50px; }
           header .header-content .header-content-inner img.cta {
             width: 60%;
-            max-width: 400px;
-            margin-bottom: 20px; }
+            max-width: 400px; }
           header .header-content .header-content-inner p {
             font-size: 18px;
             max-width: 80%;

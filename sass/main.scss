@@ -105,11 +105,13 @@ header {
             img.logo {
                 width: 90%;
                 max-width: 600px;
+                margin-bottom: 20px;
             }
 
             img.cta {
                 width: 60%;
                 max-width: 400px;
+                margin-bottom: 10px;
             }
 
             p {
@@ -126,8 +128,11 @@ header {
                     color: $red;
                 }
 
-                .form-control {
+                .form--email__form__email-input {
+                    border: $blue solid 3px;
+                    border-radius: 12px;
 
+                    color: $blue;
                 }
 
                 .form--email__success-message {
@@ -204,7 +209,6 @@ header {
                 img.cta {
                     width: 60%;
                     max-width: 400px;
-                    margin-bottom: 20px;
                 }
 
                 p {
