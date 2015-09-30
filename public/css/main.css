@@ -34,7 +34,7 @@ h6 {
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
 
-.background-cover, .section--blue-gradient {
+.background-cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -83,6 +83,11 @@ h6 {
 .btn-xl {
   padding: 15px 30px; }
 
+header,
+section,
+footer {
+  padding: 15px 0px; }
+
 .section--blue-gradient {
   background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
   background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
@@ -92,12 +97,22 @@ h6 {
   background-image: radial-gradient(ellipse farthest-corner at right bottom, #2D70AF 0%, #031440 85%); }
 
 .section--brown {
-  background-color: #543021;
+  background-color: #3e2317;
   color: #FFF; }
 
 .section--orange {
   background-color: #fda228;
   color: #FFF; }
+
+.section--orange-gradient {
+  background: #fbc543;
+  background: -moz-linear-gradient(-45deg, #fbc543 0%, #fda228 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fbc543), color-stop(100%, #fda228));
+  background: -webkit-linear-gradient(-45deg, #fbc543 0%, #fda228 100%);
+  background: -o-linear-gradient(-45deg, #fbc543 0%, #fda228 100%);
+  background: -ms-linear-gradient(-45deg, #fbc543 0%, #fda228 100%);
+  background: linear-gradient(135deg, #fbc543 0%, #fda228 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange',GradientType=1 ); }
 
 .section--padded-large {
   padding: 60px 0px; }
@@ -115,15 +130,15 @@ a {
     color: #fda228; }
     a.orange:hover, a.orange:focus {
       color: #d77c02; }
+  a.white {
+    color: #FFF; }
+    a.white:hover, a.white:focus {
+      color: #d9d9d9; }
 
 p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px; }
-
-form.form--small .form-control {
-  border-radius: 3px;
-  box-shadow: none; }
 
 .no-padding {
   padding: 0; }
@@ -239,19 +254,36 @@ header {
             header .header-content .header-content-inner form.form--email .btn {
               height: 58px; } }
 
-form .form-control.error {
-  border-color: #FF0000;
-  background-color: white; }
-  form .form-control.error::-webkit-input-placeholder {
-    color: #ff9999; }
-  form .form-control.error:-moz-placeholder {
-    /* Firefox 18- */
-    color: #ff9999; }
-  form .form-control.error::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #ff9999; }
-  form .form-control.error:-ms-input-placeholder {
-    color: #ff9999; }
+footer {
+  font-size: 12px; }
+
+form label {
+  color: white;
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 1px;
+  margin-bottom: 2px;
+  font-weight: 600; }
+form .form-control {
+  border-color: #374ca0; }
+  form .form-control.error {
+    border-color: #FF0000;
+    background-color: white; }
+    form .form-control.error::-webkit-input-placeholder {
+      color: #ff9999; }
+    form .form-control.error:-moz-placeholder {
+      /* Firefox 18- */
+      color: #ff9999; }
+    form .form-control.error::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ff9999; }
+    form .form-control.error:-ms-input-placeholder {
+      color: #ff9999; }
+form.form--small .form-control {
+  border-radius: 3px;
+  box-shadow: none; }
+form.form--orange .form-control {
+  border-color: #bd6d02; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;
