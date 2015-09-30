@@ -165,6 +165,7 @@ header {
     header .header-content .header-content-inner form.form--email .form--email__form__email-input {
       border: #1d2854 solid 3px;
       border-radius: 12px;
+      height: 58px;
       color: #1d2854; }
     header .header-content .header-content-inner form.form--email .form--email__success-message {
       padding: 10px 30px;
@@ -231,9 +232,7 @@ header {
             margin-left: auto;
             margin-right: auto; }
           header .header-content .header-content-inner form.form--email {
-            height: 110px; }
-            header .header-content .header-content-inner form.form--email .form-control {
-              height: 58px; } }
+            height: 110px; } }
 
 footer {
   font-size: 12px; }
