@@ -263,11 +263,12 @@ footer {
   font-size: 12px; }
 
 form label {
-  color: white;
   display: inline-block;
   max-width: 100%;
   margin-left: 1px;
   margin-bottom: 2px;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
   font-weight: 600; }
 form .form-control {
   border-color: #374ca0; }
