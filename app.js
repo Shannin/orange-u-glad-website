@@ -58,7 +58,7 @@ app.post('/api/addEmailToList', function(req, res) {
 
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/' + assetDir + '/'));
+    res.sendFile(path.join('/' + assetDir + '/'));
 });
 
 app.listen(server_port, server_ip_address, function(){
