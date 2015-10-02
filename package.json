@@ -14,6 +14,7 @@
     "bootstrap-sass": "^3.3.5",
     "express": "^4.13.3",
     "mailchimp": "^1.1.0",
+    "nodemailer": "^1.5.0",
     "validator": "^4.0.6"
   },
   "devDependencies": {

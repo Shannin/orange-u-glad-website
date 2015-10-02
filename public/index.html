@@ -60,9 +60,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <img src="img/contact-header.svg" style="width: 100%; margin-bottom: 20px;">
+                        <img src="img/contact-header.svg" style="width: 100%; margin-bottom: 10px;">
+                        <form id="contact-form" class="form--small form--orange" action="/api/contact"  method="POST">
+                            <div class="row">
+                                <div class="error-box"> </div>
+                            </div> 
 
-                        <form class="form--small form--orange">
                             <div class="row">
                                 <div class="form-group col-sm-8">
                                     <label>Name</label>

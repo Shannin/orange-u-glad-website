@@ -122,17 +122,37 @@ header {
             }
 
             form.form--email {
-                .error-box {
-                    min-height: 30px;
-                    padding-bottom: 10px;
-                    color: $red;
-                }
 
+                .form-control {
+                    border-color: lighten($blue, 20%);
+
+                    &.error {
+                        border-color: $red;
+                        background-color: lighten($red, 70%);
+
+                        &::-webkit-input-placeholder {
+                           color: lighten($red, 30%);
+                        }
+
+                        &:-moz-placeholder { /* Firefox 18- */
+                           color: lighten($red, 30%);;  
+                        }
+
+                        &::-moz-placeholder {  /* Firefox 19+ */
+                           color: lighten($red, 30%);;  
+                        }
+
+                        &:-ms-input-placeholder {
+                           color: lighten($red, 30%);
+                        }
+                    }
+                }
+                
                 .form--email__form__email-input {
                     border: $blue solid 3px;
                     border-radius: 12px;
 
-                    
+
                     height: 58px;
 
                     color: $blue;
@@ -241,6 +261,16 @@ footer {
 }
 
 form {
+    .error-box {
+        min-height: 30px;
+        padding-bottom: 10px;
+        color: $red;
+
+        &.success {
+            color: $green;
+        }
+    }
+
     label {
         display: inline-block;
         max-width: 100%;
@@ -256,29 +286,18 @@ form {
         resize: vertical;
     }
 
-    .form-control {
-        border-color: lighten($blue, 20%);
-
+    .form-group {
         &.error {
-            border-color: $red;
-            background-color: lighten($red, 70%);
-
-            &::-webkit-input-placeholder {
-               color: lighten($red, 30%);
+            label {
+                color: $red-dark;
             }
 
-            &:-moz-placeholder { /* Firefox 18- */
-               color: lighten($red, 30%);;  
+            input,
+            textarea {
+                border-color: $red-dark;
+                background-color:  lighten($red, 45%);
             }
-
-            &::-moz-placeholder {  /* Firefox 19+ */
-               color: lighten($red, 30%);;  
-            }
-
-            &:-ms-input-placeholder {
-               color: lighten($red, 30%);
-            }
-        }
+        } 
     }
 
     &.form--small {

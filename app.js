@@ -1,7 +1,8 @@
 var bodyParser = require('body-parser');
 var express = require('express');
-var path = require('path');
 var MailChimpAPI = require('mailchimp').MailChimpAPI;
+var nodemailer = require('nodemailer');
+var path = require('path');
 var validator = require('validator');
 
 var apiKey = process.env.MAILCHIMP_API_KEY || 'a544f296627f3988d034230b76bba7bc-us11';
@@ -15,6 +16,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var mailchimp = MailChimpAPI(apiKey, { version : '2.0' });
+
+var mailer = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: process.env.EMAIL_MAILER_USER,
+        pass: process.env.EMAIL_MAILER_PASS
+    }
+});
+
 
 app.post('/api/addEmailToList', function(req, res) {
     var values = req.body;
@@ -56,10 +66,60 @@ app.post('/api/addEmailToList', function(req, res) {
     });
 });
 
+app.post('/api/contact', function(req, res) {
+    var values = req.body;
+
+    if (values.email === '') {
+        res.json({'success': false, 'message': 'Please enter an Email Address'});
+        return;
+    }
+
+    if (!validator.isEmail(values.email)) {
+        res.json({'success': false, 'message': 'Please enter a valid Email Address'});
+        return;
+    }
+
+    if (values.comment === '') {
+        res.json({'success': false, 'message': 'Unknown email list'});
+        return;
+    }
+
+    if (values.name !== '') {
+        var from = values.name + '<' + values.email + '>';
+    } else {
+        var from = values.email;
+    }
+
+    var subject = 'Contact Form Submission: ';
+    if (values.company !== '') {
+        subject += values.company;
+    } else {
+        subject += values.email;
+    }
+
+    var mailOptions = {
+        from: from,
+        replyTo: from,
+        to: 'shannin@shanniniganfoods.com',
+        subject:  subject,
+        text: values.comment,
+    };
+
+    mailer.sendMail(mailOptions, function(error, info){
+        if(error){
+            console.log(error);
+            res.json({'success': false, 'message': 'Something went wrong.'});
+            return;
+        }
+
+        res.json({'success': true, 'message': 'Message sent successfully'});
+    });
+});
 
 app.get('/', function(req, res) {
     res.sendFile(path.join('/' + assetDir + '/'));
 });
+
 
 app.listen(server_port, server_ip_address, function(){
   console.log("Listening on " + server_ip_address + ": " + server_port);

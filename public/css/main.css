@@ -158,10 +158,21 @@ header {
       color: rgba(255, 255, 255, 0.9);
       font-size: 16px;
       margin-bottom: 20px; }
-    header .header-content .header-content-inner form.form--email .error-box {
-      min-height: 30px;
-      padding-bottom: 10px;
-      color: #FF0000; }
+    header .header-content .header-content-inner form.form--email .form-control {
+      border-color: #374ca0; }
+      header .header-content .header-content-inner form.form--email .form-control.error {
+        border-color: #FF0000;
+        background-color: white; }
+        header .header-content .header-content-inner form.form--email .form-control.error::-webkit-input-placeholder {
+          color: #ff9999; }
+        header .header-content .header-content-inner form.form--email .form-control.error:-moz-placeholder {
+          /* Firefox 18- */
+          color: #ff9999; }
+        header .header-content .header-content-inner form.form--email .form-control.error::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #ff9999; }
+        header .header-content .header-content-inner form.form--email .form-control.error:-ms-input-placeholder {
+          color: #ff9999; }
     header .header-content .header-content-inner form.form--email .form--email__form__email-input {
       border: #1d2854 solid 3px;
       border-radius: 12px;
@@ -237,6 +248,12 @@ header {
 footer {
   font-size: 12px; }
 
+form .error-box {
+  min-height: 30px;
+  padding-bottom: 10px;
+  color: #FF0000; }
+  form .error-box.success {
+    color: #169949; }
 form label {
   display: inline-block;
   max-width: 100%;
@@ -247,21 +264,12 @@ form label {
   font-weight: 600; }
 form textarea {
   resize: vertical; }
-form .form-control {
-  border-color: #374ca0; }
-  form .form-control.error {
-    border-color: #FF0000;
-    background-color: white; }
-    form .form-control.error::-webkit-input-placeholder {
-      color: #ff9999; }
-    form .form-control.error:-moz-placeholder {
-      /* Firefox 18- */
-      color: #ff9999; }
-    form .form-control.error::-moz-placeholder {
-      /* Firefox 19+ */
-      color: #ff9999; }
-    form .form-control.error:-ms-input-placeholder {
-      color: #ff9999; }
+form .form-group.error label {
+  color: #cc0000; }
+form .form-group.error input,
+form .form-group.error textarea {
+  border-color: #cc0000;
+  background-color: #ffe5e5; }
 form.form--small .form-control {
   border-radius: 3px;
   box-shadow: none; }
