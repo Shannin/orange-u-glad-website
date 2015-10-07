@@ -100,7 +100,7 @@ app.post('/api/contact', function(req, res) {
     var mailOptions = {
         from: from,
         replyTo: from,
-        to: 'shannin@shanniniganfoods.com',
+        to: 'info@orange-u-glad.com',
         subject:  subject,
         text: values.comment,
     };
