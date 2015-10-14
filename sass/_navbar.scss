@@ -1,0 +1,28 @@
+.navbar {
+    @extend .transition-all;
+    
+    position: fixed;
+    left: 0px;
+    right: 0px;
+
+    background-color: transparentize($white, .3);
+    border: none;
+    opacity: 0;
+    z-index: 1099;
+
+    .navbar__brand {
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+
+        img {
+            @extend .transition-all;
+            height: 40px;
+            vertical-align: middle;
+        }
+    }
+
+    &.visible {
+        opacity: 1;
+    }
+}

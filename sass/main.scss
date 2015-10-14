@@ -5,6 +5,7 @@
 @import "buttons";
 @import "sections";
 @import "popovers";
+@import "navbar";
 
 
 .text-right {
@@ -66,31 +67,6 @@ p {
 
 .no-padding {
     padding: 0;
-}
-
-
-// Navigation
-
-.navbar-default {
-    background-color: transparentize($white, .3);
-    border: none;
-    opacity: 0;
-
-    @extend .transition-all;
-    .navbar--brand {
-        margin: auto;
-        padding: 5px;
-        text-align: center;
-
-        img {
-            @extend .transition-all;
-            height: 40px;
-        }
-    }
-
-    &.visible {
-        opacity: 1;
-    }
 }
 
 

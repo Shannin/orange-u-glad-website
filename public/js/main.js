@@ -18,9 +18,9 @@
 
     function adjustPage() {
         if ($(window).scrollTop() > 150){
-            $('#mainNav').addClass('visible');
+            $('.navbar').addClass('visible');
         } else {
-            $('#mainNav').removeClass('visible');
+            $('.navbar').removeClass('visible');
         }
     }
 
