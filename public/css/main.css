@@ -95,6 +95,52 @@ footer {
 .section--padded-large {
   padding: 60px 0px; }
 
+.modal-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1098; }
+  .modal-custom .modal__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+    z-index: 1099;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center; }
+    .modal-custom .modal__content .modal__content__header {
+      padding: 20px;
+      padding-top: 20%; }
+      .modal-custom .modal__content .modal__content__header img {
+        height: 80px; }
+    .modal-custom .modal__content .modal__content__body {
+      padding: 30px 10px;
+      color: #333;
+      font-size: 16px; }
+    .modal-custom .modal__content .modal__content__buttons {
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      right: 0; }
+      .modal-custom .modal__content .modal__content__buttons button {
+        padding: 10px 25px; }
+  @media (min-width: 768px) and (min-height: 600px) {
+    .modal-custom .modal__content {
+      width: 650px;
+      height: 375px;
+      margin-top: -200px;
+      top: 50%; }
+      .modal-custom .modal__content .modal__content__header {
+        padding-top: 20px; }
+      .modal-custom .modal__content .modal__content__buttons {
+        bottom: 60px; } }
+
 html,
 body {
   height: 100%;
