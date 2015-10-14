@@ -1,7 +1,7 @@
 @font-face {
   font-family: StickARound;
   src: url("/fonts/Stick-A-Round.ttf"); }
-.font--sans-serif, .btn, html,
+.font--sans-serif, button, html,
 body {
   font-family: 'Asap', 'Helvetica Neue', sans-serif; }
 
@@ -29,37 +29,64 @@ h6 {
 .text-green {
   color: #169949; }
 
-.transition-all, .btn-default, .navbar, .navbar .navbar__brand img, a {
+.transition-all, button.button--primary, .navbar, .navbar .navbar__brand img, a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
 
-.btn-default {
-  color: #FFF;
-  background-color: #1d2854;
-  border-color: #1d2854; }
-  .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
-    color: #FFF;
-    background-color: #161f41;
-    border-color: #141b39; }
-  .btn-default:active, .btn-default.active {
-    background-image: none; }
-  .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
-    background-color: #1d2854;
-    border-color: #1d2854; }
-  .btn-default .badge {
-    color: #1d2854;
-    background-color: #FFF; }
-
-.btn {
+button {
   border: none;
   border-radius: 1px;
   font-weight: 700;
+  line-height: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   padding: 8px 30px; }
-
-.btn-xl {
-  padding: 15px 30px; }
+  button:active {
+    position: relative;
+    top: 1px; }
+  button.button--orange {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
+    cursor: pointer;
+    -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+    box-shadow: inset 0px 1px 0px 0px #fdb85b;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #f08a02));
+    background: -moz-linear-gradient(top, #fda228 5%, #f08a02 100%);
+    background: -webkit-linear-gradient(top, #fda228 5%, #f08a02 100%);
+    background: -o-linear-gradient(top, #fda228 5%, #f08a02 100%);
+    background: -ms-linear-gradient(top, #fda228 5%, #f08a02 100%);
+    background: linear-gradient(to bottom, #fda228 5%, #f08a02 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
+    background-color: #fda228; }
+    button.button--orange:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
+      background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
+      background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
+      background-color: #d77c02; }
+  button.button--primary {
+    color: #FFF;
+    background-color: #1d2854;
+    border-color: #1d2854; }
+    button.button--primary:hover, button.button--primary:focus, button.button--primary.focus, button.button--primary:active, button.button--primary.active {
+      color: #FFF;
+      background-color: #161f41;
+      border-color: #141b39; }
+    button.button--primary:active, button.button--primary.active {
+      background-image: none; }
+    button.button--primary.disabled, button.button--primary.disabled:hover, button.button--primary.disabled:focus, button.button--primary.disabled.focus, button.button--primary.disabled:active, button.button--primary.disabled.active, button.button--primary[disabled], button.button--primary[disabled]:hover, button.button--primary[disabled]:focus, button.button--primary[disabled].focus, button.button--primary[disabled]:active, button.button--primary[disabled].active, fieldset[disabled] button.button--primary, fieldset[disabled] button.button--primary:hover, fieldset[disabled] button.button--primary:focus, fieldset[disabled] button.button--primary.focus, fieldset[disabled] button.button--primary:active, fieldset[disabled] button.button--primary.active {
+      background-color: #1d2854;
+      border-color: #1d2854; }
+    button.button--primary .badge {
+      color: #1d2854;
+      background-color: #FFF; }
 
 header,
 section,
@@ -210,40 +237,12 @@ header {
       text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25); }
       header .header-content .header-content-inner form.form--email .form--email__success-message b {
         font-size: 28px; }
-    header .header-content .header-content-inner form.form--email .btn {
+    header .header-content .header-content-inner form.form--email button {
       width: 100%;
       max-width: 180px;
       height: 44px;
       padding: auto 40px;
-      margin: 7px auto;
-      color: #ffffff;
-      font-size: 16px;
-      text-decoration: none;
-      text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
-      cursor: pointer;
-      -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      -webkit-box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #f08a02));
-      background: -moz-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -webkit-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -o-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -ms-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: linear-gradient(to bottom, #fda228 5%, #f08a02 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
-      background-color: #fda228; }
-    header .header-content .header-content-inner form.form--email .btn:hover {
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
-      background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
-      background-color: #d77c02; }
-    header .header-content .header-content-inner form.form--email .btn:active {
-      position: relative;
-      top: 1px; }
+      margin: 7px auto; }
   @media (min-width: 768px) and (min-height: 600px) {
     header {
       min-height: 100%; }
