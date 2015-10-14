@@ -12,6 +12,10 @@
     text-align: right;
 }
 
+.container {
+    max-width: 1270px;
+}
+
 
 
 // Global Components
@@ -105,6 +109,10 @@ header {
             }
 
             form.form--email {
+
+                .error-box {
+                    min-height: 30px;
+                }
 
                 .form-control {
                     border-color: lighten($blue, 20%);
@@ -245,7 +253,6 @@ footer {
 
 form {
     .error-box {
-        min-height: 30px;
         padding-bottom: 10px;
         color: $red;
 
@@ -267,6 +274,7 @@ form {
 
     textarea {
         resize: vertical;
+        height: auto;
     }
 
     .form-group {
