@@ -24,6 +24,11 @@
 
     $(document).ready(function () {
         adjustPage();
+
+        var isEighteen = localStorage.getItem('isEighteen');
+        if (!isEighteen) {
+            $('#age-verify-modal').addClass('visible');
+        }
     });
 
     $('#header-email-form').submit(function (event) {
@@ -127,6 +132,7 @@
 
     $('.modal__button-hide').click(function (event) {
         $(this).closest('.modal-custom').removeClass('visible');
+        localStorage.setItem('isEighteen', true);
     });
 
 })(jQuery);
