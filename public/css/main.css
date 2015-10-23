@@ -317,7 +317,7 @@ form .form-group.error label {
 form .form-group.error input,
 form .form-group.error textarea {
   border-color: #cc0000;
-  background-color: #ffe5e5; }
+  background-color: #ffe6e6; }
 form.form--small .form-control {
   border-radius: 3px;
   box-shadow: none; }
