@@ -143,6 +143,14 @@ footer {
       .modal-custom .modal__content .modal__content__buttons {
         bottom: 60px; } }
 
+.locations-map {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .locations-map .locations-map__map-box {
+    width: 100%;
+    height: 100%; }
+
 html,
 body {
   height: 100%;

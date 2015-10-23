@@ -21,6 +21,9 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
+      options: {
+        compress: { unused: false }
+      },
       dist: {
         files: {
           'public/js/main.min.js': ['<%= concat.dist.dest %>']
