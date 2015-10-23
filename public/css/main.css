@@ -146,10 +146,14 @@ footer {
 .locations-map {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 94%;
+  background: #1d2854; }
   .locations-map .locations-map__map-box {
-    width: 100%;
-    height: 100%; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 5px; }
 
 html,
 body {
