@@ -4,6 +4,7 @@ var dispensaries = [
         address: '1256 Mission St, San Francisco, CA 94103',
         location: {lat: 37.7768998, lng: -122.41421489},
         phone: '415-252-7727',
+        logo: 'sparc.jpg',
         url: 'http://www.sparcsf.org',
     },
     {
@@ -11,6 +12,7 @@ var dispensaries = [
         address: '2366 San Pablo Ave Berkeley, CA 94702',
         location: {lat: 37.863273, lng: -122.290610},
         phone: '510-540-6013',
+        logo: 'bpg.png',
         url: 'http://www.mybpg.com',
     },
 ];
@@ -40,12 +42,28 @@ function initMap() {
             icon: icon
         });
 
-        setMarkerClickEvent(marker, dispensary);
+        setMarkerClickEvent(map, marker, dispensary);
     }
 }
 
-function setMarkerClickEvent(marker, dispensary) {
+function setMarkerClickEvent(map, marker, dispensary) {
     marker.addListener('click', function () {
-        console.log(dispensary);
+        var infowindow = generateInfoWindow(dispensary);
+        infowindow.open(map, marker);
     });
+}
+
+function generateInfoWindow(dispensary) {
+    var contentString =
+        '<div class="locations-map__map-box__marker-info-box">'+
+            '<img src="img/dispensaries/' + dispensary.logo + '" />' +
+            '<h4 class="font--sans-serif">' + dispensary.name + '</h4>' +
+            '<div class="marker-info-box__body">'+
+            
+            '</div>'+
+        '</div>';
+
+    return new google.maps.InfoWindow({
+        content: contentString
+      });
 }

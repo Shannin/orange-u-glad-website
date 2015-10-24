@@ -16,4 +16,15 @@
         top: 60px;
         bottom: 5px;
     }
+
+    .locations-map__map-box__marker-info-box {
+        text-align: center;
+
+        min-width: 180px;
+
+        img {
+            max-height: 42px;
+            max-width: 150px;
+        }
+    }
 }
