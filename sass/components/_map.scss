@@ -17,7 +17,7 @@
         bottom: 5px;
     }
 
-    .locations-map__map-box__marker-info-box {
+    .locations-map__dispensary-card {
         text-align: center;
 
         min-width: 180px;
@@ -29,7 +29,7 @@
             max-width: 150px;
         }
 
-        .marker-info-box__body {
+        .dispensary-card__body {
             padding-top: 10px;
             margin: 0px 20px;
 
@@ -38,7 +38,7 @@
             text-align: left;
             white-space: nowrap;
 
-            .marker-info-box__body__row {
+            .dispensary-card__body__row {
                 padding-bottom: 3px;
 
                 span {

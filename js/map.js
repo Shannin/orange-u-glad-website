@@ -81,14 +81,14 @@ function setMarkerClickEvent(map, marker, dispensary) {
 
 function generateInfoWindow(dispensary) {
     var contentString =
-        '<div class="locations-map__map-box__marker-info-box">' +
+        '<div class="locations-map__dispensary-card">' +
             '<img src="img/dispensaries/' + dispensary.logo + '" />' +
             '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
-            '<div class="font--sans-serif marker-info-box__body">' +
-                '<div class="marker-info-box__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
-                '<div class="marker-info-box__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
-                '<div class="marker-info-box__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
-                '<div class="marker-info-box__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
+            '<div class="font--sans-serif dispensary-card__body">' +
+                '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
+                '<div class="dispensary-card__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
+                '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
             '</div>' +
         '</div>';
 
