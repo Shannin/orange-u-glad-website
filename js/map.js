@@ -17,6 +17,7 @@ var dispensaries = [
     },
 ];
 
+var currentInfoWindow;
 
 
 function initMap() {
@@ -48,22 +49,28 @@ function initMap() {
 
 function setMarkerClickEvent(map, marker, dispensary) {
     marker.addListener('click', function () {
+        if (currentInfoWindow != null) {
+            currentInfoWindow.close();
+        }
+
         var infowindow = generateInfoWindow(dispensary);
         infowindow.open(map, marker);
+
+        currentInfoWindow = infowindow;
     });
 }
 
 function generateInfoWindow(dispensary) {
     var contentString =
-        '<div class="locations-map__map-box__marker-info-box">'+
+        '<div class="locations-map__map-box__marker-info-box">' +
             '<img src="img/dispensaries/' + dispensary.logo + '" />' +
-            '<h4 class="font--sans-serif">' + dispensary.name + '</h4>' +
-            '<div class="marker-info-box__body">'+
+            '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
+            '<div class="marker-info-box__body">' +
             
-            '</div>'+
+            '</div>' +
         '</div>';
 
     return new google.maps.InfoWindow({
         content: contentString
-      });
+    });
 }
