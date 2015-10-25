@@ -190,7 +190,8 @@ footer {
       height: 20%;
       min-height: 42px;
       max-height: 75px;
-      max-width: 250px; }
+      max-width: 250px;
+      margin: 10px; }
     .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card h5 {
       font-size: 22px;
       margin: 5px; }
@@ -200,7 +201,9 @@ footer {
       margin: auto;
       font-size: 16px; }
       .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row {
-        padding-bottom: 12px; }
+        padding-bottom: 12px;
+        margin-left: 10px;
+        margin-right: 10px; }
         .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row span {
           width: 80px;
           font-weight: bold; }
