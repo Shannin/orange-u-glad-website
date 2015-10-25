@@ -129,10 +129,4 @@
         
     });
 
-
-    $('.modal__button-hide').click(function (event) {
-        $(this).closest('.modal-custom').removeClass('visible');
-        localStorage.setItem('isEighteen', true);
-    });
-
 })(jQuery);
