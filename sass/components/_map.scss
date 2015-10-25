@@ -75,11 +75,11 @@
                 min-height: 42px;
                 max-height: 75px;
                 max-width: 250px;
-                margin: 15px;
             }
 
             h5 {
                 font-size: 22px;
+                margin: 5px;
             }
 
             .dispensary-card__body {
@@ -94,6 +94,7 @@
 
                     span {
                         width: 80px;
+                        font-weight: bold;
                     }
 
                     &.no-space {
