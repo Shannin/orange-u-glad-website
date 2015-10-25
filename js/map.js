@@ -27,8 +27,8 @@ var dispensaries = [
     },
 ];
 
+var center;
 var currentInfoWindow;
-
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('google-maps-box'), {
@@ -40,6 +40,15 @@ function initMap() {
         scaleControl: false,
     });
 
+    google.maps.event.addDomListener(map, 'idle', function() {
+        center = map.getCenter();
+    });
+
+    google.maps.event.addDomListener(window, 'resize', function() {
+        map.setCenter(center);
+    });
+
+    // Add markers
     var img = 'img/location-marker.png';
     var size = new google.maps.Size(25,25);
     var icon = new google.maps.MarkerImage(img, null, null, null, size);
