@@ -1,19 +1,29 @@
 var dispensaries = [
     {
         name: 'Sparc',
-        address: '1256 Mission St, San Francisco, CA 94103',
+        address: {
+            street: '1256 Mission St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
         location: {lat: 37.7768998, lng: -122.41421489},
         phone: '415-252-7727',
         logo: 'sparc.jpg',
-        url: 'http://www.sparcsf.org',
+        website: 'http://www.sparcsf.org',
     },
     {
         name: 'Berkeley Patients Group',
-        address: '2366 San Pablo Ave Berkeley, CA 94702',
+        address: {
+            street: '2366 San Pablo Ave',
+            city: 'Berkeley',
+            state: 'CA',
+            zip: '94702',
+        },
         location: {lat: 37.863273, lng: -122.290610},
         phone: '510-540-6013',
         logo: 'bpg.png',
-        url: 'http://www.mybpg.com',
+        website: 'http://www.mybpg.com',
     },
 ];
 
@@ -65,8 +75,11 @@ function generateInfoWindow(dispensary) {
         '<div class="locations-map__map-box__marker-info-box">' +
             '<img src="img/dispensaries/' + dispensary.logo + '" />' +
             '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
-            '<div class="marker-info-box__body">' +
-            
+            '<div class="font--sans-serif marker-info-box__body">' +
+                '<div class="marker-info-box__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
+                '<div class="marker-info-box__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                '<div class="marker-info-box__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
+                '<div class="marker-info-box__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
             '</div>' +
         '</div>';
 

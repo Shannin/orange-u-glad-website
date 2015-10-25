@@ -21,6 +21,8 @@
         text-align: center;
 
         min-width: 180px;
+        min-height: 170px;
+        padding-top: 10px;
 
         img {
             max-height: 42px;
@@ -28,7 +30,31 @@
         }
 
         .marker-info-box__body {
+            padding-top: 10px;
+            margin: 0px 20px;
+
             
+            font-size: 11px;
+            text-align: left;
+            white-space: nowrap;
+
+            .marker-info-box__body__row {
+                padding-bottom: 3px;
+
+                span {
+                    display: inline-block;
+                    width: 50px;
+                    font-weight: 500;
+                }
+
+                a {
+                    color: $blue-light;
+                }
+
+                &.no-space {
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 }

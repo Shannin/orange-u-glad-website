@@ -156,10 +156,28 @@ footer {
     bottom: 5px; }
   .locations-map .locations-map__map-box__marker-info-box {
     text-align: center;
-    min-width: 180px; }
+    min-width: 180px;
+    min-height: 170px;
+    padding-top: 10px; }
     .locations-map .locations-map__map-box__marker-info-box img {
       max-height: 42px;
       max-width: 150px; }
+    .locations-map .locations-map__map-box__marker-info-box .marker-info-box__body {
+      padding-top: 10px;
+      margin: 0px 20px;
+      font-size: 11px;
+      text-align: left;
+      white-space: nowrap; }
+      .locations-map .locations-map__map-box__marker-info-box .marker-info-box__body .marker-info-box__body__row {
+        padding-bottom: 3px; }
+        .locations-map .locations-map__map-box__marker-info-box .marker-info-box__body .marker-info-box__body__row span {
+          display: inline-block;
+          width: 50px;
+          font-weight: 500; }
+        .locations-map .locations-map__map-box__marker-info-box .marker-info-box__body .marker-info-box__body__row a {
+          color: #3a80b3; }
+        .locations-map .locations-map__map-box__marker-info-box .marker-info-box__body .marker-info-box__body__row.no-space {
+          padding-bottom: 0; }
 
 html,
 body {
