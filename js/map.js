@@ -109,6 +109,7 @@ function generateDispensaryCardContent(dispensary) {
                     '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
                     '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
                 '</div>' +
+                '<button class="dispensary-card__close-button btn btn-default">Close</button>'
             '</div>';
 }
 

@@ -62,6 +62,16 @@
                 }
             }
         }
+
+        .dispensary-card__close-button {
+            position: absolute;
+            margin: auto;
+            right: 0;
+            bottom: 15px;
+            left: 0;
+
+            max-width: 150px;
+        }
     }
 
     .locations-map__dispensary-card-container {

@@ -183,6 +183,13 @@ footer {
           color: #3a80b3; }
         .locations-map .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row.no-space {
           padding-bottom: 0; }
+    .locations-map .locations-map__dispensary-card .dispensary-card__close-button {
+      position: absolute;
+      margin: auto;
+      right: 0;
+      bottom: 15px;
+      left: 0;
+      max-width: 150px; }
   .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card {
     background: white;
     height: 100%; }
