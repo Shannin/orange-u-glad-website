@@ -82,9 +82,7 @@ function setMarkerClickEvent(map, marker, dispensary) {
 
             $('.locations-map__map-box', locationsMap).addClass('hidden');
             $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
-
             $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
-
         })(jQuery);
 
 

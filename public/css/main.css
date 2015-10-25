@@ -173,7 +173,8 @@ footer {
       text-align: left;
       white-space: nowrap; }
       .locations-map .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row {
-        padding-bottom: 3px; }
+        padding-bottom: 3px;
+        white-space: nowrap; }
         .locations-map .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row span {
           display: inline-block;
           width: 50px;
@@ -185,6 +186,22 @@ footer {
   .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card {
     background: white;
     height: 100%; }
+    .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card img {
+      max-height: 75px;
+      max-width: 250px;
+      margin: 20px; }
+    .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card h5 {
+      font-size: 22px; }
+    .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body {
+      width: 350px;
+      margin: auto;
+      font-size: 16px; }
+      .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row {
+        padding-bottom: 12px; }
+        .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row span {
+          width: 80px; }
+        .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row.no-space {
+          padding-bottom: 0; }
 
 html,
 body {
