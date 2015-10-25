@@ -27,8 +27,10 @@ var dispensaries = [
     },
 ];
 
+
 var center;
 var currentInfoWindow;
+var locationsMap;
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('google-maps-box'), {
@@ -74,16 +76,28 @@ function setMarkerClickEvent(map, marker, dispensary) {
 
         var dispensaryCardContent = generateDispensaryCardContent(dispensary);
 
-        
 
-        
+        (function($) {
+            var locationsMap = $('#locations-map');
 
-        var infowindow = new google.maps.InfoWindow({
-            content: dispensaryCardContent
-        });
-        infowindow.open(map, marker);
+            $('.locations-map__map-box', locationsMap).addClass('hidden');
+            $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
 
-        currentInfoWindow = infowindow;
+            $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
+
+        })(jQuery);
+
+
+        if (screenSizeMobile()) {
+
+        } else {
+            var infowindow = new google.maps.InfoWindow({
+                content: dispensaryCardContent
+            });
+            infowindow.open(map, marker);
+
+            currentInfoWindow = infowindow;
+        }
     });
 }
 
@@ -98,4 +112,10 @@ function generateDispensaryCardContent(dispensary) {
                     '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
                 '</div>' +
             '</div>';
+}
+
+function screenSizeMobile() {
+    console.log(screen.size);
+
+    return false;
 }

@@ -148,12 +148,16 @@ footer {
   width: 100%;
   height: 94%;
   background: #1d2854; }
-  .locations-map .locations-map__map-box {
+  .locations-map .locations-map__map-box,
+  .locations-map .locations-map__dispensary-card-container {
     position: absolute;
     left: 0;
     right: 0;
     top: 60px;
     bottom: 5px; }
+    .locations-map .locations-map__map-box .hidden,
+    .locations-map .locations-map__dispensary-card-container .hidden {
+      display: none; }
   .locations-map .locations-map__dispensary-card {
     text-align: center;
     min-width: 180px;
@@ -178,6 +182,9 @@ footer {
           color: #3a80b3; }
         .locations-map .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row.no-space {
           padding-bottom: 0; }
+  .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card {
+    background: white;
+    height: 100%; }
 
 html,
 body {
