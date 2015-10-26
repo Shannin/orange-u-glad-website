@@ -30,7 +30,19 @@ var dispensaries = [
 
 var center;
 var currentInfoWindow;
-var locationsMap;
+
+(function($) {
+    var locationsMap = $('#locations-map');
+
+    $(locationsMap).on('click', '.dispensary-card__close-button', function (event) {
+        if (currentInfoWindow != null) {
+            currentInfoWindow.close();
+        }
+
+        $('.locations-map__map-box', locationsMap).removeClass('hidden');
+        $('.locations-map__dispensary-card-container', locationsMap).addClass('hidden');
+    });
+})(jQuery);
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('google-maps-box'), {
