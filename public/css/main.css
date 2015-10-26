@@ -189,7 +189,8 @@ footer {
       right: 0;
       bottom: 15px;
       left: 0;
-      max-width: 150px; }
+      max-width: 150px;
+      display: none; }
   .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card {
     background: white;
     height: 100%; }
@@ -216,6 +217,8 @@ footer {
           font-weight: bold; }
         .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__body .dispensary-card__body__row.no-space {
           padding-bottom: 0; }
+    .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__close-button {
+      display: block; }
 
 html,
 body {

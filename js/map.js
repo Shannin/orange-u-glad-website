@@ -88,18 +88,14 @@ function setMarkerClickEvent(map, marker, dispensary) {
 
         var dispensaryCardContent = generateDispensaryCardContent(dispensary);
 
-
-        (function($) {
-            var locationsMap = $('#locations-map');
-
-            $('.locations-map__map-box', locationsMap).addClass('hidden');
-            $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
-            $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
-        })(jQuery);
-
-
         if (screenSizeMobile()) {
+            (function($) {
+                var locationsMap = $('#locations-map');
 
+                $('.locations-map__map-box', locationsMap).addClass('hidden');
+                $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
+                $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
+            })(jQuery);
         } else {
             var infowindow = new google.maps.InfoWindow({
                 content: dispensaryCardContent

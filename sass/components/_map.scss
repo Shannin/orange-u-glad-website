@@ -71,6 +71,8 @@
             left: 0;
 
             max-width: 150px;
+
+            display: none;
         }
     }
 
@@ -114,6 +116,10 @@
                         padding-bottom: 0;
                     }
                 }
+            }
+
+            .dispensary-card__close-button {
+                display: block;
             }
 
         }
