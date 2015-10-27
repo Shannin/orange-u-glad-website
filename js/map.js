@@ -114,12 +114,19 @@ function initMap() {
                         '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
                         '<div class="font--sans-serif dispensary-card__body">' +
                             '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
-                            '<div class="dispensary-card__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                            '<div class="dispensary-card__body__row no-space"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                            '<div class="dispensary-card__body__row"><span></span><a href="' + generateDispensaryDirectionsLink(dispensary) + '" target="_blank">Directions</a></div>' +
                             '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
                             '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
                         '</div>' +
                         '<button class="dispensary-card__close-button btn btn-default">Close</button>'
                     '</div>';
+        }
+
+        function generateDispensaryDirectionsLink(dispensary) {
+            var base = 'https://maps.google.com?saddr=Current+Location&daddr=';
+            var parts = [dispensary.address.street, dispensary.address.state, dispensary.address.zip];
+            return base + encodeURIComponent(parts.join(" "));
         }
 
         function screenSizeMobile() {
