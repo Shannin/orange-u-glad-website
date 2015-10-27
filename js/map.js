@@ -79,6 +79,12 @@ function initMap() {
             });
 
             zoomToAllMarkers(map, markers);
+
+            map.setOptions({draggable: !screenSizeMobile()});
+
+            $(window).on('resize', function() {
+                map.setOptions({draggable: !screenSizeMobile()});
+            });
         }
 
         function setMarkerClickEvent(map, marker, dispensary) {
