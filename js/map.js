@@ -43,38 +43,42 @@ function initMap() {
             $('.locations-map__dispensary-card-container', locationsMap).addClass('hidden');
         });
 
-        var map = new google.maps.Map(document.getElementById('google-maps-box'), {
-            center: {lat: 37.7396515, lng: -122.2921592},
-            zoom: 11,
-            scrollwheel: false,
-            navigationControl: false,
-            mapTypeControl: false,
-            scaleControl: false,
-        });
-
-        google.maps.event.addDomListener(map, 'idle', function() {
-            center = map.getCenter();
-        });
-
-        google.maps.event.addDomListener(window, 'resize', function() {
-            map.setCenter(center);
-        });
-
-        // Add markers
-        var img = 'img/location-marker.png';
-        var size = new google.maps.Size(25,25);
-        var icon = new google.maps.MarkerImage(img, null, null, null, size);
-
-        for (var i = 0; i < dispensaries.length; i++) {
-            var dispensary = dispensaries[i];
-
-            var marker = new google.maps.Marker({
-                position: dispensary.location,
-                map: map,
-                icon: icon
+        function init () {
+            var map = new google.maps.Map(document.getElementById('google-maps-box'), {
+                center: {lat: 37.7396515, lng: -122.2921592},
+                zoom: 11,
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
             });
 
-            setMarkerClickEvent(map, marker, dispensary);
+            google.maps.event.addDomListener(map, 'idle', function() {
+                center = map.getCenter();
+            });
+
+            google.maps.event.addDomListener(window, 'resize', function() {
+                map.setCenter(center);
+            });
+
+            // Add markers
+            var img = 'img/location-marker.png';
+            var size = new google.maps.Size(25,25);
+            var icon = new google.maps.MarkerImage(img, null, null, null, size);
+
+            var markers = dispensaries.map(function(dispensary) {
+                var marker = new google.maps.Marker({
+                    position: dispensary.location,
+                    map: map,
+                    icon: icon
+                });
+
+                setMarkerClickEvent(map, marker, dispensary);
+
+                return marker;
+            });
+
+            zoomToAllMarkers(map, markers);
         }
 
         function setMarkerClickEvent(map, marker, dispensary) {
@@ -122,5 +126,16 @@ function initMap() {
             return locationsMap.width() <= 600 || locationsMap.height() <= 600;
         }
 
+        function zoomToAllMarkers(map, markers) {
+            var bounds = new google.maps.LatLngBounds();
+            markers.forEach(function(m) {
+                bounds.extend(m.getPosition());
+            });
+
+            map.fitBounds(bounds);
+        }
+        
+
+        init();
     })(jQuery);
 }
