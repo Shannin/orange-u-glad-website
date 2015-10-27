@@ -129,4 +129,12 @@
 
         }
     }
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        .locations-map__map-box,
+        .locations-map__dispensary-card-container {
+            top: 70px;
+        }
+    }
+
 }

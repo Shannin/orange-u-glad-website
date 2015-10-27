@@ -54,6 +54,14 @@ h6 {
     @extend .font--serif;
 }
 
+h1 {
+    font-size: 36px;
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        font-size: 44px;
+    }
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;
@@ -62,6 +70,27 @@ p {
 
 .no-padding {
     padding: 0;
+}
+
+.two-line-header-text {
+    @extend .font--serif;
+
+    h1 {
+        margin: 0;
+    }
+
+    span {
+        font-style: italic;
+        padding-left: 30px;
+        font-size: 26px;
+    }
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        span {
+            padding-left: 40px;
+            font-size: 32px;
+        }
+    }
 }
 
 
@@ -105,6 +134,11 @@ header {
         padding: 100px 15px 100px;
         width: 100%;
         .header-content-inner {
+            h1 {
+                color: $orange;
+                font-size: 62px;
+            }
+
             img.logo {
                 width: 90%;
                 max-width: 600px;
@@ -230,6 +264,10 @@ header {
                 max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
+
+                h1 {
+                    font-size: 90px;
+                }
 
                 img.logo {
                     margin-bottom: 50px;

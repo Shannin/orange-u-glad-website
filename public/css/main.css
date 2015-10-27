@@ -10,7 +10,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, .two-line-header-text {
   font-family: StickARound; }
 
 .font--stick-a-round {
@@ -225,6 +225,10 @@ footer {
           padding-bottom: 0; }
     .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__close-button {
       display: block; }
+  @media (min-width: 768px) and (min-height: 600px) {
+    .locations-map .locations-map__map-box,
+    .locations-map .locations-map__dispensary-card-container {
+      top: 70px; } }
 
 html,
 body {
@@ -244,6 +248,12 @@ a {
     a.white:hover, a.white:focus {
       color: #d9d9d9; }
 
+h1 {
+  font-size: 36px; }
+  @media (min-width: 768px) and (min-height: 600px) {
+    h1 {
+      font-size: 44px; } }
+
 p {
   font-size: 16px;
   line-height: 1.5;
@@ -251,6 +261,17 @@ p {
 
 .no-padding {
   padding: 0; }
+
+.two-line-header-text h1 {
+  margin: 0; }
+.two-line-header-text span {
+  font-style: italic;
+  padding-left: 30px;
+  font-size: 26px; }
+@media (min-width: 768px) and (min-height: 600px) {
+  .two-line-header-text span {
+    padding-left: 40px;
+    font-size: 32px; } }
 
 .navbar-default {
   background-color: rgba(255, 255, 255, 0.7);
@@ -276,6 +297,9 @@ header {
     text-align: center;
     padding: 100px 15px 100px;
     width: 100%; }
+    header .header-content .header-content-inner h1 {
+      color: #fda228;
+      font-size: 62px; }
     header .header-content .header-content-inner img.logo {
       width: 90%;
       max-width: 600px;
@@ -363,6 +387,8 @@ header {
           max-width: 1000px;
           margin-left: auto;
           margin-right: auto; }
+          header .header-content .header-content-inner h1 {
+            font-size: 90px; }
           header .header-content .header-content-inner img.logo {
             margin-bottom: 50px; }
           header .header-content .header-content-inner img.cta {
