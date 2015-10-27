@@ -119,11 +119,7 @@ function initMap() {
         }
 
         function screenSizeMobile() {
-            console.log(locationsMap)
-
-
-
-            return false;
+            return locationsMap.width() <= 600 || locationsMap.height() <= 600;
         }
 
     })(jQuery);
