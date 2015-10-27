@@ -149,6 +149,11 @@ footer {
   height: 94%;
   min-height: 450px;
   background: #1d2854; }
+  .locations-map .locations-map__header {
+    text-align: center; }
+    .locations-map .locations-map__header h1 {
+      margin-top: 10px;
+      color: white; }
   .locations-map .locations-map__map-box,
   .locations-map .locations-map__dispensary-card-container {
     position: absolute;
