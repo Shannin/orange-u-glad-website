@@ -27,102 +27,104 @@ var dispensaries = [
     },
 ];
 
-
-var center;
-var currentInfoWindow;
-
-(function($) {
-    var locationsMap = $('#locations-map');
-
-    $(locationsMap).on('click', '.dispensary-card__close-button', function (event) {
-        if (currentInfoWindow != null) {
-            currentInfoWindow.close();
-        }
-
-        $('.locations-map__map-box', locationsMap).removeClass('hidden');
-        $('.locations-map__dispensary-card-container', locationsMap).addClass('hidden');
-    });
-})(jQuery);
-
+// this is shitty.
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('google-maps-box'), {
-        center: {lat: 37.7396515, lng: -122.2921592},
-        zoom: 11,
-        scrollwheel: false,
-        navigationControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-    });
+    (function($) {
+        var center;
+        var currentInfoWindow;
+        var locationsMap = $('#locations-map');
 
-    google.maps.event.addDomListener(map, 'idle', function() {
-        center = map.getCenter();
-    });
+        $(locationsMap).on('click', '.dispensary-card__close-button', function (event) {
+            if (currentInfoWindow != null) {
+                currentInfoWindow.close();
+            }
 
-    google.maps.event.addDomListener(window, 'resize', function() {
-        map.setCenter(center);
-    });
-
-    // Add markers
-    var img = 'img/location-marker.png';
-    var size = new google.maps.Size(25,25);
-    var icon = new google.maps.MarkerImage(img, null, null, null, size);
-
-    for (var i = 0; i < dispensaries.length; i++) {
-        var dispensary = dispensaries[i];
-
-        var marker = new google.maps.Marker({
-            position: dispensary.location,
-            map: map,
-            icon: icon
+            $('.locations-map__map-box', locationsMap).removeClass('hidden');
+            $('.locations-map__dispensary-card-container', locationsMap).addClass('hidden');
         });
 
-        setMarkerClickEvent(map, marker, dispensary);
-    }
-}
+        var map = new google.maps.Map(document.getElementById('google-maps-box'), {
+            center: {lat: 37.7396515, lng: -122.2921592},
+            zoom: 11,
+            scrollwheel: false,
+            navigationControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+        });
 
-function setMarkerClickEvent(map, marker, dispensary) {
-    marker.addListener('click', function () {
-        if (currentInfoWindow != null) {
-            currentInfoWindow.close();
-        }
+        google.maps.event.addDomListener(map, 'idle', function() {
+            center = map.getCenter();
+        });
 
-        var dispensaryCardContent = generateDispensaryCardContent(dispensary);
+        google.maps.event.addDomListener(window, 'resize', function() {
+            map.setCenter(center);
+        });
 
-        if (screenSizeMobile()) {
-            (function($) {
-                var locationsMap = $('#locations-map');
+        // Add markers
+        var img = 'img/location-marker.png';
+        var size = new google.maps.Size(25,25);
+        var icon = new google.maps.MarkerImage(img, null, null, null, size);
 
-                $('.locations-map__map-box', locationsMap).addClass('hidden');
-                $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
-                $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
-            })(jQuery);
-        } else {
-            var infowindow = new google.maps.InfoWindow({
-                content: dispensaryCardContent
+        for (var i = 0; i < dispensaries.length; i++) {
+            var dispensary = dispensaries[i];
+
+            var marker = new google.maps.Marker({
+                position: dispensary.location,
+                map: map,
+                icon: icon
             });
-            infowindow.open(map, marker);
 
-            currentInfoWindow = infowindow;
+            setMarkerClickEvent(map, marker, dispensary);
         }
-    });
-}
 
-function generateDispensaryCardContent(dispensary) {
-    return  '<div class="locations-map__dispensary-card">' +
-                '<img src="img/dispensaries/' + dispensary.logo + '" />' +
-                '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
-                '<div class="font--sans-serif dispensary-card__body">' +
-                    '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
-                    '<div class="dispensary-card__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
-                    '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
-                    '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
-                '</div>' +
-                '<button class="dispensary-card__close-button btn btn-default">Close</button>'
-            '</div>';
-}
+        function setMarkerClickEvent(map, marker, dispensary) {
+            marker.addListener('click', function () {
+                if (currentInfoWindow != null) {
+                    currentInfoWindow.close();
+                }
 
-function screenSizeMobile() {
-    console.log(screen.size);
+                var dispensaryCardContent = generateDispensaryCardContent(dispensary);
 
-    return false;
+                if (screenSizeMobile()) {
+                    (function($) {
+                        var locationsMap = $('#locations-map');
+
+                        $('.locations-map__map-box', locationsMap).addClass('hidden');
+                        $('.locations-map__dispensary-card-container', locationsMap).removeClass('hidden');
+                        $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
+                    })(jQuery);
+                } else {
+                    var infowindow = new google.maps.InfoWindow({
+                        content: dispensaryCardContent
+                    });
+                    infowindow.open(map, marker);
+
+                    currentInfoWindow = infowindow;
+                }
+            });
+        }
+
+        function generateDispensaryCardContent(dispensary) {
+            return  '<div class="locations-map__dispensary-card">' +
+                        '<img src="img/dispensaries/' + dispensary.logo + '" />' +
+                        '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
+                        '<div class="font--sans-serif dispensary-card__body">' +
+                            '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
+                            '<div class="dispensary-card__body__row"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                            '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
+                            '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
+                        '</div>' +
+                        '<button class="dispensary-card__close-button btn btn-default">Close</button>'
+                    '</div>';
+        }
+
+        function screenSizeMobile() {
+            console.log(locationsMap)
+
+
+
+            return false;
+        }
+
+    })(jQuery);
 }
