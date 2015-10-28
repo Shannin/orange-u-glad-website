@@ -110,7 +110,7 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange',GradientType=1 ); }
 
 .section--padded-medium {
-  padding: 20px 0px; }
+  padding: 35px 0px; }
 
 .section--padded-large {
   padding: 60px 0px; }
@@ -345,6 +345,9 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px; }
+
+.no-margin {
+  margin: 0; }
 
 .no-padding {
   padding: 0; }
