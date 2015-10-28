@@ -31,7 +31,7 @@
         }
     });
 
-    $('#form-newsletter').submit(function (event) {
+    $('#header-email-form').submit(function (event) {
         event.preventDefault();
         var form = $(this);
         var emailInput = $('input[name="email"]', form);
@@ -55,7 +55,7 @@
 
         submitBtn.prop('disabled', true);
     
-        $.post('/api/newsletter', postData, function(data) {
+        $.post('/api/addEmailToList', postData, function(data) {
             submitBtn.prop('disabled', false);
 
             if (!data.success) {

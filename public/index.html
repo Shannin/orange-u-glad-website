@@ -31,6 +31,27 @@
 
                     <h1>COMING SOON</h1>
                     <p>Debuting this fall in dispensaries across California, <span style="white-space: nowrap">Orange-U-Glad</span> is bringing a new experience to cannabis infused chocolate.  Made from premium dark chocolate and cannabis extracts, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is a new way to medicate that’s a delight to all the senses.  <b>Sign up below to be alerted when the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is in dispensaries near you.</b></p>
+                    
+                    <form id="header-email-form" class="form--email" action="/api/addEmailToList"  method="POST">
+                        <input type="hidden" name="emailList" value="7118ddea20">
+
+                        <div class="row">
+                            <div class="error-box"> </div>
+                        </div>  
+
+                        <div class="form--email__form row">
+                            <div class="form-group col-sm-8 col-sm-offset-1">
+                                <input type="email" class="form--email__form__email-input form-control input-lg" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <button type="submit" class="btn btn-default input-lg">Add Me!</button>
+                            </div>  
+                        </div>
+
+                        <div class="form--email__success-message row text-green" style="display: none">
+                            <b>Thanks!</b> You will be the first to know when <span style="white-space: nowrap">Orange-U-Glad</span> is in dispensaries!
+                        </div>
+                    </form>
                 </div>
             </div>
         </header>
@@ -49,34 +70,6 @@
         </div>
 
         -->
-
-        <section class="section--white" id="newsletter-subscribe">
-            <div class="container">
-                <form id="form-newsletter" class="form--blue" action="/api/newsletter"  method="POST">
-                    <input type="hidden" name="emailList" value="7118ddea20">
-
-                    <div class="row">
-                        <div class="error-box"> </div>
-                    </div>  
-
-                    <div class="form--email__form row">
-                        <div class="col-lg-4 col-lg-offset 1">
-                            Stay in the know:
-                        </div>
-                        <div class="form-group col-lg-5">
-                            <input type="email" class="form--email__form__email-input form-control input-lg" name="email" placeholder="Email">
-                        </div>
-                        <div class="form-group col-lg-1">
-                            <button type="submit" class="btn btn-default input-lg">Add Me!</button>
-                        </div>  
-                    </div>
-
-                    <div class="form--email__success-message row text-green" style="display: none">
-                        <b>Thanks!</b> You will be the first to know when <span style="white-space: nowrap">Orange-U-Glad</span> is in dispensaries!
-                    </div>
-                </form>
-            </div>
-        </section>
 
         <section class="section--orange-gradient section--padded-large" id="contact">
             <div class="container">

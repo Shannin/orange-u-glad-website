@@ -26,7 +26,7 @@ var mailer = nodemailer.createTransport({
 });
 
 
-app.post('/api/newsletter', function(req, res) {
+app.post('/api/addEmailToList', function(req, res) {
     var values = req.body;
 
     if (values.emailList === '') {
