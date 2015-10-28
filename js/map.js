@@ -62,7 +62,7 @@ function initMap() {
             });
 
             // Add markers
-            var img = 'img/location-marker.png';
+            var img = 'img/orange.png';
             var size = new google.maps.Size(25,25);
             var icon = new google.maps.MarkerImage(img, null, null, null, size);
 
