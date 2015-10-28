@@ -59,6 +59,7 @@
             submitBtn.prop('disabled', false);
 
             if (!data.success) {
+                emailInput.closest('.form-group').addClass('error');
                 errorBox.html(data.message);
                 return;
             }
