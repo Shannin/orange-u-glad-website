@@ -63,8 +63,8 @@
                 return;
             }
 
-            $('.form--email__form', form).toggle();
-            $('.form--email__success-message', form).toggle();
+            $('#form-newsletter__form', form).toggle();
+            $('#form-newsletter__success-message', form).toggle();
         });
     });
 
