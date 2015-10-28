@@ -50,24 +50,26 @@
 
         -->
 
-        <section class="section--white" id="newsletter-subscribe">
+        <section class="section--white section--padded-medium" id="newsletter-subscribe">
             <div class="container">
-                <form id="form-newsletter" class="form--blue" action="/api/newsletter"  method="POST">
+                <form id="form-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
                     <input type="hidden" name="emailList" value="7118ddea20">
 
                     <div class="row">
                         <div class="error-box"> </div>
                     </div>  
 
-                    <div class="form--email__form row">
-                        <div class="col-lg-4 col-lg-offset 1">
-                            Stay in the know:
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <h2 class="font--sans-serif text-regular" style="margin-top: 6px; letter-spacing: 7px;">
+                                KEEP TABS <img src="img/location-marker.png" height="36px" style="margin-top: -10px; margin-right: 3px;"  />N US
+                            </h2>
                         </div>
                         <div class="form-group col-lg-5">
-                            <input type="email" class="form--email__form__email-input form-control input-lg" name="email" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <div class="form-group col-lg-1">
-                            <button type="submit" class="btn btn-default input-lg">Add Me!</button>
+                            <button type="submit" class="btn btn--blue">Add Me!</button>
                         </div>  
                     </div>
 
@@ -117,7 +119,7 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-12 text-right">
-                                    <button type="submit" class="btn btn-default">Send</button>
+                                    <button type="submit" class="btn btn--blue">Send</button>
                                 </div>
                             </div>
                         </form>
@@ -148,7 +150,7 @@
                     <p>You must be 18 or older to view this website.<br><b>Please verify your age:</b></p>
                 </div>
                 <div class="modal__content__buttons">
-                    <button id="age-verify-modal-enter-button" class="modal__button-hide btn btn-default">I'm Over 18, Enter Site</button>
+                    <button id="age-verify-modal-enter-button" class="modal__button-hide btn btn--blue">I'm Over 18, Enter Site</button>
                 </div>
             </div>
         </div>

@@ -1,9 +1,5 @@
 // Button Styles
 
-.btn-default {
-    @include button-variant($white, $blue, $blue);
-}
-
 .btn {
     @extend .font--sans-serif;
     border: none;
@@ -13,6 +9,11 @@
     padding: 8px 30px;
 }
 
-.btn-xl {
-    padding: 15px 30px;
+.btn--blue {
+    @include button-variant($white, $blue, $blue);
 }
+
+.btn--orange {
+    @include button-variant($white, $orange, $orange);
+}
+

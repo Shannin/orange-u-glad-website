@@ -53,6 +53,8 @@ h4,
 h5,
 h6 {
     @extend .font--serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -210,59 +212,6 @@ footer {
     font-size: 12px;
 }
 
-form {
-    .error-box {
-        min-height: 30px;
-        padding-bottom: 10px;
-        color: $red;
-
-        &.success {
-            color: $green;
-        }
-    }
-
-    label {
-        display: inline-block;
-        max-width: 100%;
-        margin-left: 1px;
-        margin-bottom: 2px;
-        
-        color: white;
-        text-shadow: 1px 1px 0px rgba(0,0,0,.1);
-        font-weight: 600;
-    }
-
-    textarea {
-        resize: vertical;
-    }
-
-    .form-group {
-        &.error {
-            label {
-                color: $red-dark;
-            }
-
-            input,
-            textarea {
-                border-color: $red-dark;
-                background-color:  lighten($red, 45%);
-            }
-        } 
-    }
-
-    &.form--small {
-        .form-control {
-            border-radius: 3px;
-            box-shadow: none;
-        }
-    }
-
-    &.form--orange {
-        .form-control {
-            border-color: darken($orange, 20%);
-        }
-    }
-}
 
 // Bootstrap Overrides
 
