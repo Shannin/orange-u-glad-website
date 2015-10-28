@@ -147,6 +147,67 @@ footer {
       .modal-custom .modal__content .modal__content__header {
         padding-top: 20px; } }
 
+form.form--blue .form-control {
+  border-color: #374ca0; }
+  form.form--blue .form-control.error {
+    border-color: #FF0000;
+    background-color: white; }
+    form.form--blue .form-control.error::-webkit-input-placeholder {
+      color: #ff9999; }
+    form.form--blue .form-control.error:-moz-placeholder {
+      /* Firefox 18- */
+      color: #ff9999; }
+    form.form--blue .form-control.error::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ff9999; }
+    form.form--blue .form-control.error:-ms-input-placeholder {
+      color: #ff9999; }
+form.form--blue .form--email__form__email-input {
+  border: #1d2854 solid 3px;
+  border-radius: 12px;
+  height: 58px;
+  color: #1d2854; }
+form.form--blue .form--email__success-message {
+  padding: 10px 30px;
+  font-size: 18px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25); }
+  form.form--blue .form--email__success-message b {
+    font-size: 28px; }
+form.form--blue .btn {
+  width: 100%;
+  max-width: 180px;
+  height: 44px;
+  padding: auto 40px;
+  margin: 7px auto;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
+  cursor: pointer;
+  -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #f08a02));
+  background: -moz-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -webkit-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -o-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -ms-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: linear-gradient(to bottom, #fda228 5%, #f08a02 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
+  background-color: #fda228; }
+form.form--blue .btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
+  background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
+  background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
+  background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
+  background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
+  background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
+  background-color: #d77c02; }
+form.form--blue .btn:active {
+  position: relative;
+  top: 1px; }
+
 .locations-map {
   position: relative;
   width: 100%;
@@ -317,66 +378,6 @@ header {
       color: rgba(255, 255, 255, 0.9);
       font-size: 16px;
       margin-bottom: 20px; }
-    header .header-content .header-content-inner form.form--email .form-control {
-      border-color: #374ca0; }
-      header .header-content .header-content-inner form.form--email .form-control.error {
-        border-color: #FF0000;
-        background-color: white; }
-        header .header-content .header-content-inner form.form--email .form-control.error::-webkit-input-placeholder {
-          color: #ff9999; }
-        header .header-content .header-content-inner form.form--email .form-control.error:-moz-placeholder {
-          /* Firefox 18- */
-          color: #ff9999; }
-        header .header-content .header-content-inner form.form--email .form-control.error::-moz-placeholder {
-          /* Firefox 19+ */
-          color: #ff9999; }
-        header .header-content .header-content-inner form.form--email .form-control.error:-ms-input-placeholder {
-          color: #ff9999; }
-    header .header-content .header-content-inner form.form--email .form--email__form__email-input {
-      border: #1d2854 solid 3px;
-      border-radius: 12px;
-      height: 58px;
-      color: #1d2854; }
-    header .header-content .header-content-inner form.form--email .form--email__success-message {
-      padding: 10px 30px;
-      font-size: 18px;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25); }
-      header .header-content .header-content-inner form.form--email .form--email__success-message b {
-        font-size: 28px; }
-    header .header-content .header-content-inner form.form--email .btn {
-      width: 100%;
-      max-width: 180px;
-      height: 44px;
-      padding: auto 40px;
-      margin: 7px auto;
-      color: #ffffff;
-      font-size: 16px;
-      text-decoration: none;
-      text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
-      cursor: pointer;
-      -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      -webkit-box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      box-shadow: inset 0px 1px 0px 0px #fdb85b;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #f08a02));
-      background: -moz-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -webkit-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -o-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: -ms-linear-gradient(top, #fda228 5%, #f08a02 100%);
-      background: linear-gradient(to bottom, #fda228 5%, #f08a02 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
-      background-color: #fda228; }
-    header .header-content .header-content-inner form.form--email .btn:hover {
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
-      background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
-      background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
-      background-color: #d77c02; }
-    header .header-content .header-content-inner form.form--email .btn:active {
-      position: relative;
-      top: 1px; }
   @media (min-width: 768px) and (min-height: 600px) {
     header {
       min-height: 100%; }
