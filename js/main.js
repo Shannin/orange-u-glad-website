@@ -47,7 +47,7 @@
 
         if (postData.email === "") {
             emailInput.attr('placeholder', 'Please enter an email address');
-            emailInput.addClass('error');
+            emailInput.closest('.form-group').addClass('error');
 
             errorBox.html('Please enter an email address');
             return;

@@ -30,8 +30,7 @@ form {
                 color: $red-dark;
             }
 
-            input,
-            textarea {
+            .form-control {
                 border-color: $red-dark;
                 background-color:  lighten($red, 45%);
 

@@ -185,23 +185,18 @@ form .form-group textarea {
   resize: vertical; }
 form .form-group.error label {
   color: #cc0000; }
-form .form-group.error input,
-form .form-group.error textarea {
+form .form-group.error .form-control {
   border-color: #cc0000;
   background-color: #ffe6e6; }
-  form .form-group.error input::-webkit-input-placeholder,
-  form .form-group.error textarea::-webkit-input-placeholder {
+  form .form-group.error .form-control::-webkit-input-placeholder {
     color: #ff9999; }
-  form .form-group.error input:-moz-placeholder,
-  form .form-group.error textarea:-moz-placeholder {
+  form .form-group.error .form-control:-moz-placeholder {
     /* Firefox 18- */
     color: #ff9999; }
-  form .form-group.error input::-moz-placeholder,
-  form .form-group.error textarea::-moz-placeholder {
+  form .form-group.error .form-control::-moz-placeholder {
     /* Firefox 19+ */
     color: #ff9999; }
-  form .form-group.error input:-ms-input-placeholder,
-  form .form-group.error textarea:-ms-input-placeholder {
+  form .form-group.error .form-control:-ms-input-placeholder {
     color: #ff9999; }
 
 .form--small .form-control {
