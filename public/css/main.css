@@ -38,11 +38,12 @@ h6, .two-line-header-text {
   transition: all 0.35s; }
 
 .button {
+  padding: 8px 30px;
   border: none;
   border-radius: 1px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 8px 30px; }
+  white-space: nowrap; }
   .button:active {
     top: 1px; }
 

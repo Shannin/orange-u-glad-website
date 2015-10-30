@@ -2,11 +2,13 @@
 
 .button {
     @extend .font--sans-serif;
+    padding: 8px 30px;
     border: none;
     border-radius: 1px;
+
     font-weight: 700;
     text-transform: uppercase;
-    padding: 8px 30px;
+    white-space: nowrap;
 
     &:active {
         top:1px;
