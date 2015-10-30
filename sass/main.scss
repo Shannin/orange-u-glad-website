@@ -21,6 +21,8 @@ body {
 
 a {
     @extend .transition-all;
+    text-decoration: none;
+
     color: $blue;
     &:hover,
     &:focus {
@@ -28,11 +30,11 @@ a {
     }
 
     &.orange {
-        color: $orange;
+        color: $orange-dark;
 
         &:hover,
         &:focus {
-            color: darken($orange, 15%);
+            color: $orange-light;
         }
     }
 
@@ -136,6 +138,18 @@ header {
 
     text-align: center;
     color: white;
+
+    img.logo {
+        width: 90%;
+        max-width: 400px;
+
+        margin-bottom: 50px;
+
+
+    }
+
+
+
     .header-content {
         position: relative;
         text-align: center;
@@ -148,8 +162,7 @@ header {
             }
 
             img.logo {
-                width: 90%;
-                max-width: 600px;
+                
                 margin-bottom: 20px;
             }
 
@@ -169,29 +182,29 @@ header {
     }
     @media (min-width: 768px) and (min-height: 600px) {
         min-height: 100%;
+
+        img.logo {
+            position: absolute;
+            margin: auto;
+            top: 8%;
+            left: 0;
+            right: 0;
+        }
+
+
         .header-content {
             position: absolute;
-            top: 42%;
+            top: 50%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             padding: 0 50px;
             .header-content-inner {
-                max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
 
                 h1 {
                     font-size: 90px;
-                }
-
-                img.logo {
-                    margin-bottom: 50px;
-                }
-
-                img.cta {
-                    width: 60%;
-                    max-width: 400px;
                 }
 
                 p {
@@ -213,10 +226,9 @@ header {
     }
 }
 
-footer {
+.text-sm {
     font-size: 12px;
 }
-
 
 // Bootstrap Overrides
 

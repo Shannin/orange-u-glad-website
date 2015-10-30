@@ -1,7 +1,7 @@
 @font-face {
   font-family: StickARound;
   src: url("/fonts/Stick-A-Round.ttf"); }
-.font--sans-serif, .btn, html,
+.font--sans-serif, .button, html,
 body {
   font-family: 'Asap', 'Helvetica Neue', sans-serif; }
 
@@ -32,51 +32,85 @@ h6, .two-line-header-text {
 .text-green {
   color: #169949; }
 
-.transition-all, .btn--blue, .btn--orange, a, .navbar-default, .navbar-default .navbar--brand img {
+.transition-all, .button--blue, .button--orange, a, .navbar-default, .navbar-default .navbar--brand img {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
 
-.btn {
+.button {
   border: none;
   border-radius: 1px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 8px 30px; }
+  .button:active {
+    top: 1px; }
 
-.btn--blue {
+.button--blue {
   color: #FFF;
   background-color: #1d2854;
   border-color: #1d2854; }
-  .btn--blue:hover, .btn--blue:focus, .btn--blue.focus, .btn--blue:active, .btn--blue.active {
+  .button--blue:hover, .button--blue:focus, .button--blue.focus, .button--blue:active, .button--blue.active {
     color: #FFF;
     background-color: #161f41;
     border-color: #141b39; }
-  .btn--blue:active, .btn--blue.active {
+  .button--blue:active, .button--blue.active {
     background-image: none; }
-  .btn--blue.disabled, .btn--blue.disabled:hover, .btn--blue.disabled:focus, .btn--blue.disabled.focus, .btn--blue.disabled:active, .btn--blue.disabled.active, .btn--blue[disabled], .btn--blue[disabled]:hover, .btn--blue[disabled]:focus, .btn--blue[disabled].focus, .btn--blue[disabled]:active, .btn--blue[disabled].active, fieldset[disabled] .btn--blue, fieldset[disabled] .btn--blue:hover, fieldset[disabled] .btn--blue:focus, fieldset[disabled] .btn--blue.focus, fieldset[disabled] .btn--blue:active, fieldset[disabled] .btn--blue.active {
+  .button--blue.disabled, .button--blue.disabled:hover, .button--blue.disabled:focus, .button--blue.disabled.focus, .button--blue.disabled:active, .button--blue.disabled.active, .button--blue[disabled], .button--blue[disabled]:hover, .button--blue[disabled]:focus, .button--blue[disabled].focus, .button--blue[disabled]:active, .button--blue[disabled].active, fieldset[disabled] .button--blue, fieldset[disabled] .button--blue:hover, fieldset[disabled] .button--blue:focus, fieldset[disabled] .button--blue.focus, fieldset[disabled] .button--blue:active, fieldset[disabled] .button--blue.active {
     background-color: #1d2854;
     border-color: #1d2854; }
-  .btn--blue .badge {
+  .button--blue .badge {
     color: #1d2854;
     background-color: #FFF; }
 
-.btn--orange {
+.button--orange {
   color: #FFF;
   background-color: #fda228;
   border-color: #fda228; }
-  .btn--orange:hover, .btn--orange:focus, .btn--orange.focus, .btn--orange:active, .btn--orange.active {
+  .button--orange:hover, .button--orange:focus, .button--orange.focus, .button--orange:active, .button--orange.active {
     color: #FFF;
     background-color: #fd970f;
     border-color: #fd9305; }
-  .btn--orange:active, .btn--orange.active {
+  .button--orange:active, .button--orange.active {
     background-image: none; }
-  .btn--orange.disabled, .btn--orange.disabled:hover, .btn--orange.disabled:focus, .btn--orange.disabled.focus, .btn--orange.disabled:active, .btn--orange.disabled.active, .btn--orange[disabled], .btn--orange[disabled]:hover, .btn--orange[disabled]:focus, .btn--orange[disabled].focus, .btn--orange[disabled]:active, .btn--orange[disabled].active, fieldset[disabled] .btn--orange, fieldset[disabled] .btn--orange:hover, fieldset[disabled] .btn--orange:focus, fieldset[disabled] .btn--orange.focus, fieldset[disabled] .btn--orange:active, fieldset[disabled] .btn--orange.active {
+  .button--orange.disabled, .button--orange.disabled:hover, .button--orange.disabled:focus, .button--orange.disabled.focus, .button--orange.disabled:active, .button--orange.disabled.active, .button--orange[disabled], .button--orange[disabled]:hover, .button--orange[disabled]:focus, .button--orange[disabled].focus, .button--orange[disabled]:active, .button--orange[disabled].active, fieldset[disabled] .button--orange, fieldset[disabled] .button--orange:hover, fieldset[disabled] .button--orange:focus, fieldset[disabled] .button--orange.focus, fieldset[disabled] .button--orange:active, fieldset[disabled] .button--orange.active {
     background-color: #fda228;
     border-color: #fda228; }
-  .btn--orange .badge {
+  .button--orange .badge {
     color: #fda228;
     background-color: #FFF; }
+
+.button--orange-gradient {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
+  -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  box-shadow: inset 0px 1px 0px 0px #fdb85b;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fda228), color-stop(1, #f08a02));
+  background: -moz-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -webkit-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -o-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: -ms-linear-gradient(top, #fda228 5%, #f08a02 100%);
+  background: linear-gradient(to bottom, #fda228 5%, #f08a02 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
+  background-color: #fda228; }
+  .button--orange-gradient:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
+    background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
+    background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
+    background: -o-linear-gradient(top, #d77c02 5%, #fda228 100%);
+    background: -ms-linear-gradient(top, #d77c02 5%, #fda228 100%);
+    background: linear-gradient(to bottom, #d77c02 5%, #fda228 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
+    background-color: #d77c02; }
+
+.button-xl {
+  width: 100%;
+  max-width: 240px;
+  height: 48px;
+  padding: auto 40px;
+  font-size: 18px; }
 
 header,
 section,
@@ -309,13 +343,14 @@ body {
   width: 100%; }
 
 a {
+  text-decoration: none;
   color: #1d2854; }
   a:hover, a:focus {
     color: #10162e; }
   a.orange {
-    color: #fda228; }
+    color: #d77c02; }
     a.orange:hover, a.orange:focus {
-      color: #d77c02; }
+      color: #fbc543; }
   a.white {
     color: #FFF; }
     a.white:hover, a.white:focus {
@@ -378,6 +413,10 @@ header {
   min-height: auto;
   text-align: center;
   color: white; }
+  header img.logo {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 50px; }
   header .header-content {
     position: relative;
     text-align: center;
@@ -387,8 +426,6 @@ header {
       color: #fda228;
       font-size: 62px; }
     header .header-content .header-content-inner img.logo {
-      width: 90%;
-      max-width: 600px;
       margin-bottom: 20px; }
     header .header-content .header-content-inner img.cta {
       width: 60%;
@@ -402,24 +439,24 @@ header {
   @media (min-width: 768px) and (min-height: 600px) {
     header {
       min-height: 100%; }
+      header img.logo {
+        position: absolute;
+        margin: auto;
+        top: 8%;
+        left: 0;
+        right: 0; }
       header .header-content {
         position: absolute;
-        top: 42%;
+        top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         padding: 0 50px; }
         header .header-content .header-content-inner {
-          max-width: 1000px;
           margin-left: auto;
           margin-right: auto; }
           header .header-content .header-content-inner h1 {
             font-size: 90px; }
-          header .header-content .header-content-inner img.logo {
-            margin-bottom: 50px; }
-          header .header-content .header-content-inner img.cta {
-            width: 60%;
-            max-width: 400px; }
           header .header-content .header-content-inner p {
             font-size: 18px;
             max-width: 80%;
@@ -428,7 +465,7 @@ header {
           header .header-content .header-content-inner form.form--email {
             height: 110px; } }
 
-footer {
+.text-sm {
   font-size: 12px; }
 
 .no-gutter > [class*='col-'] {
