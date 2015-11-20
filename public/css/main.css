@@ -430,15 +430,16 @@ header {
   header .header-content {
     position: relative;
     text-align: center;
-    padding: 100px 15px 100px;
+    padding: 65px 15px 65px;
     width: 100%; }
     header .header-content .header-content-inner h1 {
-      font-size: 36px; }
+      font-size: 40px;
+      margin-bottom: 30px; }
     header .header-content .header-content-inner p {
       font-weight: 300;
       color: rgba(255, 255, 255, 0.9);
       font-size: 16px;
-      margin-bottom: 30px; }
+      margin-bottom: 80px; }
   @media (min-width: 768px) and (min-height: 600px) {
     header {
       min-height: 100%; }
@@ -459,7 +460,7 @@ header {
           margin-left: auto;
           margin-right: auto; }
           header .header-content .header-content-inner h1 {
-            font-size: 52px; }
+            font-size: 58px; }
           header .header-content .header-content-inner p {
             font-size: 17px;
             margin-bottom: 40px; }
