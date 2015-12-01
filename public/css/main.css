@@ -23,6 +23,9 @@ h6, .two-line-header-text {
 .text-small {
   font-size: 12px; }
 
+.text-large {
+  font-size: 18px; }
+
 .text-regular {
   font-weight: normal; }
 
@@ -126,6 +129,10 @@ header,
 section,
 footer {
   padding: 15px 0px; }
+
+.section--blue {
+  background-color: #1d2854;
+  color: #FFF; }
 
 .section--blue-gradient {
   background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);

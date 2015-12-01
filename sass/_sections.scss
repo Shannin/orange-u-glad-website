@@ -6,6 +6,10 @@ footer {
     padding: 15px 0px;
 }
 
+.section--blue {
+    background-color: $blue;
+    color: $white;
+}
 
 .section--blue-gradient {
     background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #2D70AF 0%, #031440 85%);
