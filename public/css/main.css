@@ -26,6 +26,10 @@ h6, .two-line-header-text {
 .text-large {
   font-size: 18px; }
 
+.text-xl, .testimonials .testimonials-wrapper h3 {
+  font-size: 22px;
+  line-height: 30px; }
+
 .text-regular {
   font-weight: normal; }
 
@@ -145,6 +149,10 @@ footer {
 .section--brown {
   background-color: #3e2317;
   color: #FFF; }
+
+.section--gray, .testimonials {
+  background-clip: #f4f6f6;
+  color: #333; }
 
 .section--orange {
   background-color: #fda228;
@@ -353,6 +361,13 @@ form .form-group.error .form-control {
     .locations-map .locations-map__map-box,
     .locations-map .locations-map__dispensary-card-container {
       top: 70px; } }
+
+.testimonials {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .testimonials .testimonials-wrapper {
+    min-height: 90px;
+    margin-top: 25px; }
 
 html,
 body {

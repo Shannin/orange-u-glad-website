@@ -25,6 +25,11 @@ footer {
     color: $white;
 }
 
+.section--gray {
+    background-clip: $gray;
+    color: $black;
+}
+
 .section--orange {
     background-color: $orange;
     color: $white;
