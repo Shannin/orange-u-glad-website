@@ -1,7 +1,7 @@
 @font-face {
   font-family: StickARound;
   src: url("/fonts/Stick-A-Round.ttf"); }
-.font--sans-serif, .button, html,
+.font--sans-serif, .button, .testimonials .testimonials-wrapper h3, html,
 body {
   font-family: 'Asap', 'Helvetica Neue', sans-serif; }
 

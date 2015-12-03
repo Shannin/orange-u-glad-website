@@ -10,6 +10,7 @@
 
         h3 {
             @extend .text-xl;
+            @extend .font--sans-serif;
         }
     }
 }
