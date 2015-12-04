@@ -366,10 +366,14 @@ form .form-group.error .form-control {
   padding-top: 25px;
   padding-bottom: 25px; }
   .testimonials .testimonials__testimonial-wrapper {
-    min-height: 90px;
-    margin-top: 25px; }
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px; }
     .testimonials .testimonials__testimonial-wrapper h3 {
-      display: none; }
+      position: absolute;
+      display: none;
+      left: 0;
+      right: 0; }
 
 html,
 body {
