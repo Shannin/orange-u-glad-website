@@ -25,6 +25,12 @@ footer {
     color: $white;
 }
 
+.section--image {
+    background-position: bottom left;
+    background-size: cover;
+    height: 85%;
+}
+
 .section--orange {
     background-color: $orange;
     color: $white;

@@ -146,6 +146,11 @@ footer {
   background-color: #3e2317;
   color: #FFF; }
 
+.section--image {
+  background-position: bottom left;
+  background-size: cover;
+  height: 85%; }
+
 .section--orange {
   background-color: #fda228;
   color: #FFF; }
