@@ -47,6 +47,19 @@ footer {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange',GradientType=1 );
 }
 
+.section--orange-gradient-dark {
+    color: $white;
+
+    background: darken($orange, 10%);
+    background: -moz-linear-gradient(-15deg,  $orange 0%, darken($orange, 10%) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$orange), color-stop(100%,darken($orange, 10%)));
+    background: -webkit-linear-gradient(-15deg,  $orange 0%,darken($orange, 10%) 100%);
+    background: -o-linear-gradient(-15deg,  $orange 0%,darken($orange, 10%) 100%);
+    background: -ms-linear-gradient(-15deg,  $orange 0%,darken($orange, 10%) 100%);
+    background: linear-gradient(165deg,  $orange 0%,darken($orange, 10%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=1 );
+}
+
 .section--padded-medium {
     padding: 35px 0px;
 }

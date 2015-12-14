@@ -165,6 +165,17 @@ footer {
   background: linear-gradient(135deg, #fbc543 0%, #fda228 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange',GradientType=1 ); }
 
+.section--orange-gradient-dark {
+  color: #FFF;
+  background: #f08a02;
+  background: -moz-linear-gradient(-15deg, #fda228 0%, #f08a02 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fda228), color-stop(100%, #f08a02));
+  background: -webkit-linear-gradient(-15deg, #fda228 0%, #f08a02 100%);
+  background: -o-linear-gradient(-15deg, #fda228 0%, #f08a02 100%);
+  background: -ms-linear-gradient(-15deg, #fda228 0%, #f08a02 100%);
+  background: linear-gradient(165deg, #fda228 0%, #f08a02 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=1 ); }
+
 .section--padded-medium {
   padding: 35px 0px; }
 
