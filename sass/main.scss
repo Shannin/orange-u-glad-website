@@ -165,6 +165,13 @@ header {
                 margin-bottom: 80px;
             }
 
+            .image-right {
+                position: absolute;
+                height: 725px;
+                left: -15%;
+                top: -225px;
+            }
+
         }
     }
     @media (min-width: 768px) and (min-height: 600px) {
