@@ -25,42 +25,145 @@
         </nav>
 
         <header class="section--blue-gradient">
+            <img src="img/logo.svg" class="logo">
+            
             <div class="header-content">
                 <div class="header-content-inner">
-                    <img src="img/logo.svg" class="logo">
-
-                    <img src="img/coming-soon.svg" class="cta">
-                    <p>Debuting this fall in dispensaries across California, <span style="white-space: nowrap">Orange-U-Glad</span> is bringing a new experience to cannabis infused chocolate.  Made from premium dark chocolate and cannabis extracts, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is a new way to medicate that’s a delight to all the senses.  <b>Sign up below to be alerted when the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is in dispensaries near you.</b></p>
-                    
-                    <form id="header-email-form" class="form--email" action="/api/addEmailToList"  method="POST">
-                        <input type="hidden" name="emailList" value="7118ddea20">
-
+                    <div class="container">
                         <div class="row">
-                            <div class="error-box"> </div>
-                        </div>  
-
-                        <div class="form--email__form row">
-                            <div class="form-group col-sm-8 col-sm-offset-1">
-                                <input type="email" class="form--email__form__email-input form-control input-lg" name="email" placeholder="Email">
+                            <div class="hidden-md hidden-lg hidden-xl">
+                                <img class="image-top" src="img/header-orange.png">
                             </div>
-                            <div class="form-group col-sm-2">
-                                <button type="submit" class="btn btn-default input-lg">Add Me!</button>
-                            </div>  
-                        </div>
+                            <div class="col-md-7">
+                                <h1 class="text--orange">Introducing the <span style="white-space: nowrap">Orange-U-Glad</span> <span style="white-space: nowrap">Chocolate Orange</span></h1>
+                                <p>With 20 slices pre-dosed at 10mg of THC each, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an easy and delightful new way to experience cannabis infused chocolate.</p>
 
-                        <div class="form--email__success-message row text-green" style="display: none">
-                            <b>Thanks!</b> You will be the first to know when <span style="white-space: nowrap">Orange-U-Glad</span> is in dispensaries!
+                                <form action="#locations">
+                                    <button type="submit" class="button button--orange-gradient button-xl">Where to Find</button>
+                                </form>
+                                <a href="#contact" class="orange text-sm" style="margin-top: 8px; display: block">Are you a dispensary?</a>
+                            </div>
+                            <div class="hidden-xs hidden-sm col-md-5 text-center">
+                                <img class="image-right" src="img/header-orange.png">
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </header>
+
+        <div class="section--image" style="background-image: url('img/open-box.jpg');">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-6">
+                         <h3 class="font--sans-serif text-regular" style="line-height: 1.4em">
+                            <div class="hidden-xs hidden-sm" style="padding-top: 35%">Each orange is carefully hand crafted from smooth dark chocolate and infused with extracts from premium California cannabis and all natural orange oil.</div>
+                            <div class="hidden-md hidden-lg hidden-xl" style="padding-top: 10%">Each orange is carefully hand crafted from smooth dark chocolate and infused with extracts from premium California cannabis and all natural orange oil.</div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section--orange-gradient-dark section--padded-medium">
+            <div class="container text-center"> 
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-1">
+                        <img src="img/line-orange.svg" width="110px">
+                        <div class="text-medium" style="padding-top: 9px;">Artisanal Dark Chocolate</div>
+                        <div class="hidden-md hidden-lg" style="height:30px;"></div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <img src="img/cannabis-indica.svg" width="110px">
+                        <div class="text-medium">Premium California Cannabis Extracts</div>
+                        <div class="hidden-md hidden-lg" style="height:30px;"></div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <img src="img/line-peel-oil.svg" width="110px">
+                        <div class="text-medium" style="padding-top: 9px;">Natural Orange Oils</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <div id="locations" style="position: absolute; top: -50px;"></div>
+        </div>
+
+        <div id="locations-map" class="locations-map">
+            <div class="locations-map__header">
+                <div class="container">
+                    <h1 class="font-serif">Find us at the following locations</h1>
+                </div>
+            </div>
+            <div id="google-maps-box" class="locations-map__map-box"></div>
+            <div class="locations-map__dispensary-card-container hidden"></div>
+        </div>
+
+        <section class="section--white section--padded-medium" id="newsletter-subscribe">
+            <div class="container">
+                <form id="form-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
+                    <input type="hidden" name="emailList" value="7118ddea20">
+
+                    <div id="form-newsletter__form" class="row" >
+                        <div class="col-lg-4 text-center">
+                            <h1 class="font--serif text-right" style="margin-top: -3px;">GET THE JUICE</h1>
+                        </div>
+                        <div class="form-group no-margin-tb col-md-7 col-md-offset-2 col-lg-5 col-lg-offset-0">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group no-margin-tb col-md-1 text-center">
+                            <button type="submit" class="button button--blue">Add Me!</button>
+                        </div>  
+                    </div>
+
+                    <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
+                        <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section--blue section--padded-large" id="disclaimer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-1 text-center">
+                        <img src="img/testing-disclaimer.svg" width="75%">
+                        <br>
+                        <img src="img/per-slice.svg" style="display: inline;" width="40%">
+                        <img src="img/per-orange.svg" style="display: inline;" width="40%">
+                        <div class="hidden-md hidden-lg" style="height:50px;"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-justify">
+                        <span class="text-large">Orange-U-Glad holds itself to the highest standard when it comes to quality, consistency, and accuracy in potency.  We use only premium coverture chocolate and natural ingredients.  Further, all extracts are tested by CW Analytical for potency and quality, and we regularly test our chocolate to make sure it's consistent from batch to batch.</span>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <div style="padding-top: 20px;">
+                            <span class="text-medium">Ingredients:</span>
+                            cocoa bean (cocoa liquor, cocoa butter), sugar, soy lecithin, vanilla, cannabis extract, natural flavor
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <hr>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <p class="text-center">Consuming this product causes THC to be absorbed sublingually and though ingestion.  The amount of time before you start to feel the effects of the THC after consumption can range from 30 minutes to two hours, and is dependent on a number of factors from how much food you’ve ate to your metabolic rate.  Wait at least one hour after initial consumption before increasing dosage.</p>
+                        <p class="text-medium text-center">It’s important to know your dose when medicating with cannabis.  We recommend starting with half a slice (5mg) and waiting at least one hour before consuming more.  Start slow and low, and work your way up until you find a dose that works for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="section--orange-gradient section--padded-large" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <img src="img/contact-header.svg" style="width: 100%; margin-bottom: 10px;">
+                        <div class="two-line-header-text">
+                            <h1>Dispensary, delivery service, or have a question?</h1>
+                            <span>Get in touch!</span>
+                        </div>
                         <form id="contact-form" class="form--small form--orange" action="/api/contact"  method="POST">
                             <div class="row">
                                 <div class="error-box"> </div>
@@ -92,7 +195,7 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-12 text-right">
-                                    <button type="submit" class="btn btn-default">Send</button>
+                                    <button type="submit" class="button button--blue">Send</button>
                                 </div>
                             </div>
                         </form>
@@ -102,21 +205,44 @@
         </section>
 
         <footer class="section--brown">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-8">
-                        © 2015 Orange-U-Glad, brought to you by Shanninigan Brands
+            <div class="container text-sm">
+                <div class="row hidden-sm hidden-md hidden-lg text-center">
+                    <div class="col-xs-12">
+                        © 2015 Orange-U-Glad, A Shanninigan Brands Company
                     </div>
-                    <div class="col-xs-4 text-right">
+                    <div class="col-xs-12">
+                        <a class="white" href="mail:info@orange-u-glad.com">Contact</a>
+                    </div>
+                </div>
+                <div class="row visible-sm-block visible-md-block visible-lg-block ">
+                    <div class="col-sm-7">
+                        © 2015 Orange-U-Glad, A Shanninigan Brands Company
+                    </div>
+                    <div class="col-sm-5 text-right">
                         <a class="white" href="mail:info@orange-u-glad.com">Contact</a>
                     </div>
                 </div>
             </div>
         </footer>
 
+        <div id="age-verify-modal" class="modal-custom">
+            <div class="modal__content">
+                <div class="modal__content__header">
+                    <img src="img/logo.svg">
+                </div>
+                <div class="modal__content__body">
+                    <p>You must be 18 or older to view this website.<br><b>Please verify your age:</b></p>
+                </div>
+                <div class="modal__content__buttons">
+                    <button id="age-verify-modal-enter-button" class="modal__button-hide button button--blue">I'm Over 18, Enter Site</button>
+                </div>
+            </div>
+        </div>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_HouQkKVlrxgZDGsDmcqvnnPF7HV5O4I&callback=initMap" async defer></script>
 
-        <script src="js/main.js"></script>
+        <script src="js/main.min.js"></script>
     </body>
 </html>

@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 (function($) {
     "use strict"; // Start of use strict
 
@@ -30,9 +24,14 @@
 
     $(document).ready(function () {
         adjustPage();
+
+        var isEighteen = localStorage.getItem('isEighteen');
+        if (!isEighteen) {
+            $('#age-verify-modal').addClass('visible');
+        }
     });
 
-    $('#header-email-form').submit(function (event) {
+    $('#form-newsletter').submit(function (event) {
         event.preventDefault();
         var form = $(this);
         var emailInput = $('input[name="email"]', form);
@@ -48,7 +47,7 @@
 
         if (postData.email === "") {
             emailInput.attr('placeholder', 'Please enter an email address');
-            emailInput.addClass('error');
+            emailInput.closest('.form-group').addClass('error');
 
             errorBox.html('Please enter an email address');
             return;
@@ -56,16 +55,17 @@
 
         submitBtn.prop('disabled', true);
     
-        $.post('/api/addEmailToList', postData, function(data) {
+        $.post('/api/newsletter', postData, function(data) {
             submitBtn.prop('disabled', false);
 
             if (!data.success) {
+                emailInput.closest('.form-group').addClass('error');
                 errorBox.html(data.message);
                 return;
             }
 
-            $('.form--email__form', form).toggle();
-            $('.form--email__success-message', form).toggle();
+            $('#form-newsletter__form', form).toggle();
+            $('#form-newsletter__success-message', form).toggle();
         });
     });
 
@@ -130,4 +130,4 @@
         
     });
 
-})(jQuery); // End of use strict
+})(jQuery);

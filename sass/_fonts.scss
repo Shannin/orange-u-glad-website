@@ -25,10 +25,30 @@
     font-size: 12px;
 }
 
+.text-large {
+    font-size: 18px;
+}
+
+.text-regular {
+    font-weight: normal;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
 .text-primary {
     color: $black;
 }
 
 .text-green {
     color: $green;
+}
+
+.text--orange {
+    color: $orange;
 }

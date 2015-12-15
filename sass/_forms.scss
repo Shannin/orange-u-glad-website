@@ -1,0 +1,90 @@
+form {
+    .error-box {
+        min-height: 30px;
+        padding-bottom: 10px;
+        color: $red;
+
+        &.success {
+            color: $green;
+        }
+    }
+
+    .form-group {
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-left: 1px;
+            margin-bottom: 2px;
+            
+            color: white;
+            text-shadow: 1px 1px 0px rgba(0,0,0,.1);
+            font-weight: 600;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        &.error {
+            label {
+                color: $red-dark;
+            }
+
+            .form-control {
+                border-color: $red-dark;
+                background-color:  lighten($red, 45%);
+
+                &::-webkit-input-placeholder {
+                   color: lighten($red, 30%);
+                }
+
+                &:-moz-placeholder { /* Firefox 18- */
+                   color: lighten($red, 30%);;  
+                }
+
+                &::-moz-placeholder {  /* Firefox 19+ */
+                   color: lighten($red, 30%);;  
+                }
+
+                &:-ms-input-placeholder {
+                   color: lighten($red, 30%);
+                }
+            }
+        }
+    }
+}
+
+.form--small {
+    .form-control {
+        border-radius: 3px;
+        box-shadow: none;
+    }
+}
+
+.form--large {
+    .form-group {
+        .form-control {
+            height: 46px;
+            border-width: 2px;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 5px;
+        }
+    }
+}
+
+.form--orange {
+    .form-control {
+        border-color: darken($orange, 20%);
+    }
+}
+
+.form--blue {
+    .form-group {
+        .form-control {
+            border-color: lighten($blue, 10%);
+        }
+    }
+}

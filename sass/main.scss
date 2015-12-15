@@ -4,6 +4,10 @@
 
 @import "buttons";
 @import "sections";
+@import "modals";
+@import "forms";
+
+@import "components/map";
 
 
 // Global Components
@@ -17,6 +21,8 @@ body {
 
 a {
     @extend .transition-all;
+    text-decoration: none;
+
     color: $blue;
     &:hover,
     &:focus {
@@ -24,11 +30,11 @@ a {
     }
 
     &.orange {
-        color: $orange;
+        color: $orange-dark;
 
         &:hover,
         &:focus {
-            color: darken($orange, 15%);
+            color: $orange-light;
         }
     }
 
@@ -49,6 +55,16 @@ h4,
 h5,
 h6 {
     @extend .font--serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        font-size: 44px;
+    }
 }
 
 p {
@@ -57,8 +73,34 @@ p {
     margin-bottom: 20px;
 }
 
+.no-margin-tb {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .no-padding {
     padding: 0;
+}
+
+.two-line-header-text {
+    @extend .font--serif;
+
+    h1 {
+        margin: 0;
+    }
+
+    span {
+        font-style: italic;
+        padding-left: 30px;
+        font-size: 26px;
+    }
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        span {
+            padding-left: 40px;
+            font-size: 32px;
+        }
+    }
 }
 
 
@@ -96,152 +138,86 @@ header {
 
     text-align: center;
     color: white;
+
+    img.logo {
+        width: 90%;
+        max-width: 400px;
+
+        margin: auto;
+        margin-bottom: 50px;
+
+        z-index: 1000;
+    }
+
     .header-content {
         position: relative;
         text-align: center;
-        padding: 100px 15px 100px;
+        padding: 65px 15px 65px;
         width: 100%;
         .header-content-inner {
-            img.logo {
-                width: 90%;
-                max-width: 600px;
-                margin-bottom: 20px;
-            }
 
-            img.cta {
-                width: 60%;
-                max-width: 400px;
-                margin-bottom: 10px;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 30px;
             }
 
             p {
                 font-weight: 300;
                 color: transparentize(white, .1);
                 font-size: 16px;
-                margin-bottom: 20px;
+                margin-bottom: 80px;
             }
 
-            form.form--email {
-
-                .form-control {
-                    border-color: lighten($blue, 20%);
-
-                    &.error {
-                        border-color: $red;
-                        background-color: lighten($red, 70%);
-
-                        &::-webkit-input-placeholder {
-                           color: lighten($red, 30%);
-                        }
-
-                        &:-moz-placeholder { /* Firefox 18- */
-                           color: lighten($red, 30%);;  
-                        }
-
-                        &::-moz-placeholder {  /* Firefox 19+ */
-                           color: lighten($red, 30%);;  
-                        }
-
-                        &:-ms-input-placeholder {
-                           color: lighten($red, 30%);
-                        }
-                    }
-                }
-                
-                .form--email__form__email-input {
-                    border: $blue solid 3px;
-                    border-radius: 12px;
-
-
-                    height: 58px;
-
-                    color: $blue;
-                }
-
-                .form--email__success-message {
-                    padding: 10px 30px;
-                    font-size: 18px;
-
-                    text-shadow: 1px 1px 0px transparentize(black, .75);
-
-                    b {
-                        font-size: 28px;
-                    }
-                }
-
-                .btn {
-                    width: 100%;
-                    max-width: 180px;
-                    height: 44px;
-                    padding: auto 40px;
-                    margin: 7px auto;
-
-                    color: #ffffff;
-                    font-size: 16px;
-                    text-decoration: none;
-                    text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
-                    cursor: pointer;
-
-                    -moz-box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 25%);
-                    -webkit-box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 25%);
-                    box-shadow:inset 0px 1px 0px 0px lighten($orange-dark, 25%);
-
-                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $orange), color-stop(1, darken($orange, 10%)));
-                    background:-moz-linear-gradient(top, $orange 5%, darken($orange, 10%) 100%);
-                    background:-webkit-linear-gradient(top, $orange 5%, darken($orange, 10%) 100%);
-                    background:-o-linear-gradient(top, $orange 5%, darken($orange, 10%) 100%);
-                    background:-ms-linear-gradient(top, $orange 5%, darken($orange, 10%) 100%);
-                    background:linear-gradient(to bottom, $orange 5%, darken($orange, 10%) 100%);
-                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
-                    background-color:$orange;
-                }
-                .btn:hover {
-                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $orange-dark), color-stop(1, $orange));
-                    background:-moz-linear-gradient(top, $orange-dark 5%, $orange 100%);
-                    background:-webkit-linear-gradient(top, $orange-dark 5%, $orange 100%);
-                    background:-o-linear-gradient(top, $orange-dark 5%, $orange 100%);
-                    background:-ms-linear-gradient(top, $orange-dark 5%, $orange 100%);
-                    background:linear-gradient(to bottom, $orange-dark 5%, $orange 100%);
-                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange-dark', endColorstr='$orange',GradientType=0);
-                    background-color:$orange-dark;
-                }
-                .btn:active {
-                    position:relative;
-                    top:1px;
-                }
-
-
+            .image-top {
+                width: 100%;
+                margin-top: -35%;
+                margin-bottom: -15%;
             }
+
+            .image-right {
+                position: absolute;
+                height: 725px;
+                left: -15%;
+                top: -225px;
+            }
+
         }
     }
     @media (min-width: 768px) and (min-height: 600px) {
         min-height: 100%;
+
+        img.logo {
+            position: absolute;
+            margin: auto;
+            top: 8%;
+            left: 0;
+            right: 0;
+        }
+
+
         .header-content {
             position: absolute;
-            top: 42%;
+            top: 50%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             padding: 0 50px;
             .header-content-inner {
-                max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
 
-                img.logo {
-                    margin-bottom: 50px;
-                }
-
-                img.cta {
-                    width: 60%;
-                    max-width: 400px;
+                h1 {
+                    font-size: 58px;
                 }
 
                 p {
-                    font-size: 18px;
-                    max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
+                    font-size: 17px;
+                    margin-bottom: 40px;
+                }
+
+                .image-top {
+                    width: 100%;
+                    margin-top: 5%;
                 }
 
                 form.form--email {
@@ -256,62 +232,8 @@ header {
     }
 }
 
-footer {
+.text-sm {
     font-size: 12px;
-}
-
-form {
-    .error-box {
-        min-height: 30px;
-        padding-bottom: 10px;
-        color: $red;
-
-        &.success {
-            color: $green;
-        }
-    }
-
-    label {
-        display: inline-block;
-        max-width: 100%;
-        margin-left: 1px;
-        margin-bottom: 2px;
-        
-        color: white;
-        text-shadow: 1px 1px 0px rgba(0,0,0,.1);
-        font-weight: 600;
-    }
-
-    textarea {
-        resize: vertical;
-    }
-
-    .form-group {
-        &.error {
-            label {
-                color: $red-dark;
-            }
-
-            input,
-            textarea {
-                border-color: $red-dark;
-                background-color:  lighten($red, 45%);
-            }
-        } 
-    }
-
-    &.form--small {
-        .form-control {
-            border-radius: 3px;
-            box-shadow: none;
-        }
-    }
-
-    &.form--orange {
-        .form-control {
-            border-color: darken($orange, 20%);
-        }
-    }
 }
 
 // Bootstrap Overrides
