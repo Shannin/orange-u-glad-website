@@ -143,7 +143,10 @@ header {
         width: 90%;
         max-width: 400px;
 
+        margin: auto;
         margin-bottom: 50px;
+
+        z-index: 1000;
     }
 
     .header-content {
@@ -163,6 +166,12 @@ header {
                 color: transparentize(white, .1);
                 font-size: 16px;
                 margin-bottom: 80px;
+            }
+
+            .image-top {
+                width: 100%;
+                margin-top: -35%;
+                margin-bottom: -15%;
             }
 
             .image-right {
@@ -204,6 +213,11 @@ header {
                 p {
                     font-size: 17px;
                     margin-bottom: 40px;
+                }
+
+                .image-top {
+                    width: 100%;
+                    margin-top: 5%;
                 }
 
                 form.form--email {

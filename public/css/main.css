@@ -450,7 +450,9 @@ header {
   header img.logo {
     width: 90%;
     max-width: 400px;
-    margin-bottom: 50px; }
+    margin: auto;
+    margin-bottom: 50px;
+    z-index: 1000; }
   header .header-content {
     position: relative;
     text-align: center;
@@ -464,6 +466,10 @@ header {
       color: rgba(255, 255, 255, 0.9);
       font-size: 16px;
       margin-bottom: 80px; }
+    header .header-content .header-content-inner .image-top {
+      width: 100%;
+      margin-top: -35%;
+      margin-bottom: -15%; }
     header .header-content .header-content-inner .image-right {
       position: absolute;
       height: 725px;
@@ -493,6 +499,9 @@ header {
           header .header-content .header-content-inner p {
             font-size: 17px;
             margin-bottom: 40px; }
+          header .header-content .header-content-inner .image-top {
+            width: 100%;
+            margin-top: 5%; }
           header .header-content .header-content-inner form.form--email {
             height: 110px; } }
 
