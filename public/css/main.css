@@ -23,6 +23,9 @@ h6, .two-line-header-text {
 .text-small {
   font-size: 12px; }
 
+.text-plus {
+  font-size: 16px; }
+
 .text-large {
   font-size: 18px; }
 
@@ -35,8 +38,11 @@ h6, .two-line-header-text {
 .text-bold {
   font-weight: bold; }
 
-.text-primary {
+.text-black {
   color: #333; }
+
+.text-gray {
+  color: #494949; }
 
 .text-green {
   color: #169949; }
@@ -58,6 +64,8 @@ h6, .two-line-header-text {
   white-space: nowrap; }
   .button:active {
     top: 1px; }
+  .button:hover {
+    text-decoration: none; }
 
 .button--blue {
   color: #FFF;
@@ -94,7 +102,7 @@ h6, .two-line-header-text {
     background-color: #FFF; }
 
 .button--orange-gradient {
-  color: #ffffff;
+  color: #FFF;
   text-decoration: none;
   text-shadow: 0px 1px 0px rgba(150, 84, 6, 0.1);
   -moz-box-shadow: inset 0px 1px 0px 0px #fdb85b;
@@ -109,6 +117,7 @@ h6, .two-line-header-text {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=0);
   background-color: #fda228; }
   .button--orange-gradient:hover {
+    color: #FFF;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d77c02), color-stop(1, #fda228));
     background: -moz-linear-gradient(top, #d77c02 5%, #fda228 100%);
     background: -webkit-linear-gradient(top, #d77c02 5%, #fda228 100%);
@@ -122,7 +131,7 @@ h6, .two-line-header-text {
   width: 100%;
   max-width: 240px;
   height: 48px;
-  padding: auto 40px;
+  padding: 10px 50px;
   font-size: 18px; }
 
 header,
@@ -475,7 +484,7 @@ header {
       height: 725px;
       left: -15%;
       top: -225px; }
-  @media (min-width: 768px) and (min-height: 600px) {
+  @media (min-width: 992px) and (min-height: 600px) {
     header {
       min-height: 100%; }
       header img.logo {
@@ -501,9 +510,7 @@ header {
             margin-bottom: 40px; }
           header .header-content .header-content-inner .image-top {
             width: 100%;
-            margin-top: 5%; }
-          header .header-content .header-content-inner form.form--email {
-            height: 110px; } }
+            margin-top: 5%; } }
 
 .text-sm {
   font-size: 12px; }

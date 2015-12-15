@@ -25,6 +25,10 @@
     font-size: 12px;
 }
 
+.text-plus {
+    font-size: 16px;
+}
+
 .text-large {
     font-size: 18px;
 }
@@ -41,8 +45,12 @@
     font-weight: bold;
 }
 
-.text-primary {
+.text-black {
     color: $black;
+}
+
+.text-gray {
+    color: $black-light;
 }
 
 .text-green {
