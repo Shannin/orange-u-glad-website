@@ -50,6 +50,9 @@ h6, .two-line-header-text {
 .text--orange {
   color: #fda228; }
 
+.text--white {
+  color: #FFF; }
+
 .transition-all, .button--blue, .button--orange, a, .navbar-default, .navbar-default .navbar--brand img {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
@@ -195,6 +198,9 @@ footer {
 
 .section--padded-large {
   padding: 60px 0px; }
+
+.section--padded-xl {
+  padding: 100px 0px; }
 
 .modal-custom {
   position: fixed;
