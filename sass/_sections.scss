@@ -26,6 +26,11 @@ footer {
     color: $white;
 }
 
+.section--gray {
+    background-color: $gray;
+    color: $black;
+}
+
 .section--image {
     background-position: bottom left;
     background-size: cover;

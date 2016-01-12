@@ -156,6 +156,10 @@ footer {
   background-color: #3e2317;
   color: #FFF; }
 
+.section--gray {
+  background-color: #f0f0f0;
+  color: #333; }
+
 .section--image {
   background-position: bottom left;
   background-size: cover;
