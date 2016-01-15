@@ -6,7 +6,7 @@ var path = require('path');
 var validator = require('validator');
 
 var apiKey = process.env.MAILCHIMP_API_KEY || 'a544f296627f3988d034230b76bba7bc-us11';
-var assetDir = 'public';
+var assetDir = __ dirname || 'public';
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
