@@ -14,6 +14,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/img', express.static(__dirname + '/img'));
+
+
 var mailchimp = MailChimpAPI(apiKey, { version : '2.0' });
 
 var mailer = nodemailer.createTransport({
