@@ -151,25 +151,33 @@
 
         <section class="section--white section--padded-medium" id="newsletter-subscribe">
             <div class="container">
-                <form id="form-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
-                    <input type="hidden" name="emailList" value="7118ddea20">
-
-                    <div id="form-newsletter__form" class="row" >
-                        <div class="col-md-4 text-center">
-                            <h1 class="font--serif" style="margin-top: -3px;">GET THE JUICE</h1>
-                        </div>
-                        <div class="col-md-6 form-group no-margin-tb">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
-                        </div>
-                        <div class="col-md-1 form-group no-margin-tb text-center">
-                            <button type="submit" class="button button--blue">Add Me!</button>
-                        </div>  
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="text-large text-center" style="padding-bottom: 20px;">
+                        Can’t find Orange-U-Glad nearby?  We’re constantly stocking new dispensaries, so connect with us to find out when the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange will be available near you!
                     </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1">
+                    <form id="form-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
+                        <input type="hidden" name="emailList" value="7118ddea20">
 
-                    <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
-                        <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
-                    </div>
-                </form>
+                        <div id="form-newsletter__form" class="row" >
+                            <div class="col-md-10 form-group no-margin-tb">
+                                <input type="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-2 form-group no-margin-tb text-center">
+                                <button type="submit" class="button button--blue">Add Me!</button>
+                            </div>  
+                        </div>
+
+                        <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
+                            <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 text-center" style="padding-top: 7px;">
+                    <a href="https://www.instagram.com/orangeuglad_orange/" target="_blank"><img src="img/icon-instagram.png" height="32px"></a>
+                    <a href="#contact" class="orange text-sm" style="padding-left: 15px;"><img src="img/icon-email.png" height="32px"></a>
+                </div>
             </div>
         </section>
 
