@@ -496,7 +496,7 @@ header {
       top: -225px; }
   @media (min-width: 992px) and (min-height: 600px) {
     header {
-      min-height: 100%; }
+      min-height: 98%; }
       header img.logo {
         position: absolute;
         margin: auto;
