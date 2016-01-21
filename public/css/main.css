@@ -313,11 +313,33 @@ form .form-group.error .form-control {
     margin-bottom: 40px; }
   .lab-results #lab-results__form {
     padding: 20px 0px; }
+    .lab-results #lab-results__form input[type="text"] {
+      height: 44px;
+      font-size: 16px;
+      border: 1px solid #cecece;
+      border-radius: 3px; }
+    .lab-results #lab-results__form button {
+      height: 46px;
+      margin-top: 30px;
+      background: #f2f2f2;
+      border-radius: 2px;
+      border: 1px solid #cecece;
+      font-weight: normal;
+      font-size: 12px; }
+      .lab-results #lab-results__form button:hover {
+        background: #ebebeb; }
+    .lab-results #lab-results__form .error-box {
+      text-align: center;
+      padding-top: 20px; }
   .lab-results .lab-results__footer {
-    position: absolute;
-    width: 100%;
-    bottom: 20px;
+    padding-top: 80px;
     color: #cecece; }
+    @media (min-height: 625px) {
+      .lab-results .lab-results__footer {
+        position: absolute;
+        padding-top: 0px;
+        width: 100%;
+        bottom: 20px; } }
 
 .locations-map {
   position: relative;

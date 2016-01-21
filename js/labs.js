@@ -14,7 +14,14 @@
         if (labResultsLink) {
             window.open(labResultsLink, '_blank');
         } else {
-            console.log('display error')
+            var errorBox = $(".error-box", form);
+
+            if (lotNumber.length > 0) {
+                errorBox.html("Results for lot number '" + lotNumber + "' could not be found.");
+            } else {
+                errorBox.html("Please enter a lot number.")
+            }
+
         }
     });
 
