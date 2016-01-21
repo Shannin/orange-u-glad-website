@@ -303,6 +303,13 @@ form .form-group.error .form-control {
 .form--blue .form-group .form-control {
   border-color: #2a3a7a; }
 
+.lab-results {
+  min-height: 100%;
+  width: 100%;
+  background: #f0f0f0; }
+  .lab-results img.logo {
+    width: 80%; }
+
 .locations-map {
   position: relative;
   width: 100%;
