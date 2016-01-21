@@ -1,19 +1,21 @@
-var labs = {
-    'A0201': [],
-};
-
 (function($) {
     "use strict"; // Start of use strict
 
-    $("#lab-results__form").submit(function (event) {
-        console.log("called")
+    var labs = {
+        'A0201': 'http://www.cwcannalytical.com/cwlims/verify?cwid=CW7214S01&share=1',
+    };
 
+    $("#lab-results__form").submit(function (event) {
         event.preventDefault();
         var form = $(this);
-        var lotNumber = $('input[name="lot-number"]', form);
+        var lotNumber = $('input[name="lot-number"]', form).val().toUpperCase();
 
-        console.log(lotNumber);
-
+        var labResultsLink = labs[lotNumber];
+        if (labResultsLink) {
+            window.open(labResultsLink, '_blank');
+        } else {
+            console.log('display error')
+        }
     });
 
 })(jQuery);
