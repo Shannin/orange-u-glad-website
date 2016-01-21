@@ -308,7 +308,16 @@ form .form-group.error .form-control {
   width: 100%;
   background: #f0f0f0; }
   .lab-results img.logo {
-    width: 80%; }
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .lab-results #lab-results__form {
+    padding: 20px 0px; }
+  .lab-results .lab-results__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    color: #cecece; }
 
 .locations-map {
   position: relative;
