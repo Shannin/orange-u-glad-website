@@ -179,12 +179,26 @@
                         Orange-U-Glad not in a dispensary near you?  We’re growing fast and always looking for new markets to enter.  <b>Use the form below to let us know you want <span style="white-space: nowrap">Orange-U-Glad</span> in your area!</b>
                     </div>
                 </div>
-                <div class="col-md-7 col-md-offset-1">
+                <div class="col-md-8 col-md-offset-2">
                     <form id="location-newsletter" class="newsletter-form form--blue form--large" action="/api/newsletter"  method="POST">
                         <input type="hidden" name="emailList" value="7118ddea20">
 
-                        <div class="newsletter-form__form row" >
-                            <div class="col-md-10 form-group no-margin-tb">
+                        <div class="newsletter-form__form row">
+                            <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 form-group" style="z-index: 999">
+                                <select class="form-control" name="location">
+                                    <option>Location</option>
+                                    <option>LA</option>
+                                    <option>San Diago</option>
+                                    <option>Santa Cruz</option>
+                                    <option>Sacramento</option>
+                                    <option>Washington</option>
+                                    <option>DC</option>
+                                    <option>Oregon</option>
+                                    <option>Colorado</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8 col-md-7 form-group">
                                 <input type="email" class="form-control" name="email" placeholder="Email Address">
                             </div>
                             <div class="col-md-2 form-group no-margin-tb text-center">
