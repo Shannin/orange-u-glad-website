@@ -315,9 +315,10 @@ form .form-group.error .form-control {
     padding: 20px 0px; }
     .lab-results #lab-results__form input[type="text"] {
       height: 44px;
-      font-size: 16px;
+      background: #FFF;
       border: 1px solid #cecece;
-      border-radius: 3px; }
+      border-radius: 3px;
+      font-size: 16px; }
     .lab-results #lab-results__form button {
       height: 46px;
       margin-top: 30px;
@@ -333,13 +334,14 @@ form .form-group.error .form-control {
       padding-top: 20px; }
   .lab-results .lab-results__footer {
     padding-top: 80px;
+    padding-bottom: 10px;
     color: #cecece; }
     @media (min-height: 625px) {
       .lab-results .lab-results__footer {
         position: absolute;
         padding-top: 0px;
         width: 100%;
-        bottom: 20px; } }
+        bottom: 10px; } }
 
 .locations-map {
   position: relative;
