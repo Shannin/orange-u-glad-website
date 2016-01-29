@@ -591,6 +591,9 @@ header {
 .text-sm {
   font-size: 12px; }
 
+.nowrap {
+  white-space: nowrap; }
+
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }

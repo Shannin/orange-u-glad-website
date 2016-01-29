@@ -228,6 +228,10 @@ header {
     font-size: 12px;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 // Bootstrap Overrides
 
 .no-gutter > [class*='col-'] {
