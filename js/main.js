@@ -33,9 +33,6 @@
     });
 
     $('.newsletter-form').submit(function (event) {
-        console.log("submit")
-
-
         event.preventDefault();
         var form = $(this);
         var emailInput = $('input[name="email"]', form);

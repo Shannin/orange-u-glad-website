@@ -57,8 +57,10 @@ app.post('/api/newsletter', function(req, res) {
         batch: [{
             email: {
                 email: values.email,
-                location: values.location,
             },
+            merge_vars: {
+                LOCATION: values.location,
+            }
             email_type: 'html',
         }],
         double_optin: false, // dont send opt in email
