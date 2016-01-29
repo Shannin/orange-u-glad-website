@@ -39,11 +39,11 @@ form {
                 }
 
                 &:-moz-placeholder { /* Firefox 18- */
-                   color: lighten($red, 30%);;  
+                   color: lighten($red, 30%);
                 }
 
                 &::-moz-placeholder {  /* Firefox 19+ */
-                   color: lighten($red, 30%);;  
+                   color: lighten($red, 30%);
                 }
 
                 &:-ms-input-placeholder {
@@ -61,6 +61,22 @@ form {
     }
 }
 
+.form--medium {
+    .form-group {
+        .form-control {
+            height: 40px;
+            border-width: 2px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 4px;
+
+            padding: 6px 22px;
+        }
+    }
+}
+
 .form--large {
     .form-group {
         .form-control {
@@ -71,6 +87,14 @@ form {
 
         button {
             margin-top: 5px;
+        }
+    }
+}
+
+.form--blue {
+    .form-group {
+        .form-control {
+            border-color: lighten($blue, 10%);
         }
     }
 }
@@ -87,10 +111,31 @@ form {
     }
 }
 
-.form--blue {
-    .form-group {
-        .form-control {
-            border-color: lighten($blue, 10%);
+.form--transparent-dark {
+    .form-control {
+        background-color: transparent;
+        color: $white;
+
+        &::-webkit-input-placeholder {
+           color: $orange-dark;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: $orange-dark;  
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: $orange-dark;  
+        }
+
+        &:-ms-input-placeholder {
+           color: $orange-dark;
         }
     }
+
+    button {
+        background-color: $orange-dark;
+    }
 }
+
+
