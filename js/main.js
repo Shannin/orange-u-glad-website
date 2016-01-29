@@ -32,7 +32,7 @@
         }
     });
 
-    $('#form-newsletter').submit(function (event) {
+    $('.newsletter-form').submit(function (event) {
         event.preventDefault();
         var form = $(this);
         var emailInput = $('input[name="email"]', form);
@@ -65,8 +65,8 @@
                 return;
             }
 
-            $('#form-newsletter__form', form).toggle();
-            $('#form-newsletter__success-message', form).toggle();
+            $('.newsletter-form__form', form).toggle();
+            $('.newsletter-form__success-message', form).toggle();
         });
     });
 

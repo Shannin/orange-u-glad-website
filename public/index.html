@@ -55,19 +55,19 @@
                                     <p>Debuting in dispensaries across California, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an exciting new way to experience cannabis infused chocolate.  Each orange is made up of 20 orange flavored chocolate slices dosed at 10mg each, for a total of 200mg.  Find it now in dispensaries across the Bay Area, or sign up below to be alerted when Orange-U-Glad is in a dispensary near you!</p>
                                 </div>
                                 <div class="row">
-                                    <form id="cta-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
+                                    <form id="cta-newsletter" class="newsletter-form form--blue form--large" action="/api/newsletter"  method="POST">
                                         <input type="hidden" name="emailList" value="7118ddea20">
 
-                                        <div id="form-newsletter__form" class="row" >
+                                        <div class="newsletter-form__form row" >
                                             <div class="col-md-10 form-group no-margin-tb">
                                                 <input type="email" class="form-control" name="email" placeholder="Email">
                                             </div>
                                             <div class="col-md-2 form-group no-margin-tb text-center">
                                                 <button type="submit" class="button button--blue">Add Me!</button>
-                                            </div>
+                                            </div>  
                                         </div>
 
-                                        <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
+                                        <div class="form-newsletter__success-message row text-green text-center" style="padding: 5px 0px; display: none;">
                                             <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
                                         </div>
                                     </form>
@@ -180,10 +180,10 @@
                     </div>
                 </div>
                 <div class="col-md-7 col-md-offset-1">
-                    <form id="form-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
+                    <form id="subscribe-newsletter" class="newsletter-form form--blue form--large" action="/api/newsletter"  method="POST">
                         <input type="hidden" name="emailList" value="7118ddea20">
 
-                        <div id="form-newsletter__form" class="row" >
+                        <div class="newsletter-form__form row" >
                             <div class="col-md-10 form-group no-margin-tb">
                                 <input type="email" class="form-control" name="email" placeholder="Email">
                             </div>
@@ -192,7 +192,7 @@
                             </div>  
                         </div>
 
-                        <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
+                        <div class="form-newsletter__success-message row text-green text-center" style="padding: 5px 0px; display: none;">
                             <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
                         </div>
                     </form>
