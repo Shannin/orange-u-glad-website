@@ -60,7 +60,7 @@ app.post('/api/newsletter', function(req, res) {
             },
             merge_vars: {
                 LOCATION: values.location,
-            }
+            },
             email_type: 'html',
         }],
         double_optin: false, // dont send opt in email
