@@ -48,11 +48,16 @@ app.post('/api/newsletter', function(req, res) {
         return;
     }
 
+    if (!values.location) {
+        values.location = '';
+    }
+
     var params = {
         id: values.emailList,
         batch: [{
             email: {
                 email: values.email,
+                location: values.location,
             },
             email_type: 'html',
         }],
