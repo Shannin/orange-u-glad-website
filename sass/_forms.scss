@@ -77,6 +77,12 @@ form {
 
 .form--orange {
     .form-control {
+        border-color: $orange;
+    }
+}
+
+.form--orange-dark {
+    .form-control {
         border-color: darken($orange, 20%);
     }
 }

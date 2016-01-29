@@ -47,15 +47,15 @@
                             <div class="hidden-md hidden-lg hidden-xl">
                                 <img class="image-top" src="img/header-orange.png">
                             </div>
-                            <div class="col-md-7 text-center">
+                            <div class="col-md-7 text-center" style="z-index: 999"> <!-- hack to keep button on top -->
                                 <div class="row">
                                     <h1 class="text--orange">Introducing the <span style="white-space: nowrap">Orange-U-Glad</span> <span style="white-space: nowrap">Chocolate Orange</span></h1>
                                 </div>
                                 <div class="row">
-                                    <p>Debuting in dispensaries across California, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an exciting new way to experience cannabis infused chocolate.  Each orange is made up of 20 orange flavored chocolate slices dosed at 10mg each, for a total of 200mg.  Find it now in dispensaries across the Bay Area, or sign up below to be alerted when Orange-U-Glad is in a dispensary near you!</p>
+                                    <p>Debuting in dispensaries across California, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an exciting new way to experience cannabis infused chocolate.  Each orange is made up of 20 orange flavored chocolate slices dosed at 10mg each, for a total of 200mg.  <b>Find it now in dispensaries across the Bay Area, or sign up below to be alerted when Orange-U-Glad is in a dispensary near you!</b></p>
                                 </div>
                                 <div class="row">
-                                    <form id="cta-newsletter" class="newsletter-form form--blue form--large" action="/api/newsletter"  method="POST">
+                                    <form id="cta-newsletter" class="newsletter-form form--orange form--large" action="/api/newsletter"  method="POST">
                                         <input type="hidden" name="emailList" value="7118ddea20">
 
                                         <div class="newsletter-form__form row" >
@@ -63,7 +63,7 @@
                                                 <input type="email" class="form-control" name="email" placeholder="Email">
                                             </div>
                                             <div class="col-md-2 form-group no-margin-tb text-center">
-                                                <button type="submit" class="button button--blue">Add Me!</button>
+                                                <button type="submit" class="button button--orange">Add Me!</button>
                                             </div>  
                                         </div>
 
@@ -72,10 +72,10 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="margin-top: 50px;">
                                     <a href="#locations" class="button button--orange-gradient button-xl page-scroll" style="margin: auto;">Where to Find</a>
 
-                                    <a href="#contact" class="orange text-sm page-scroll" style="margin-left: 20px;">Are you a dispensary?</a>
+                                    <a href="#contact" class="white text-sm page-scroll" style="margin-left: 20px;">Are you a dispensary?</a>
                                 </div>
                             </div>
                             <div class="hidden-xs hidden-sm col-md-5 text-center">
@@ -244,7 +244,7 @@
                             <h1>Dispensary, delivery service, or have a question?</h1>
                             <span>Get in touch!</span>
                         </div>
-                        <form id="contact-form" class="form--small form--orange" action="/api/contact"  method="POST">
+                        <form id="contact-form" class="form--small form--orange-dark" action="/api/contact"  method="POST">
                             <div class="row">
                                 <div class="error-box"> </div>
                             </div> 

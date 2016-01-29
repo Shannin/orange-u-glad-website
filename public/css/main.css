@@ -298,6 +298,9 @@ form .form-group.error .form-control {
   margin-top: 5px; }
 
 .form--orange .form-control {
+  border-color: #fda228; }
+
+.form--orange-dark .form-control {
   border-color: #bd6d02; }
 
 .form--blue .form-group .form-control {
@@ -523,8 +526,7 @@ header {
     header .header-content .header-content-inner p {
       font-weight: 300;
       color: rgba(255, 255, 255, 0.9);
-      font-size: 16px;
-      margin-bottom: 80px; }
+      font-size: 16px; }
     header .header-content .header-content-inner .image-top {
       width: 100%;
       margin-top: -35%;
