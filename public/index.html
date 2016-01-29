@@ -48,12 +48,35 @@
                                 <img class="image-top" src="img/header-orange.png">
                             </div>
                             <div class="col-md-7 text-center">
-                                <h1 class="text--orange">Introducing the <span style="white-space: nowrap">Orange-U-Glad</span> <span style="white-space: nowrap">Chocolate Orange</span></h1>
-                                <p>Debuting in dispensaries across California, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an exciting new way to experience cannabis infused chocolate.  Each orange is made up of 20 orange flavored chocolate slices dosed at 10mg each, for a total of 200mg.  Find it now in dispensaries across the Bay Area, or sign up below to be alerted when Orange-U-Glad is in a dispensary near you!</p>
+                                <div class="row">
+                                    <h1 class="text--orange">Introducing the <span style="white-space: nowrap">Orange-U-Glad</span> <span style="white-space: nowrap">Chocolate Orange</span></h1>
+                                </div>
+                                <div class="row">
+                                    <p>Debuting in dispensaries across California, the <span style="white-space: nowrap">Orange-U-Glad</span> Chocolate Orange is an exciting new way to experience cannabis infused chocolate.  Each orange is made up of 20 orange flavored chocolate slices dosed at 10mg each, for a total of 200mg.  Find it now in dispensaries across the Bay Area, or sign up below to be alerted when Orange-U-Glad is in a dispensary near you!</p>
+                                </div>
+                                <div class="row">
+                                    <form id="cta-newsletter" class="form--blue form--large" action="/api/newsletter"  method="POST">
+                                        <input type="hidden" name="emailList" value="7118ddea20">
 
-                                <a href="#locations" class="button button--orange-gradient button-xl page-scroll" style="margin: auto;">Where to Find</a>
+                                        <div id="form-newsletter__form" class="row" >
+                                            <div class="col-md-10 form-group no-margin-tb">
+                                                <input type="email" class="form-control" name="email" placeholder="Email">
+                                            </div>
+                                            <div class="col-md-2 form-group no-margin-tb text-center">
+                                                <button type="submit" class="button button--blue">Add Me!</button>
+                                            </div>
+                                        </div>
 
-                                <a href="#contact" class="orange text-sm page-scroll" style="margin-left: 20px;">Are you a dispensary?</a>
+                                        <div id="form-newsletter__success-message" class="row text-green text-center" style="padding: 5px 0px; display: none;">
+                                            <h4 class="font--sans-serif"><b>Thanks!</b> You will be the first receive updates from <span style="white-space: nowrap">Orange-U-Glad</span>!</h4>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <a href="#locations" class="button button--orange-gradient button-xl page-scroll" style="margin: auto;">Where to Find</a>
+
+                                    <a href="#contact" class="orange text-sm page-scroll" style="margin-left: 20px;">Are you a dispensary?</a>
+                                </div>
                             </div>
                             <div class="hidden-xs hidden-sm col-md-5 text-center">
                                 <img class="image-right" src="img/header-orange.png">
