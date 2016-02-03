@@ -1,4 +1,5 @@
 var dispensaries = [
+/*    
     {
         name: 'Sparc',
         address: {
@@ -25,6 +26,32 @@ var dispensaries = [
         logo: 'bpg.png',
         website: 'http://www.mybpg.com',
     },
+*/
+    {
+        name: 'Medithrive',
+        address: {
+            street: '1933 Mission St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
+        location: {lat: 37.766169, lng: -122.419424},
+        phone: '415-562-6334',
+        logo: 'medithrive.png',
+        website: 'http://www.medithrive.com',
+    },
+    {
+        name: 'The Cookie Co. 415',
+        address: {
+            street: '3139 Mission Street',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94110',
+        },
+        location: {lat: 37.747016, lng: -122.418717},
+        phone: '415-814-2890',
+        logo: 'thecookieco.png',
+    },
 ];
 
 // this is shitty.
@@ -46,7 +73,6 @@ function initMap() {
         function init () {
             var map = new google.maps.Map(document.getElementById('google-maps-box'), {
                 center: {lat: 37.7396515, lng: -122.2921592},
-                zoom: 11,
                 scrollwheel: false,
                 navigationControl: false,
                 mapTypeControl: false,
@@ -146,8 +172,16 @@ function initMap() {
             });
 
             map.fitBounds(bounds);
-        }
-        
+            
+            // zoom out
+            zoomChangeBoundsListener = 
+            google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+                if (this.getZoom()){
+                    this.setZoom(14);
+                }
+            });
+            setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+        }        
 
         init();
     })(jQuery);
