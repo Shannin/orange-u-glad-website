@@ -381,12 +381,15 @@ form .form-group.error .form-control {
     .locations-map .locations-map__header h1 {
       margin-top: 10px;
       color: white; }
+    @media (max-width: 600px) {
+      .locations-map .locations-map__header h1 {
+        font-size: 28px; } }
   .locations-map .locations-map__map-box,
   .locations-map .locations-map__dispensary-card-container {
     position: absolute;
     left: 0;
     right: 0;
-    top: 60px;
+    top: 50px;
     bottom: 5px; }
     .locations-map .locations-map__map-box .hidden,
     .locations-map .locations-map__dispensary-card-container .hidden {
@@ -452,7 +455,7 @@ form .form-group.error .form-control {
           padding-bottom: 0; }
     .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__close-button {
       display: block; }
-  @media (min-width: 768px) and (min-height: 600px) {
+  @media (min-width: 600px) and (min-height: 600px) {
     .locations-map .locations-map__map-box,
     .locations-map .locations-map__dispensary-card-container {
       top: 70px; } }
