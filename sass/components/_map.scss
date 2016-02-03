@@ -16,7 +16,7 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 20px;
+                font-size: 22px;
 
             }
         }
@@ -138,14 +138,7 @@
         }
     }
 
-    @media (min-width: 600px) and (min-height: 600px) {
-        .locations-map__map-box,
-        .locations-map__dispensary-card-container {
-            top: 70px;
-        }
-    }
-
-    @media (min-width: 480px) and (min-height: 600px) {
+    @media (min-width: 380px) and (min-height: 600px) {
         .locations-map__header {
             h1 {
                 font-size: 28px;
@@ -153,4 +146,10 @@
         }
     }
 
+    @media (min-width: 600px) and (min-height: 600px) {
+        .locations-map__map-box,
+        .locations-map__dispensary-card-container {
+            top: 70px;
+        }
+    }
 }
