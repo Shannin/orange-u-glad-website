@@ -452,9 +452,6 @@ form .form-group.error .form-control {
           padding-bottom: 0; }
     .locations-map .locations-map__dispensary-card-container .locations-map__dispensary-card .dispensary-card__close-button {
       display: block; }
-  @media (max-width: 380px) {
-    .locations-map .locations-map__header h1 {
-      font-size: 20px; } }
   @media (max-width: 600px) {
     .locations-map .locations-map__header h1 {
       font-size: 28px; } }
@@ -462,6 +459,9 @@ form .form-group.error .form-control {
     .locations-map .locations-map__map-box,
     .locations-map .locations-map__dispensary-card-container {
       top: 70px; } }
+  @media (max-width: 380px) {
+    .locations-map .locations-map__header h1 {
+      font-size: 20px; } }
 
 html,
 body {

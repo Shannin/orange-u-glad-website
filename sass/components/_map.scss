@@ -131,13 +131,7 @@
         }
     }
 
-    @media (max-width: 380px) {
-        .locations-map__header {
-            h1 {
-                font-size: 20px;
-            }
-        }
-    }
+    
 
     @media (max-width: 600px) {
         .locations-map__header {
@@ -152,6 +146,14 @@
         .locations-map__map-box,
         .locations-map__dispensary-card-container {
             top: 70px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .locations-map__header {
+            h1 {
+                font-size: 20px;
+            }
         }
     }
 }
