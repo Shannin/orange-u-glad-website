@@ -530,6 +530,13 @@ p {
     text-align: center; }
     .navbar-default .navbar--brand img {
       height: 40px; }
+  .navbar-default .navbar-links {
+    padding-top: 14px;
+    padding-bottom: 12px; }
+    .navbar-default .navbar-links a {
+      margin-left: 10px; }
+      .navbar-default .navbar-links a:first-of-type {
+        margin-left: 0px; }
   .navbar-default.visible {
     opacity: 1; }
 
