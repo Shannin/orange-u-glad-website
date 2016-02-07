@@ -9,6 +9,7 @@
 
 @import "components/lab-results";
 @import "components/map";
+@import "components/navbar";
 
 
 // Global Components
@@ -107,40 +108,7 @@ p {
 
 // Navigation
 
-.navbar-default {
-    background-color: transparentize($white, .3);
-    border: none;
-    opacity: 0;
 
-    @extend .transition-all;
-    .navbar--brand {
-        margin: auto;
-        padding: 5px;
-        text-align: center;
-
-        img {
-            @extend .transition-all;
-            height: 40px;
-        }
-    }
-
-    .navbar-links {
-        padding-top: 14px;
-        padding-bottom: 12px;
-
-        a {
-            margin-left: 10px;
-
-            &:first-of-type {
-                margin-left: 0px;
-            }
-        }
-    }
-
-    &.visible {
-        opacity: 1;
-    }
-}
 
 
 // Homepage Header

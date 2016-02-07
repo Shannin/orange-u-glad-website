@@ -53,7 +53,7 @@ h6, .two-line-header-text {
 .text--white {
   color: #FFF; }
 
-.transition-all, .button--blue, .button--orange, a, .navbar-default, .navbar-default .navbar--brand img {
+.transition-all, .button--blue, .button--orange, .navbar-default, .navbar-default .navbar--brand img, a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
@@ -463,6 +463,26 @@ form .form-group.error .form-control {
     .locations-map .locations-map__header h1 {
       font-size: 22px; } }
 
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  opacity: 0; }
+  .navbar-default .navbar--brand {
+    margin: auto;
+    padding: 5px;
+    text-align: center; }
+    .navbar-default .navbar--brand img {
+      height: 40px; }
+  .navbar-default .navbar-links {
+    padding-top: 14px;
+    padding-bottom: 12px; }
+    .navbar-default .navbar-links a {
+      margin-left: 10px; }
+      .navbar-default .navbar-links a:first-of-type {
+        margin-left: 0px; }
+  .navbar-default.visible {
+    opacity: 1; }
+
 html,
 body {
   height: 100%;
@@ -519,26 +539,6 @@ p {
   .two-line-header-text span {
     padding-left: 40px;
     font-size: 32px; } }
-
-.navbar-default {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  opacity: 0; }
-  .navbar-default .navbar--brand {
-    margin: auto;
-    padding: 5px;
-    text-align: center; }
-    .navbar-default .navbar--brand img {
-      height: 40px; }
-  .navbar-default .navbar-links {
-    padding-top: 14px;
-    padding-bottom: 12px; }
-    .navbar-default .navbar-links a {
-      margin-left: 10px; }
-      .navbar-default .navbar-links a:first-of-type {
-        margin-left: 0px; }
-  .navbar-default.visible {
-    opacity: 1; }
 
 header {
   position: relative;
