@@ -1,7 +1,7 @@
 @font-face {
   font-family: StickARound;
   src: url("/fonts/Stick-A-Round.ttf"); }
-.font--sans-serif, .button, html,
+.font--sans-serif, .button, .testimonials .testimonials__testimonial-wrapper h3, html,
 body {
   font-family: 'Asap', 'Helvetica Neue', sans-serif; }
 
@@ -28,6 +28,10 @@ h6, .two-line-header-text {
 
 .text-large {
   font-size: 18px; }
+
+.text-xl, .testimonials .testimonials__testimonial-wrapper h3 {
+  font-size: 22px;
+  line-height: 30px; }
 
 .text-regular {
   font-weight: normal; }
@@ -487,6 +491,19 @@ form .form-group.error .form-control {
         margin-left: 0px; }
   .navbar-default.visible {
     opacity: 1; }
+
+.testimonials {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .testimonials .testimonials__testimonial-wrapper {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+    .testimonials .testimonials__testimonial-wrapper h3 {
+      position: absolute;
+      display: none;
+      left: 0;
+      right: 0; }
 
 html,
 body {

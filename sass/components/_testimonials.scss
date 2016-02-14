@@ -1,0 +1,22 @@
+.testimonials {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .testimonials__testimonial-wrapper {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        h3 {
+            @extend .text-xl;
+            @extend .font--sans-serif;
+
+            position: absolute;
+            display: none;
+
+            left: 0;
+            right: 0;
+        }
+    }
+
+}
