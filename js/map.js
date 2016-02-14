@@ -28,6 +28,19 @@ var dispensaries = [
     },
 */
     {
+        name: 'Cannabis Wellness Center',
+        address: {
+            street: '2021 Palmetto Ave',
+            city: 'Pacifica',
+            state: 'CA',
+            zip: '94044',
+        },
+        location: {lat: 37.633629, lng: -122.491880},
+        phone: '650-735-5031',
+        logo: 'cannabiswellness.png',
+        website: 'http://www.thecannabiswellnesscenter.com',
+    },
+    {
         name: 'Medithrive',
         address: {
             street: '1933 Mission St',
@@ -172,15 +185,6 @@ function initMap() {
             });
 
             map.fitBounds(bounds);
-            
-            // zoom out
-            zoomChangeBoundsListener = 
-            google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-                if (this.getZoom()){
-                    this.setZoom(14);
-                }
-            });
-            setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
         }        
 
         init();
