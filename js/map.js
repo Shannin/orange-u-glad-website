@@ -27,6 +27,18 @@ var dispensaries = [
         website: 'http://www.mybpg.com',
     },
 */
+    {
+        name: 'Bernal Heights Collective',
+        address: {
+            street: '33 29th St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
+        location: {lat: 37.743839, lng: -122.421660},
+        phone: '415-463-7473',
+        website: 'http://bernalheightscollective.weebly.com',
+    },
     // {
     //     name: 'Cannabis Wellness Center',
     //     address: {
@@ -154,8 +166,14 @@ function initMap() {
         }
 
         function generateDispensaryCardContent(dispensary) {
+            logoLine = "";
+            if (dispensary.logo && dispensary.logo.length > 0) {
+                logoLine = '<img src="img/dispensaries/' + dispensary.logo + '" />';
+
+            }
+
             return  '<div class="locations-map__dispensary-card">' +
-                        '<img src="img/dispensaries/' + dispensary.logo + '" />' +
+                        logoLine +
                         '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
                         '<div class="font--sans-serif dispensary-card__body">' +
                             '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
