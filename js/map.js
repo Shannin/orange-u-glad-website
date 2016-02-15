@@ -28,6 +28,31 @@ var dispensaries = [
     },
 */
     {
+        name: 'Bernal Heights Collective',
+        address: {
+            street: '33 29th St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
+        location: {lat: 37.743839, lng: -122.421660},
+        phone: '415-463-7473',
+        website: 'http://bernalheightscollective.weebly.com',
+    },
+    // {
+    //     name: 'Cannabis Wellness Center',
+    //     address: {
+    //         street: '2021 Palmetto Ave',
+    //         city: 'Pacifica',
+    //         state: 'CA',
+    //         zip: '94044',
+    //     },
+    //     location: {lat: 37.633629, lng: -122.491880},
+    //     phone: '650-735-5031',
+    //     logo: 'cannabiswellness.png',
+    //     website: 'http://www.thecannabiswellnesscenter.com',
+    // },
+    {
         name: 'Medithrive',
         address: {
             street: '1933 Mission St',
@@ -141,8 +166,14 @@ function initMap() {
         }
 
         function generateDispensaryCardContent(dispensary) {
+            logoLine = "";
+            if (dispensary.logo && dispensary.logo.length > 0) {
+                logoLine = '<img src="img/dispensaries/' + dispensary.logo + '" />';
+
+            }
+
             return  '<div class="locations-map__dispensary-card">' +
-                        '<img src="img/dispensaries/' + dispensary.logo + '" />' +
+                        logoLine +
                         '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
                         '<div class="font--sans-serif dispensary-card__body">' +
                             '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
@@ -172,15 +203,6 @@ function initMap() {
             });
 
             map.fitBounds(bounds);
-            
-            // zoom out
-            zoomChangeBoundsListener = 
-            google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-                if (this.getZoom()){
-                    this.setZoom(14);
-                }
-            });
-            setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
         }        
 
         init();
