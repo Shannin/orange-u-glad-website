@@ -39,19 +39,19 @@ var dispensaries = [
         phone: '415-463-7473',
         website: 'http://bernalheightscollective.weebly.com',
     },
-    // {
-    //     name: 'Cannabis Wellness Center',
-    //     address: {
-    //         street: '2021 Palmetto Ave',
-    //         city: 'Pacifica',
-    //         state: 'CA',
-    //         zip: '94044',
-    //     },
-    //     location: {lat: 37.633629, lng: -122.491880},
-    //     phone: '650-735-5031',
-    //     logo: 'cannabiswellness.png',
-    //     website: 'http://www.thecannabiswellnesscenter.com',
-    // },
+    {
+        name: 'Cannabis Wellness Center',
+        address: {
+            street: '2021 Palmetto Ave',
+            city: 'Pacifica',
+            state: 'CA',
+            zip: '94044',
+        },
+        location: {lat: 37.633629, lng: -122.491880},
+        phone: '650-735-5031',
+        logo: 'cannabiswellness.png',
+        website: 'http://www.thecannabiswellnesscenter.com',
+    },
     {
         name: 'Medithrive',
         address: {
