@@ -53,6 +53,19 @@ var dispensaries = [
         website: 'http://www.thecannabiswellnesscenter.com',
     },
     {
+        name: 'Holistic Healing Collective',
+        address: {
+            street: '15501 San Pablo Ave',
+            city: 'Richmond',
+            state: 'CA',
+            zip: '94806',
+        },
+        location: {lat: 37.990006, lng: -122.335593},
+        phone: '510-275-3365',
+        logo: 'holistichealing.png',
+        website: 'http://www.holistichealingcollective.org',
+    },
+    {
         name: 'Medithrive',
         address: {
             street: '1933 Mission St',
