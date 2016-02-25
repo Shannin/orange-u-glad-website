@@ -89,6 +89,7 @@ var dispensaries = [
         location: {lat: 37.747016, lng: -122.418717},
         phone: '415-814-2890',
         logo: 'thecookieco.png',
+        website: 'http://thecookieco415.com/',
     },
 ];
 
