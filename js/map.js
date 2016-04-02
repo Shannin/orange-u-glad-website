@@ -53,6 +53,18 @@ var dispensaries = [
         website: 'http://www.thecannabiswellnesscenter.com',
     },
     {
+        name: 'Highway 29 Health Care',
+        address: {
+            street: '3737 Sonoma Blvd',
+            city: 'Vallejo',
+            state: 'CA',
+            zip: '94589',
+        },
+        location: {lat: 38.125609, lng: -122.2559},
+        phone: '707-645-8303',
+        logo: 'highway29.png',
+    },
+    {
         name: 'Holistic Healing Collective',
         address: {
             street: '15501 San Pablo Ave',
@@ -64,6 +76,18 @@ var dispensaries = [
         phone: '510-275-3365',
         logo: 'holistichealing.png',
         website: 'http://www.holistichealingcollective.org',
+    },
+    {
+        name: 'HTP Group',
+        address: {
+            street: '1408 Enterprise St Suite D4',
+            city: 'Vallejo',
+            state: 'CA',
+            zip: '94589',
+        },
+        location: {lat: 38.135419, lng: -122.258426},
+        phone: '707-260-2626',
+        logo: 'htpgroup.png',
     },
     {
         name: 'Medithrive',
@@ -81,7 +105,7 @@ var dispensaries = [
     {
         name: 'The Cookie Co. 415',
         address: {
-            street: '3139 Mission Street',
+            street: '3139 Mission St',
             city: 'San Francisco',
             state: 'CA',
             zip: '94110',
@@ -89,7 +113,33 @@ var dispensaries = [
         location: {lat: 37.747016, lng: -122.418717},
         phone: '415-814-2890',
         logo: 'thecookieco.png',
-        website: 'http://thecookieco415.com/',
+        website: 'http://www.thecookieco415.com/',
+    },
+    {
+        name: 'Vallejo Holistic Health Center',
+        address: {
+            street: '539 Tennesee St',
+            city: 'Vallejo',
+            state: 'CA',
+            zip: '94590',
+        },
+        location: {lat: 38.109687, lng: -122.253393},
+        phone: '707-652-5018',
+        logo: 'vhhc.png',
+        website: 'http://www.vhhc420.org/',
+    },
+    {
+        name: '7 Stars Holistic Healing Center',
+        address: {
+            street: '3288 Pierce St Suite M108 (Upstairs)',
+            city: 'Richmond',
+            state: 'CA',
+            zip: '94804',
+        },
+        location: {lat: 37.898754, lng: -122.307853},
+        phone: '510-527-7827',
+        logo: '7starshhc.png',
+        website: 'http://www.7starshhc.com/',
     },
 ];
 
@@ -180,24 +230,29 @@ function initMap() {
         }
 
         function generateDispensaryCardContent(dispensary) {
-            logoLine = "";
-            if (dispensary.logo && dispensary.logo.length > 0) {
-                logoLine = '<img src="img/dispensaries/' + dispensary.logo + '" />';
+            var infoCard = '<div class="locations-map__dispensary-card">';
 
+            if (dispensary.logo && dispensary.logo.length > 0) {
+                infoCard += '<img src="img/dispensaries/' + dispensary.logo + '" />';
             }
 
-            return  '<div class="locations-map__dispensary-card">' +
-                        logoLine +
-                        '<h5 class="font--sans-serif">' + dispensary.name + '</h5>' +
-                        '<div class="font--sans-serif dispensary-card__body">' +
+            infoCard += '<h5 class="font--sans-serif">' + dispensary.name + '</h5>';
+
+            infoCard += '<div class="font--sans-serif dispensary-card__body">' +
                             '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
                             '<div class="dispensary-card__body__row no-space"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
                             '<div class="dispensary-card__body__row"><span></span><a href="' + generateDispensaryDirectionsLink(dispensary) + '" target="_blank">Directions</a></div>' +
-                            '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>' +
-                            '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>' +
-                        '</div>' +
-                        '<button class="dispensary-card__close-button btn btn-default">Close</button>'
-                    '</div>';
+                            '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>';
+
+            if (dispensary.website && dispensary.website.length > 0) {
+                infoCard += '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>';
+            }
+                        '</div>';
+
+            infoCard += '<button class="dispensary-card__close-button btn btn-default">Close</button>';
+            infoCard += '</div>';
+
+            return infoCard;
         }
 
         function generateDispensaryDirectionsLink(dispensary) {
