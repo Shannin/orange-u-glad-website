@@ -103,7 +103,7 @@ app.post('/api/contact', function(req, res) {
 
     var subject = 'Contact Form Submission: ';
     if (values.company !== '') {
-        subject += values.company;
+        subject += values.company + ' - ' + values.email;
     } else {
         subject += values.email;
     }
