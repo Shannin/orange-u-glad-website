@@ -3,7 +3,7 @@
 
     var labs = {
         'A0201': 'http://www.cwcannalytical.com/cwlims/verify?cwid=CW7214S01&share=1',
-        'OUGO214': 'http://www.cwcannalytical.com/cwlims/verify?cwid=CW9190S01&share=1',
+        'OUG214': 'http://www.cwcannalytical.com/cwlims/verify?cwid=CW9190S01&share=1',
     };
 
     $("#lab-results__form").submit(function (event) {
