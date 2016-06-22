@@ -27,6 +27,7 @@ var dispensaries = [
         website: 'http://www.mybpg.com',
     },
 */
+/*
     {
         name: 'Bernal Heights Collective',
         address: {
@@ -39,6 +40,7 @@ var dispensaries = [
         phone: '415-463-7473',
         website: 'http://bernalheightscollective.weebly.com',
     },
+*/
     {
         name: 'Cannabis Wellness Center',
         address: {
@@ -53,6 +55,18 @@ var dispensaries = [
         website: 'http://www.thecannabiswellnesscenter.com',
     },
     {
+        name: 'Flower Power',
+        address: {
+            street: '70 2nd Street',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94105',
+        },
+        location: {lat: 37.788252, lng: -122.400471},
+        phone: '628-444-3441',
+        logo: 'flowerpower.png',
+    },
+    {
         name: 'Highway 29 Health Care',
         address: {
             street: '3737 Sonoma Blvd',
@@ -64,6 +78,7 @@ var dispensaries = [
         phone: '707-645-8303',
         logo: 'highway29.png',
     },
+/*
     {
         name: 'Holistic Healing Collective',
         address: {
@@ -77,6 +92,7 @@ var dispensaries = [
         logo: 'holistichealing.png',
         website: 'http://www.holistichealingcollective.org',
     },
+*/
     {
         name: 'HTP Group',
         address: {
