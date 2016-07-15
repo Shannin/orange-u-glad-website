@@ -78,7 +78,6 @@ var dispensaries = [
         phone: '707-645-8303',
         logo: 'highway29.png',
     },
-/*
     {
         name: 'Holistic Healing Collective',
         address: {
@@ -92,7 +91,6 @@ var dispensaries = [
         logo: 'holistichealing.png',
         website: 'http://www.holistichealingcollective.org',
     },
-*/
     {
         name: 'HTP Group',
         address: {
@@ -104,6 +102,18 @@ var dispensaries = [
         location: {lat: 38.135419, lng: -122.258426},
         phone: '707-260-2626',
         logo: 'htpgroup.png',
+    },
+    {
+        name: 'Igzactly 420',
+        address: {
+            street: '527 Howard Street',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94105',
+        },
+        location: {lat: 37.787834, lng: -122.396539},
+        phone: '415-834-5225',
+        logo: 'igzactly420.png',
     },
     {
         name: 'Medithrive',
