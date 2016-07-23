@@ -42,6 +42,19 @@ var dispensaries = [
     },
 */
     {
+        name: 'Blum Oak',
+        address: {
+            street: '578 W Grand Ave',
+            city: 'Oakland',
+            state: 'CA',
+            zip: '94612',
+        },
+        location: {lat: 37.812502, lng: -122.270956},
+        phone: '510.338.3632',
+        logo: 'blum.png',
+        website: 'http://blumoak.com',
+    },
+    {
         name: 'Cannabis Wellness Center',
         address: {
             street: '2021 Palmetto Ave',
