@@ -42,7 +42,7 @@ var dispensaries = [
     },
 */
     {
-        name: 'Blum Oak',
+        name: 'Blüm Oak',
         address: {
             street: '578 W Grand Ave',
             city: 'Oakland',
