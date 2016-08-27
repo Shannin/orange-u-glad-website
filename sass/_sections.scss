@@ -32,9 +32,25 @@ footer {
 }
 
 .section--image {
-    background-position: bottom left;
+    background-position: bottom center;
     background-size: cover;
     min-height: 85%;
+
+    &.section--image__left {
+        background-position: bottom right;
+
+        @media (min-width: 992px) {
+            background-position: bottom left;
+        }
+    }
+
+    &.section--image__right {
+        background-position: bottom left;
+
+        @media (min-width: 992px) {
+            background-position: bottom right;
+        }
+    }
 }
 
 .section--orange {
