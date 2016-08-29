@@ -572,6 +572,15 @@ p {
     padding-left: 40px;
     font-size: 32px; } }
 
+img.logo {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  z-index: 1000; }
+
+.spacer--medium {
+  padding-top: 30px; }
+
 header {
   position: relative;
   width: 100%;
@@ -579,11 +588,7 @@ header {
   text-align: center;
   color: white; }
   header img.logo {
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-    margin-bottom: 50px;
-    z-index: 1000; }
+    margin-bottom: 50px; }
   header .header-content {
     position: relative;
     text-align: center;
@@ -638,6 +643,18 @@ header {
 
 .nowrap {
   white-space: nowrap; }
+
+.color-box {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  margin-bottom: 20px; }
+  .color-box .details {
+    width: 85%;
+    padding-top: 70%;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;

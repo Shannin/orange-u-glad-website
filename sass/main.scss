@@ -107,10 +107,16 @@ p {
     }
 }
 
+img.logo {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    z-index: 1000;
+}
 
-// Navigation
-
-
+.spacer--medium {
+    padding-top: 30px;
+}
 
 
 // Homepage Header
@@ -124,13 +130,7 @@ header {
     color: white;
 
     img.logo {
-        width: 90%;
-        max-width: 400px;
-
-        margin: auto;
         margin-bottom: 50px;
-
-        z-index: 1000;
     }
 
     .header-content {
@@ -213,6 +213,24 @@ header {
 
 .nowrap {
     white-space: nowrap;
+}
+
+// Vendor Page
+
+.color-box {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+
+    .details {
+        width: 85%;
+        padding-top:70%;
+
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 // Bootstrap Overrides
