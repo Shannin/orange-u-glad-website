@@ -581,6 +581,9 @@ img.logo {
 img.full-width {
   width: 100%; }
 
+.spacer--small {
+  padding-top: 15px; }
+
 .spacer--medium {
   padding-top: 30px; }
 
