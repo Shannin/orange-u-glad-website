@@ -271,8 +271,6 @@ function initMap() {
             var dispensaryMarkers = addDispensariesToMap(map, allDispensaries);
             var deliveryRanges = addDeliveryServicesToMap(map, allDeliveryServices);
 
-            console.log(deliveryRanges);
-
             zoomToAllMarkers(map, dispensaryMarkers);
 
             map.setOptions({draggable: !screenSizeMobile()});
@@ -283,20 +281,8 @@ function initMap() {
         }
 
         function addDispensariesToMap(map, dispensaries) {
-            var img = 'img/orange.png';
-            var size = new google.maps.Size(25,25);
-            var icon = new google.maps.MarkerImage(img, null, null, null, size);
-
             var markers = dispensaries.map(function(dispensary) {
-                var marker = new google.maps.Marker({
-                    position: dispensary.location,
-                    map: map,
-                    icon: icon
-                });
-
-                setMarkerClickEvent(map, marker, dispensary);
-
-                return marker;
+                return addMarkerToMap(map, dispensary.location, dispensary, 'dispensary');
             });
 
             return markers;
@@ -315,24 +301,35 @@ function initMap() {
 
                 poly.setMap(map);
 
-                addMarkerForDeliveryService(map, delivery);
+                var deliveryServiceBounds = getBoundsForDeliveryRange(delivery.range);
+                var location = getPositionForDeliveryMarker(map.getBounds(), deliveryServiceBounds);
 
-                return poly;
+                var marker = addMarkerToMap(map, location, delivery, 'delivery');
+
+                return {
+                    marker: marker,
+                    poly: poly,
+                    polyBounds: deliveryServiceBounds
+                };
             });
 
             return deliveryRanges;
         }
 
-        function addMarkerForDeliveryService(map, delivery) {
-            var deliveryServiceBounds = getBoundsForDeliveryRange(delivery.range);
+        function addMarkerToMap(map, location, dispensary, type) {
+            var img = type == 'delivery' ? 'img/orange.png' : 'img/orange.png';
+            var size = new google.maps.Size(25,25);
+            var icon = new google.maps.MarkerImage(img, null, null, null, size);
 
-            delivery.location = getPositionForDeliveryMarker(map.getBounds(), deliveryServiceBounds);
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                icon: icon
+            });
 
+            setMarkerClickEvent(map, marker, dispensary);
 
-            console.log(delivery);
-
-            addDispensariesToMap(map, [delivery])
-
+            return marker;
         }
 
         function getBoundsForDeliveryRange(range) {
@@ -370,7 +367,6 @@ function initMap() {
         }
 
         function getPositionForDeliveryMarker(mapBounds, rangeBounds) {
-            console.log(mapBounds);
             if (!mapBounds) {
                 return {
                     lat: ((rangeBounds.latMax - rangeBounds.latMin) / 2) + rangeBounds.latMin,
@@ -424,17 +420,27 @@ function initMap() {
             }
 
             infoCard += '<h5 class="font--sans-serif">' + dispensary.name + '</h5>';
+            infoCard += '<div class="font--sans-serif dispensary-card__body">';
 
-            infoCard += '<div class="font--sans-serif dispensary-card__body">' +
-                            '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
-                            '<div class="dispensary-card__body__row no-space"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
-                            '<div class="dispensary-card__body__row"><span></span><a href="' + generateDispensaryDirectionsLink(dispensary) + '" target="_blank">Directions</a></div>' +
-                            '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>';
+            if (dispensary.address) {
+                infoCard += '<div class="dispensary-card__body__row no-space"><span>Address</span>' + dispensary.address.street + '</div>' +
+                                '<div class="dispensary-card__body__row no-space"><span></span>' + dispensary.address.city + ', ' + dispensary.address.state + ' ' + dispensary.address.zip + '</div>' +
+                                '<div class="dispensary-card__body__row"><span></span><a href="' + generateDispensaryDirectionsLink(dispensary) + '" target="_blank">Directions</a></div>';
+            }
+
+            if (dispensary.phone) {
+                infoCard += '<div class="dispensary-card__body__row"><span>Phone</span>' + dispensary.phone + '</div>';
+            }
 
             if (dispensary.website && dispensary.website.length > 0) {
                 infoCard += '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.website + '" target="_blank">Website</a></div>';
             }
-                        '</div>';
+
+            if (dispensary.menu && dispensary.menu.length > 0) {
+                infoCard += '<div class="dispensary-card__body__row"><span></span><a href="' + dispensary.menu + '" target="_blank">Menu</a></div>';
+            }
+
+            infoCard += '</div>';
 
             infoCard += '<button class="dispensary-card__close-button btn btn-default">Close</button>';
             infoCard += '</div>';
