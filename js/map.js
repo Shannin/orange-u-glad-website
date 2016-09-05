@@ -80,6 +80,19 @@ var dispensaries = [
         logo: 'flowerpower.png',
     },
     {
+        name: 'Herbal Cruz',
+        address: {
+            street: '1001 41st Ave',
+            city: 'Santa Cruz',
+            state: 'CA',
+            zip: '95062',
+        },
+        location: {lat: 36.965865, lng: -121.965386},
+        phone: '831-471-8289',
+        logo: 'herbalcruz.png',
+        website: 'http://www.herbalcruzsantacruz.com/',
+    },
+    {
         name: 'Highway 29 Health Care',
         address: {
             street: '3737 Sonoma Blvd',
@@ -153,6 +166,19 @@ var dispensaries = [
         phone: '415-814-2890',
         logo: 'thecookieco.png',
         website: 'http://www.thecookieco415.com/',
+    },
+    {
+        name: 'The Cookie Co. 831',
+        address: {
+            street: '3711 Soquel Dr',
+            city: 'Soquel',
+            state: 'CA',
+            zip: '95073',
+        },
+        location: {lat: 36.987826, lng: -121.967465},
+        phone: '831-471-8289',
+        logo: 'thecookieco.png',
+        website: 'http://thecookieco831.com/',
     },
     {
         name: 'Vallejo Holistic Health Center',
