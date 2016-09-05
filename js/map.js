@@ -1,4 +1,4 @@
-var dispensaries = [
+var allDispensaries = [
 /*    
     {
         name: 'Sparc',
@@ -208,6 +208,29 @@ var dispensaries = [
     },
 ];
 
+var allDeliveryServices = [
+    {
+        name: 'East Bay Meds',
+        range: [
+            {lat: 37.983291, lng: -122.096901},
+            {lat: 37.983021, lng: -122.067719},
+            {lat: 37.957831, lng: -122.054329},
+            {lat: 37.899202, lng: -122.041454},
+            {lat: 37.863568, lng: -121.985321},
+            {lat: 37.703771, lng: -121.879578},
+            {lat: 37.701055, lng: -121.960602},
+            {lat: 37.817844, lng: -122.125053},
+            {lat: 37.899434, lng: -122.225304}
+        ],
+        phone: '510.338.3632',
+        logo: 'blum.png',
+        website: 'http://blumoak.com',
+        menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
+    },
+
+
+]
+
 // this is shitty.
 function initMap() {
     (function($) {
@@ -237,11 +260,29 @@ function initMap() {
                 center = map.getCenter();
             });
 
+            google.maps.event.addDomListener(map, 'bounds_changed', function() {
+                console.log("bounds");
+            });
+
             google.maps.event.addDomListener(window, 'resize', function() {
                 map.setCenter(center);
             });
 
-            // Add markers
+            var dispensaryMarkers = addDispensariesToMap(map, allDispensaries);
+            var deliveryRanges = addDeliveryServicesToMap(map, allDeliveryServices);
+
+            console.log(deliveryRanges);
+
+            zoomToAllMarkers(map, dispensaryMarkers);
+
+            map.setOptions({draggable: !screenSizeMobile()});
+
+            $(window).on('resize', function() {
+                map.setOptions({draggable: !screenSizeMobile()});
+            });
+        }
+
+        function addDispensariesToMap(map, dispensaries) {
             var img = 'img/orange.png';
             var size = new google.maps.Size(25,25);
             var icon = new google.maps.MarkerImage(img, null, null, null, size);
@@ -258,13 +299,94 @@ function initMap() {
                 return marker;
             });
 
-            zoomToAllMarkers(map, markers);
+            return markers;
+        }
 
-            map.setOptions({draggable: !screenSizeMobile()});
+        function addDeliveryServicesToMap(map, deliveryServices) {
+            var deliveryRanges = deliveryServices.map(function(delivery) {
+                var poly = new google.maps.Polygon({
+                        paths: delivery.range,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2,
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.35
+                    });
 
-            $(window).on('resize', function() {
-                map.setOptions({draggable: !screenSizeMobile()});
+                poly.setMap(map);
+
+                addMarkerForDeliveryService(map, delivery);
+
+                return poly;
             });
+
+            return deliveryRanges;
+        }
+
+        function addMarkerForDeliveryService(map, delivery) {
+            var deliveryServiceBounds = getBoundsForDeliveryRange(delivery.range);
+
+            delivery.location = getPositionForDeliveryMarker(map.getBounds(), deliveryServiceBounds);
+
+
+            console.log(delivery);
+
+            addDispensariesToMap(map, [delivery])
+
+        }
+
+        function getBoundsForDeliveryRange(range) {
+            var latMax = -1000;
+            var latMin = 1000;
+            var lngMax = -1000;
+            var lngMin = 1000;
+
+            for (var i = 0; i < range.length; i++) {
+                var coord = range[i];
+
+                if (coord.lat > latMax) {
+                    latMax = coord.lat;
+                }
+
+                if (coord.lat < latMin) {
+                    latMin = coord.lat;
+                }
+
+                if (coord.lng > lngMax) {
+                    lngMax = coord.lng;
+                }
+
+                if (coord.lng < lngMin) {
+                    lngMin = coord.lng;
+                }
+            }
+
+            return {
+                latMax: latMax,
+                latMin: latMin,
+                lngMax: lngMax,
+                lngMin: lngMin
+            };
+        }
+
+        function getPositionForDeliveryMarker(mapBounds, rangeBounds) {
+            console.log(mapBounds);
+            if (!mapBounds) {
+                return {
+                    lat: ((rangeBounds.latMax - rangeBounds.latMin) / 2) + rangeBounds.latMin,
+                    lng: ((rangeBounds.lngMax - rangeBounds.lngMin) / 2) + rangeBounds.lngMin
+                }
+            }
+
+            var latMin = mapBounds[0][0] < rangeBounds.latMin ? mapBounds[0][0] : rangeBounds.latMin;
+            var latMax = mapBounds[1][0] > rangeBounds.latMax ? mapBounds[1][0] : rangeBounds.latMax;
+            var lngMin = 1000;
+            var lngMax = -1000;
+
+            return {
+                lat: ((latMax - latMin) / 2) + latMin,
+                lng: ((lngMax - lngMin) / 2) + lngMin
+            }
         }
 
         function setMarkerClickEvent(map, marker, dispensary) {
