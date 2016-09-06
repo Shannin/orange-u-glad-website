@@ -268,8 +268,13 @@ function initMap() {
                 map.setCenter(center);
             });
 
-            var dispensaryMarkers = addDispensariesToMap(map, allDispensaries);
-            var deliveryRanges = addDeliveryServicesToMap(map, allDeliveryServices);
+            addDispensariesToMap(map, allDispensaries);
+            addDeliveryServicesToMap(map, allDeliveryServices);
+
+            // zoom out to all markers
+            var dispensaryMarkers = allDispensaries.map(function (dispensary) {
+                return dispensary.marker;
+            });
 
             zoomToAllMarkers(map, dispensaryMarkers);
 
@@ -281,39 +286,34 @@ function initMap() {
         }
 
         function addDispensariesToMap(map, dispensaries) {
-            var markers = dispensaries.map(function(dispensary) {
-                return addMarkerToMap(map, dispensary.location, dispensary, 'dispensary');
-            });
+            dispensaries.forEach(function(dispensary) {
+                var marker = addMarkerToMap(map, dispensary.location, dispensary, 'dispensary');
+                setMarkerClickEvent(map, marker, dispensary);
 
-            return markers;
+                dispensary.marker = marker;
+            });
         }
 
         function addDeliveryServicesToMap(map, deliveryServices) {
-            var deliveryRanges = deliveryServices.map(function(delivery) {
+            deliveryServices.forEach(function (delivery) {
                 var poly = new google.maps.Polygon({
-                        paths: delivery.range,
-                        strokeColor: '#FF0000',
-                        strokeOpacity: 0.8,
-                        strokeWeight: 2,
-                        fillColor: '#FF0000',
-                        fillOpacity: 0.35
-                    });
-
-                poly.setMap(map);
+                    paths: delivery.range,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35,
+                    map: map
+                });
 
                 var deliveryServiceBounds = getBoundsForDeliveryRange(delivery.range);
                 var location = getPositionForDeliveryMarker(map.getBounds(), deliveryServiceBounds);
-
                 var marker = addMarkerToMap(map, location, delivery, 'delivery');
 
-                return {
-                    marker: marker,
-                    poly: poly,
-                    polyBounds: deliveryServiceBounds
-                };
+                delivery.marker = marker;
+                delivery.poly = poly;
+                delivery.rangeBounds = deliveryServiceBounds;
             });
-
-            return deliveryRanges;
         }
 
         function addMarkerToMap(map, location, dispensary, type) {
@@ -321,13 +321,13 @@ function initMap() {
             var size = new google.maps.Size(25,25);
             var icon = new google.maps.MarkerImage(img, null, null, null, size);
 
+            console.log(dispensary);
+
             var marker = new google.maps.Marker({
                 position: location,
                 map: map,
                 icon: icon
             });
-
-            setMarkerClickEvent(map, marker, dispensary);
 
             return marker;
         }
@@ -376,8 +376,8 @@ function initMap() {
 
             var latMin = mapBounds[0][0] < rangeBounds.latMin ? mapBounds[0][0] : rangeBounds.latMin;
             var latMax = mapBounds[1][0] > rangeBounds.latMax ? mapBounds[1][0] : rangeBounds.latMax;
-            var lngMin = 1000;
-            var lngMax = -1000;
+            var lngMin = mapBounds[0][0] < rangeBounds.lngMin ? mapBounds[0][0] : rangeBounds.lngMin;
+            var lngMax = mapBounds[1][0] > rangeBounds.lngMax ? mapBounds[1][0] : rangeBounds.lngMax;
 
             return {
                 lat: ((latMax - latMin) / 2) + latMin,
@@ -402,12 +402,12 @@ function initMap() {
                         $('.locations-map__dispensary-card-container', locationsMap).html(dispensaryCardContent);
                     })(jQuery);
                 } else {
-                    var infowindow = new google.maps.InfoWindow({
+                    var infoWindow = new google.maps.InfoWindow({
                         content: dispensaryCardContent
                     });
-                    infowindow.open(map, marker);
+                    infoWindow.open(map, marker);
 
-                    currentInfoWindow = infowindow;
+                    currentInfoWindow = infoWindow;
                 }
             });
         }
@@ -454,6 +454,12 @@ function initMap() {
             return base + encodeURIComponent(parts.join(" "));
         }
 
+
+        init();
+
+
+        // helper functions
+
         function screenSizeMobile() {
             return locationsMap.width() <= 600 || locationsMap.height() <= 600;
         }
@@ -465,8 +471,28 @@ function initMap() {
             });
 
             map.fitBounds(bounds);
-        }        
+        } 
 
-        init();
+
+        // google maps exensions
+        google.maps.Polygon.prototype.hide = function(){
+            if (this._visible) {
+                this._visible = false;
+                this._strokeOpacity = this.strokeOpacity;
+                this._fillOpacity = this.fillOpacity;
+                this.strokeOpacity = 0;
+                this.fillOpacity = 0;
+                this.setMap(this.map);
+            }
+        }
+
+        google.maps.Polygon.prototype.show = function() {
+            if (!this._visible) {
+                this._visible = true;
+                this.strokeOpacity = this._strokeOpacity;
+                this.fillOpacity = this._fillOpacity;
+                this.setMap(this.map);
+            }
+        }
     })(jQuery);
 }
