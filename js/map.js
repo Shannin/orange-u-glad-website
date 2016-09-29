@@ -222,11 +222,29 @@ var allDeliveryServices = [
             {lat: 37.817844, lng: -122.125053},
             {lat: 37.899434, lng: -122.225304}
         ],
-        phone: '510.338.3632',
-        logo: 'blum.png',
-        website: 'http://blumoak.com',
+        phone: '925.324.3349',
+        logo: 'east-bay-meds.png',
+        website: 'http://www.eastbaymeds.org',
         menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
     },
+    {
+        name: 'Marygold Delivery',
+        range: [
+            {lat: 38.021979, lng: -122.152519},
+            {lat: 38.057131, lng: -122.024117},
+            {lat: 38.014643, lng: -121.780701},
+            {lat: 37.943741, lng: -121.774521},
+            {lat: 37.774056, lng: -121.928329},
+            {lat: 37.755600, lng: -121.990128},
+            {lat: 37.877648, lng: -122.101364},
+            {lat: 37.948072, lng: -122.119217}
+        ],
+        phone: '925.979.5119',
+        logo: 'marygolddelivery.png',
+        website: 'http://www.marygolddelivery.com',
+        menu: 'http://www.marygolddelivery.com/browse-our-menu.html'
+    },
+
 
 
 ]
@@ -236,11 +254,18 @@ function initMap() {
     (function($) {
         var center;
         var currentInfoWindow;
+        var currentPoly;
         var locationsMap = $('#locations-map');
 
         $(locationsMap).on('click', '.dispensary-card__close-button', function (event) {
             if (currentInfoWindow != null) {
                 currentInfoWindow.close();
+                currentInfoWindow = null;
+            }
+
+            if (currentPoly != null) {
+                currentPoly.setMap(null);
+                currentPoly = null;
             }
 
             $('.locations-map__map-box', locationsMap).removeClass('hidden');
@@ -275,7 +300,6 @@ function initMap() {
             var dispensaryMarkers = allDispensaries.map(function (dispensary) {
                 return dispensary.marker;
             });
-
             zoomToAllMarkers(map, dispensaryMarkers);
 
             map.setOptions({draggable: !screenSizeMobile()});
@@ -303,12 +327,13 @@ function initMap() {
                     strokeWeight: 2,
                     fillColor: '#FF0000',
                     fillOpacity: 0.35,
-                    map: map
                 });
 
                 var deliveryServiceBounds = getBoundsForDeliveryRange(delivery.range);
                 var location = getPositionForDeliveryMarker(map.getBounds(), deliveryServiceBounds);
+
                 var marker = addMarkerToMap(map, location, delivery, 'delivery');
+                setMarkerClickEvent(map, marker, delivery);
 
                 delivery.marker = marker;
                 delivery.poly = poly;
@@ -406,8 +431,17 @@ function initMap() {
                         content: dispensaryCardContent
                     });
                     infoWindow.open(map, marker);
-
                     currentInfoWindow = infoWindow;
+
+                    if (dispensary.poly) {
+                        dispensary.poly.setMap(map);
+
+                        google.maps.event.addListener(infoWindow,'closeclick',function() {
+                            dispensary.poly.setMap(null);
+                        });
+
+                        currentPoly = dispensary.poly;
+                    }
                 }
             });
         }
@@ -471,28 +505,6 @@ function initMap() {
             });
 
             map.fitBounds(bounds);
-        } 
-
-
-        // google maps exensions
-        google.maps.Polygon.prototype.hide = function(){
-            if (this._visible) {
-                this._visible = false;
-                this._strokeOpacity = this.strokeOpacity;
-                this._fillOpacity = this.fillOpacity;
-                this.strokeOpacity = 0;
-                this.fillOpacity = 0;
-                this.setMap(this.map);
-            }
-        }
-
-        google.maps.Polygon.prototype.show = function() {
-            if (!this._visible) {
-                this._visible = true;
-                this.strokeOpacity = this._strokeOpacity;
-                this.fillOpacity = this._fillOpacity;
-                this.setMap(this.map);
-            }
         }
     })(jQuery);
 }
