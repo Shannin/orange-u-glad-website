@@ -82,6 +82,10 @@ footer {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=1 );
 }
 
+.section--padded-small {
+    padding: 15px 0px;
+}
+
 .section--padded-medium {
     padding: 35px 0px;
 }

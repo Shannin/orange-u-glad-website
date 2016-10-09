@@ -207,6 +207,9 @@ footer {
   background: linear-gradient(165deg, #fda228 0%, #f08a02 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange', endColorstr='darken($orange, 10%)',GradientType=1 ); }
 
+.section--padded-small {
+  padding: 15px 0px; }
+
 .section--padded-medium {
   padding: 35px 0px; }
 
