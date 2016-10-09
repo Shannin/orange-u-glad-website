@@ -347,11 +347,6 @@ form .form-group.error .form-control {
 .form--transparent-dark button {
   background-color: #d77c02; }
 
-.delivery-services a {
-  display: inline-block; }
-  .delivery-services a img {
-    height: 75px; }
-
 .lab-results {
   min-height: 100%;
   width: 100%;
