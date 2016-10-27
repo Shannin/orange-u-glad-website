@@ -210,7 +210,27 @@ var allDispensaries = [
 
 var allDeliveryServices = [
     {
-        name: 'East Bay Meds',
+        name: '7 Leaf Health',
+        range: [
+            {lat: 37.746524, lng: -121.832199},
+            {lat: 37.770884, lng: -121.554108},
+            {lat: 37.830565, lng: -121.320648},
+            {lat: 37.778483, lng: -121.348114},
+            {lat: 37.705723, lng: -121.317902},
+            {lat: 37.657902, lng: -121.470337},
+            {lat: 37.656815, lng: -121.683197},
+            {lat: 37.622016, lng: -121.856232},
+            {lat: 37.915120, lng: -122.133636},
+            {lat: 37.956279, lng: -122.064972},
+            {lat: 37.912953, lng: -121.985321},
+            {lat: 37.795848, lng: -121.904297}
+        ],
+        phone: '925.261.8478',
+        logo: '7leaf.png',
+        menu: 'https://weedmaps.com/deliveries/7-leaf-health#/menu'
+    },
+    {
+    name: 'East Bay Meds',
         range: [
             {lat: 37.983291, lng: -122.096901},
             {lat: 37.983021, lng: -122.067719},
@@ -226,6 +246,26 @@ var allDeliveryServices = [
         logo: 'east-bay-meds.png',
         website: 'http://www.eastbaymeds.org',
         menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
+    },
+        {
+        name: 'Higher Elevation',
+        range: [
+            {lat: 37.746524, lng: -121.832199},
+            {lat: 37.770884, lng: -121.554108},
+            {lat: 37.830565, lng: -121.320648},
+            {lat: 37.843580, lng: -121.191559},
+            {lat: 37.796933, lng: -121.151733},
+            {lat: 37.705723, lng: -121.317902},
+            {lat: 37.657902, lng: -121.470337},
+            {lat: 37.656815, lng: -121.683197},
+            {lat: 37.622016, lng: -121.856232},
+            {lat: 37.663338, lng: -121.942749},
+            {lat: 37.723105, lng: -121.959229}
+        ],
+        phone: '925.579.3330',
+        logo: 'higher-elevation.png',
+        website: 'http://www.higherelevationcollective.com',
+        menu: 'https://weedmaps.com/deliveries/higher-elevation'
     },
     {
         name: 'Marygold Delivery',
@@ -243,10 +283,7 @@ var allDeliveryServices = [
         logo: 'marygolddelivery.png',
         website: 'http://www.marygolddelivery.com',
         menu: 'http://www.marygolddelivery.com/browse-our-menu.html'
-    },
-
-
-
+    }
 ]
 
 // this is shitty.
