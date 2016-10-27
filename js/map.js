@@ -453,6 +453,11 @@ function initMap() {
                     currentInfoWindow.close();
                 }
 
+                if (currentPoly != null) {
+                    currentPoly.setMap(null);
+                    currentPoly = null;
+                }
+
                 var dispensaryCardContent = generateDispensaryCardContent(dispensary);
 
                 if (screenSizeMobile()) {
