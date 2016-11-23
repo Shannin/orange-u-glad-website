@@ -68,6 +68,42 @@ var allDispensaries = [
         website: 'http://www.thecannabiswellnesscenter.com',
     },
     {
+        name: 'CC101',
+        address: {
+            street: '6435 Florin Perkins Rd',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95828',
+        },
+        location: {lat: 38.509532, lng: -121.390239},
+        phone: '916-387-6233',
+        website: 'http://cc101sac.com',
+    },
+    {
+        name: 'Cloud 9',
+        address: {
+            street: '5711 Florin Perkins Rd',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95828',
+        },
+        location: {lat: 38.522980, lng: -121.389761},
+        phone: '916-387-8605',
+        website: 'http://sacloud9.com',
+    },
+    {
+        name: 'Doctors Orders Co-Op',
+        address: {
+            street: '1704 Main Ave',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95838',
+        },
+        location: {lat: 38.654371, lng: -121.426569},
+        phone: '916-564-2112',
+        website: 'http://doctorsordersrx.com',
+    },
+    {
         name: 'Flower Power',
         address: {
             street: '70 2nd Street',
@@ -118,6 +154,18 @@ var allDispensaries = [
         website: 'http://www.holistichealingcollective.org',
     },
     {
+        name: 'House of Organics',
+        address: {
+            street: '8848 Fruitridge Rd',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95826',
+        },
+        location: {lat: 38.525149, lng: -121.373803},
+        phone: '916-381-3769',
+        website: 'http://sachouseoforganics.com',
+    },
+    {
         name: 'HTP Group',
         address: {
             street: '1408 Enterprise St Suite D4',
@@ -155,6 +203,17 @@ var allDispensaries = [
         website: 'http://www.medithrive.com',
     },
     {
+        name: 'THC',
+        address: {
+            street: '6666 Fruitridge Rd',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95820',
+        },
+        location: {lat: 38.524707, lng: -121.424713},
+        phone: '916-476-4431',
+    },
+    {
         name: 'The Cookie Co. 415',
         address: {
             street: '3139 Mission St',
@@ -179,6 +238,29 @@ var allDispensaries = [
         phone: '831-471-8289',
         logo: 'thecookieco.png',
         website: 'http://thecookieco831.com/',
+    },
+    {
+        name: 'The Healing Flower',
+        address: {
+            street: '1060 Reno Ave Suite d',
+            city: 'Modesto',
+            state: 'CA',
+            zip: '95351',
+        },
+        location: {lat: 37.649938, lng: -121.026467},
+        phone: '209-577-1660',
+        logo: 'the-healing-flower.png',
+    },
+    {
+        name: 'The Lion Empire',
+        address: {
+            street: '831 E Main St',
+            city: 'Stockton',
+            state: 'CA',
+            zip: '95202',
+        },
+        location: {lat: 37.954604, lng: -121.280106},
+        phone: '209-475-8022',
     },
     {
         name: 'Vallejo Holistic Health Center',
@@ -225,7 +307,7 @@ var allDeliveryServices = [
             {lat: 37.912953, lng: -121.985321},
             {lat: 37.795848, lng: -121.904297}
         ],
-        phone: '925.261.8478',
+        phone: '925-261-8478',
         logo: '7leaf.png',
         menu: 'https://weedmaps.com/deliveries/7-leaf-health#/menu'
     },
@@ -242,7 +324,7 @@ var allDeliveryServices = [
             {lat: 37.817844, lng: -122.125053},
             {lat: 37.899434, lng: -122.225304}
         ],
-        phone: '925.324.3349',
+        phone: '925-324-3349',
         logo: 'east-bay-meds.png',
         website: 'http://www.eastbaymeds.org',
         menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
@@ -262,7 +344,7 @@ var allDeliveryServices = [
             {lat: 37.663338, lng: -121.942749},
             {lat: 37.723105, lng: -121.959229}
         ],
-        phone: '925.579.3330',
+        phone: '925-579-3330',
         logo: 'higher-elevation.png',
         website: 'http://www.higherelevationcollective.com',
         menu: 'https://weedmaps.com/deliveries/higher-elevation'
@@ -279,10 +361,29 @@ var allDeliveryServices = [
             {lat: 37.877648, lng: -122.101364},
             {lat: 37.948072, lng: -122.119217}
         ],
-        phone: '925.979.5119',
+        phone: '925-979-5119',
         logo: 'marygolddelivery.png',
         website: 'http://www.marygolddelivery.com',
         menu: 'http://www.marygolddelivery.com/browse-our-menu.html'
+    },
+    {
+        name: 'Valley Essentials',
+        range: [
+            {lat: 37.466334, lng: -122.114925},
+            {lat: 37.437444, lng: -122.090893},
+            {lat: 37.406906, lng: -122.053127},
+            {lat: 37.397906, lng: -122.028065},
+            {lat: 37.370899, lng: -121.997509},
+            {lat: 37.352343, lng: -121.998539},
+            {lat: 37.338696, lng: -122.015705},
+            {lat: 37.335421, lng: -122.083683},
+            {lat: 37.416996, lng: -122.217922},
+            {lat: 37.446167, lng: -122.170887},
+        ],
+        phone: '650-823-3760',
+        logo: 'valley-essentials.png',
+        website: 'https://www.valleyessentialsinc.com',
+        menu: 'https://www.valleyessentialsinc.com/store/c1/Featured_Products.html'
     }
 ]
 
