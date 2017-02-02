@@ -103,6 +103,7 @@ var allDispensaries = [
         phone: '916-564-2112',
         website: 'http://doctorsordersrx.com',
     },
+/*
     {
         name: 'Flower Power',
         address: {
@@ -115,6 +116,7 @@ var allDispensaries = [
         phone: '628-444-3441',
         logo: 'flowerpower.png',
     },
+*/
     {
         name: 'Herbal Cruz',
         address: {
@@ -140,6 +142,7 @@ var allDispensaries = [
         phone: '707-645-8303',
         logo: 'highway29.png',
     },
+/*
     {
         name: 'Holistic Healing Collective',
         address: {
@@ -153,6 +156,7 @@ var allDispensaries = [
         logo: 'holistichealing.png',
         website: 'http://www.holistichealingcollective.org',
     },
+*/
     {
         name: 'House of Organics',
         address: {
@@ -201,6 +205,45 @@ var allDispensaries = [
         phone: '415-562-6334',
         logo: 'medithrive.png',
         website: 'http://www.medithrive.com',
+    },
+    {
+        name: 'Medithrive Ocean',
+        address: {
+            street: '1545 Ocean Ave',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94112',
+        },
+        location: {lat: 37.724271, lng: -122.458990},
+        phone: '415-859-5761',
+        logo: 'medithrive.png',
+        website: 'http://www.medithrive.com',
+    },
+    // {
+    //     name: 'My Green Giant',
+    //     address: {
+    //         street: '8130 Lorraine Ave #324',
+    //         city: 'Stockton',
+    //         state: 'CA',
+    //         zip: '95210',
+    //     },
+    //     location: {lat: 38.023737, lng: -121.280454},
+    //     phone: '844-315-3066',
+    //     logo: 'medithrive.png',
+    //     website: 'http://www.medithrive.com',
+    // },
+    {
+        name: 'Tahoe Wellness',
+        address: {
+            street: '3445 Lake Tahoe Blvd',
+            city: 'South Lake Tahoe',
+            state: 'CA',
+            zip: '96150',
+        },
+        location: {lat: 38.946212, lng: -119.965582},
+        phone: '530-544-8000',
+        logo: 'tahoe-wellness.png',
+        website: 'http://www.http://tahoewellnesscoop.org',
     },
     {
         name: 'THC',
@@ -311,6 +354,7 @@ var allDeliveryServices = [
         logo: '7leaf.png',
         menu: 'https://weedmaps.com/deliveries/7-leaf-health#/menu'
     },
+/*
     {
     name: 'East Bay Meds',
         range: [
@@ -348,6 +392,53 @@ var allDeliveryServices = [
         logo: 'higher-elevation.png',
         website: 'http://www.higherelevationcollective.com',
         menu: 'https://weedmaps.com/deliveries/higher-elevation'
+    },
+*/
+    {
+        name: 'A+ Organics',
+        range: [
+            {lat: 38.114503, lng: -122.314911},
+            {lat: 38.379816, lng: -122.062225},
+            {lat: 38.674186, lng: -121.562347},
+            {lat: 38.800587, lng: -121.257477},
+            {lat: 38.652740, lng: -121.013031},
+            {lat: 38.386275, lng: -121.317902},
+            {lat: 38.323814, lng: -121.746368},
+            {lat: 38.053971, lng: -122.177582},
+        ],
+        phone: '916-540-0212',
+        logo: 'aplus.png',
+        menu: 'https://more.weedmaps.com/deliveries/aplusorganics?page=4',
+        website: 'http://www.aplusorganics.club'
+    },
+    {
+        name: 'Blackbird Botanicals',
+        range: [
+            {lat: 36.826566, lng: -119.906845},
+            {lat: 36.915553, lng: -119.750290},
+            {lat: 36.801279, lng: -119.630814},
+            {lat: 36.707754, lng: -119.684372},
+            {lat: 36.663703, lng: -119.812088},
+        ],
+        phone: '619-654-0287',
+        logo: 'blackbirdbotanical.png',
+        menu: 'https://weedmaps.com/deliveries/blackbird-botanical-deliveries#/menu'
+    },
+    {
+        name: 'Jah Healing Caregivers',
+        range: [
+            {lat: 33.218836, lng: -117.406082},
+            {lat: 33.431119, lng: -117.375870},
+            {lat: 33.592565, lng: -117.301712},
+            {lat: 33.685175, lng: -117.172623},
+            {lat: 33.594853, lng: -117.036667},
+            {lat: 33.369209, lng: -117.017441},
+            {lat: 33.110775, lng: -116.995468},
+            {lat: 33.048637, lng: -117.095718},
+            {lat: 33.004885, lng: -117.281113}
+        ],
+        phone: '619-654-0287',
+        menu: 'https://weedmaps.com/deliveries/j-h-care-givers-2'
     },
     {
         name: 'Marygold Delivery',
@@ -435,10 +526,23 @@ function initMap() {
             addDeliveryServicesToMap(map, allDeliveryServices);
 
             // zoom out to all markers
-            var dispensaryMarkers = allDispensaries.map(function (dispensary) {
-                return dispensary.marker;
+            var dispensaryMarkers = allDispensaries.map(function (d) {
+                return d.marker;
             });
-            zoomToAllMarkers(map, dispensaryMarkers);
+
+            var deliveryMarkers = allDeliveryServices.map(function (d) {
+                return d.marker;
+            });
+
+            var allMarkers = dispensaryMarkers.concat(deliveryMarkers)
+
+            console.log(allMarkers)
+
+
+
+
+
+            zoomToAllMarkers(map, allMarkers);
 
             map.setOptions({draggable: !screenSizeMobile()});
 
