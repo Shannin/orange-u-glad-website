@@ -42,6 +42,31 @@ var allDispensaries = [
     },
 */
     {
+        name: 'Alternative Medical Center',
+        address: {
+            street: '1220 Blumenfeld Drive',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95815',
+        },
+        location: {lat: 38.604024, lng: -121.438648},
+        phone: '916-564-1100',
+        website: 'http://www.amc916.com',
+    },
+    {
+        name: 'Barbary Coast',
+        address: {
+            street: '952 Mission St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
+        location: {lat: 37.781935, lng: -122.407793},
+        phone: '510-338-3632',
+        logo: 'barbarycoast.png',
+        website: 'http://www.barbarycoastsf.org',
+    },
+    {
         name: 'Blüm Oak',
         address: {
             street: '578 W Grand Ave',
@@ -219,19 +244,19 @@ var allDispensaries = [
         logo: 'medithrive.png',
         website: 'http://www.medithrive.com',
     },
-    // {
-    //     name: 'My Green Giant',
-    //     address: {
-    //         street: '8130 Lorraine Ave #324',
-    //         city: 'Stockton',
-    //         state: 'CA',
-    //         zip: '95210',
-    //     },
-    //     location: {lat: 38.023737, lng: -121.280454},
-    //     phone: '844-315-3066',
-    //     logo: 'medithrive.png',
-    //     website: 'http://www.medithrive.com',
-    // },
+    {
+        name: 'My Green Giant',
+        address: {
+            street: '8130 Lorraine Ave #324',
+            city: 'Stockton',
+            state: 'CA',
+            zip: '95210',
+        },
+        location: {lat: 38.023737, lng: -121.280454},
+        phone: '844-315-3066',
+        logo: 'mygreen.png',
+        website: 'http://www.mygreengiant.net',
+    },
     {
         name: 'Tahoe Wellness',
         address: {
