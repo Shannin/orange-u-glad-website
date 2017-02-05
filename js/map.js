@@ -379,46 +379,6 @@ var allDeliveryServices = [
         logo: '7leaf.png',
         menu: 'https://weedmaps.com/deliveries/7-leaf-health#/menu'
     },
-/*
-    {
-    name: 'East Bay Meds',
-        range: [
-            {lat: 37.983291, lng: -122.096901},
-            {lat: 37.983021, lng: -122.067719},
-            {lat: 37.957831, lng: -122.054329},
-            {lat: 37.899202, lng: -122.041454},
-            {lat: 37.863568, lng: -121.985321},
-            {lat: 37.703771, lng: -121.879578},
-            {lat: 37.701055, lng: -121.960602},
-            {lat: 37.817844, lng: -122.125053},
-            {lat: 37.899434, lng: -122.225304}
-        ],
-        phone: '925-324-3349',
-        logo: 'east-bay-meds.png',
-        website: 'http://www.eastbaymeds.org',
-        menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
-    },
-        {
-        name: 'Higher Elevation',
-        range: [
-            {lat: 37.746524, lng: -121.832199},
-            {lat: 37.770884, lng: -121.554108},
-            {lat: 37.830565, lng: -121.320648},
-            {lat: 37.843580, lng: -121.191559},
-            {lat: 37.796933, lng: -121.151733},
-            {lat: 37.705723, lng: -121.317902},
-            {lat: 37.657902, lng: -121.470337},
-            {lat: 37.656815, lng: -121.683197},
-            {lat: 37.622016, lng: -121.856232},
-            {lat: 37.663338, lng: -121.942749},
-            {lat: 37.723105, lng: -121.959229}
-        ],
-        phone: '925-579-3330',
-        logo: 'higher-elevation.png',
-        website: 'http://www.higherelevationcollective.com',
-        menu: 'https://weedmaps.com/deliveries/higher-elevation'
-    },
-*/
     {
         name: 'A+ Organics',
         range: [
@@ -448,6 +408,80 @@ var allDeliveryServices = [
         phone: '619-654-0287',
         logo: 'blackbirdbotanical.png',
         menu: 'https://weedmaps.com/deliveries/blackbird-botanical-deliveries#/menu'
+    },
+/*
+    {
+    name: 'East Bay Meds',
+        range: [
+            {lat: 37.983291, lng: -122.096901},
+            {lat: 37.983021, lng: -122.067719},
+            {lat: 37.957831, lng: -122.054329},
+            {lat: 37.899202, lng: -122.041454},
+            {lat: 37.863568, lng: -121.985321},
+            {lat: 37.703771, lng: -121.879578},
+            {lat: 37.701055, lng: -121.960602},
+            {lat: 37.817844, lng: -122.125053},
+            {lat: 37.899434, lng: -122.225304}
+        ],
+        phone: '925-324-3349',
+        logo: 'east-bay-meds.png',
+        website: 'http://www.eastbaymeds.org',
+        menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
+    },
+*/
+    {
+        name: 'Higher Elevation',
+        range: [
+            {lat: 37.746524, lng: -121.832199},
+            {lat: 37.770884, lng: -121.554108},
+            {lat: 37.830565, lng: -121.320648},
+            {lat: 37.843580, lng: -121.191559},
+            {lat: 37.796933, lng: -121.151733},
+            {lat: 37.705723, lng: -121.317902},
+            {lat: 37.657902, lng: -121.470337},
+            {lat: 37.656815, lng: -121.683197},
+            {lat: 37.622016, lng: -121.856232},
+            {lat: 37.663338, lng: -121.942749},
+            {lat: 37.723105, lng: -121.959229}
+        ],
+        phone: '925-579-3330',
+        logo: 'higher-elevation.png',
+        website: 'http://www.higherelevationcollective.com',
+        menu: 'https://weedmaps.com/deliveries/higher-elevation'
+    },
+    {
+        name: 'Grasshopper SF',
+        range: [
+            {lat: 37.783121, lng: -122.513180},
+            {lat: 37.790718, lng: -122.488461},
+            {lat: 37.809708, lng: -122.476788},
+            {lat: 37.805910, lng: -122.447262},
+            {lat: 37.809436, lng: -122.409840},
+            {lat: 37.785292, lng: -122.384777},
+            {lat: 37.747567, lng: -122.375507},
+            {lat: 37.726661, lng: -122.432842},
+            {lat: 37.708465, lng: -122.464085},
+            {lat: 37.721501, lng: -122.508373}
+        ],
+        phone: '415-340-2438',
+        website: 'http://www.grasshoppersf.com',
+        menu: 'http://www.grasshoppersf.com/menu/'
+    },
+    {
+        name: 'Green Grizzly',
+        range: [
+            {lat: 38.020745, lng: -122.147369},
+            {lat: 38.049950, lng: -122.051926},
+            {lat: 37.974211, lng: -121.966782},
+            {lat: 37.905978, lng: -121.995621},
+            {lat: 37.852865, lng: -122.079391},
+            {lat: 37.808394, lng: -122.242813},
+            {lat: 37.829006, lng: -122.303238},
+            {lat: 37.889723, lng: -122.318344},
+            {lat: 37.920063, lng: -122.197495},
+            {lat: 37.968798, lng: -122.142563},
+        ],
+        phone: '925-808-5269'
     },
     {
         name: 'Jah Healing Caregivers',
