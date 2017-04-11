@@ -54,6 +54,31 @@ var allDispensaries = [
         website: 'http://www.amc916.com',
     },
     {
+        name: 'Alternatives Health Collective',
+        address: {
+            street: '1603 Hampton Way',
+            city: 'Santa Rosa',
+            state: 'CA',
+            zip: '95407',
+        },
+        location: {lat: 38.428261, lng: -122.738194},
+        phone: '707-525-1420',
+        logo: 'alternatives-sr.png',
+        website: 'https://weedmaps.com/dispensaries/alternatives-health-collective#/menu',
+    },
+    {
+        name: 'Ancient Wisdom',
+        address: {
+            street: '18680 N. Hwy 88 Suite C',
+            city: 'Lockeford',
+            state: 'CA',
+            zip: '95237',
+        },
+        location: {lat: 38.153860, lng: -121.155866},
+        phone: '209-426-1112',
+        website: 'https://weedmaps.com/dispensaries/ancient-wisdom#/menu',
+    },
+    {
         name: 'Barbary Coast',
         address: {
             street: '952 Mission St',
@@ -61,10 +86,23 @@ var allDispensaries = [
             state: 'CA',
             zip: '94103',
         },
-        location: {lat: 37.781935, lng: -122.407793},
+        location: {lat: 37.781818, lng: -122.407632},
         phone: '510-338-3632',
         logo: 'barbarycoast.png',
         website: 'http://www.barbarycoastsf.org',
+    },
+    {
+        name: 'Bloom Room',
+        address: {
+            street: '471 Jessie St',
+            city: 'San Francisco',
+            state: 'CA',
+            zip: '94103',
+        },
+        location: {lat: 37.782073, lng: -122.408434},
+        phone: '415-543-7666',
+        logo: 'bloomroom.png',
+        website: 'http://www.bloomroomsf.com',
     },
     {
         name: 'Blüm Oak',
@@ -143,6 +181,30 @@ var allDispensaries = [
     },
 */
     {
+        name: 'Golden Health',
+        address: {
+            street: '1030 Joellis Way',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95815',
+        },
+        location: {lat: 38.601542, lng: -121.442913},
+        phone: '916-646-6340',
+        website: 'https://weedmaps.com/dispensaries/golden-health-and-wellnes#/details',
+    },
+    {
+        name: 'Green Gold Cultivators',
+        address: {
+            street: '568 Angels Rd',
+            city: 'San Andreas',
+            state: 'CA',
+            zip: '95249',
+        },
+        location: {lat: 38.188752, lng: -120.675429},
+        phone: '209-674-8008',
+        website: 'https://weedmaps.com/dispensaries/green-gold-cultivators#/details',
+    },
+    {
         name: 'Herbal Cruz',
         address: {
             street: '1001 41st Ave',
@@ -217,6 +279,18 @@ var allDispensaries = [
         location: {lat: 37.787834, lng: -122.396539},
         phone: '415-834-5225',
         logo: 'igzactly420.png',
+    },
+    {
+        name: '',
+        address: {
+            street: '2641 Hwy 4 #7A',
+            city: 'Arnold',
+            state: 'CA',
+            zip: '95223',
+        },
+        location: {lat: 38.233510, lng: -120.366955},
+        phone: '209-890-3647',
+        logo: 'littletrees.png'
     },
     {
         name: 'Medithrive',
@@ -331,6 +405,19 @@ var allDispensaries = [
         phone: '209-475-8022',
     },
     {
+        name: 'Theraleaf Relief',
+        address: {
+            street: '1014 Timothy Drive',
+            city: 'San Jose',
+            state: 'CA',
+            zip: '95133',
+        },
+        location: {lat: 37.364150, lng: -121.879811},
+        phone: '408-849-3706',
+        logo: 'theraleaf.png',
+        website: 'https://weedmaps.com/dispensaries/theraleaf-relief-inc',
+    },
+    {
         name: 'Vallejo Holistic Health Center',
         address: {
             street: '539 Tennesee St',
@@ -342,6 +429,19 @@ var allDispensaries = [
         phone: '707-652-5018',
         logo: 'vhhc.png',
         website: 'http://www.vhhc420.org/',
+    },
+    {
+        name: 'Zen Garden Wellness',
+        address: {
+            street: '2201 Northgate Blvd Suite H',
+            city: 'Sacramento',
+            state: 'CA',
+            zip: '95833',
+        },
+        location: {lat: 38.607279, lng: -121.476421},
+        phone: '916-292-8120',
+        logo: 'zengarden.png',
+        website: 'https://weedmaps.com/dispensaries/zen-garden-wellness#/details',
     },
     {
         name: '7 Stars Holistic Healing Center',
@@ -409,7 +509,20 @@ var allDeliveryServices = [
         logo: 'blackbirdbotanical.png',
         menu: 'https://weedmaps.com/deliveries/blackbird-botanical-deliveries#/menu'
     },
-/*
+    {
+        name: 'Cake Fam Delivery',
+        range: [
+            {lat: 37.967867, lng: -121.379356},
+            {lat: 38.034960, lng: -121.371117},
+            {lat: 38.048480, lng: -121.299706},
+            {lat: 38.012242, lng: -121.207695},
+            {lat: 37.945128, lng: -121.168556},
+            {lat: 37.896920, lng: -121.187096},
+            {lat: 37.876327, lng: -121.309319},
+        ],
+        phone: '209-898-2055',
+        menu: 'https://weedmaps.com/deliveries/cake-fam-delivery-stockton#/menu'
+    },
     {
     name: 'East Bay Meds',
         range: [
@@ -428,7 +541,6 @@ var allDeliveryServices = [
         website: 'http://www.eastbaymeds.org',
         menu: 'https://weedmaps.com/deliveries/east-bay-meds-2#/menu'
     },
-*/
     {
         name: 'Higher Elevation',
         range: [
@@ -515,6 +627,100 @@ var allDeliveryServices = [
         logo: 'marygolddelivery.png',
         website: 'http://www.marygolddelivery.com',
         menu: 'http://www.marygolddelivery.com/browse-our-menu.html'
+    },
+    {
+        name: 'Mountainside Cooperative',
+        range: [
+            {lat: 37.254576, lng: -122.045574},
+            {lat: 37.299925, lng: -121.998539},
+            {lat: 37.313852, lng: -121.953220},
+            {lat: 37.306207, lng: -121.883526},
+            {lat: 37.254850, lng: -121.876659},
+            {lat: 37.223417, lng: -121.917171},
+            {lat: 37.235718, lng: -121.996136},
+        ],
+        phone: '408-688-6307',
+        menu: 'https://weedmaps.com/deliveries/mountainside-cooperative#/menu'
+    },
+    {
+        name: 'Nollie Green-Blu Solutions',
+        range: [
+            {lat: 38.599893, lng: -121.503811},
+            {lat: 38.586208, lng: -121.447163},
+            {lat: 38.557756, lng: -121.412487},
+            {lat: 38.510758, lng: -121.416264},
+            {lat: 38.512907, lng: -121.521664},
+        ],
+        phone: '916-297-2114',
+        menu: 'https://weedmaps.com/deliveries/nollie-green-blu-solutions#/menu'
+    },
+    {
+        name: 'STC Alternative Healing',
+        range: [
+            {lat: 38.371203, lng: -121.490936},
+            {lat: 38.401344, lng: -121.251984},
+            {lat: 38.590510, lng: -121.213531},
+            {lat: 38.796306, lng: -121.378326},
+            {lat: 38.781320, lng: -121.652985},
+            {lat: 38.663464, lng: -121.721649},
+            {lat: 38.513184, lng: -121.683197},
+            {lat: 38.409953, lng: -121.587067},
+        ],
+        phone: '916-661-1542',
+        website: 'https://www.stcalternativehealing.com',
+        menu: 'https://weedmaps.com/deliveries/stc-alternative-healing#/menu'
+    },
+    {
+        name: 'Stoned Age Meds',
+        range: [
+            {lat: 38.037124, lng: -121.367683},
+            {lat: 38.051724, lng: -121.253700},
+            {lat: 38.023061, lng: -121.159630},
+            {lat: 37.950543, lng: -121.177483},
+            {lat: 37.902880, lng: -121.209068},
+            {lat: 37.873617, lng: -121.272926},
+            {lat: 37.909381, lng: -121.353264},
+            {lat: 37.973280, lng: -121.369743},
+        ],
+        phone: '510-560-4372',
+        logo: 'stonedagemeds.png',
+        menu: 'https://weedmaps.com/deliveries/stoned-age-meds-3'
+    },
+    {
+        name: 'Titan 420',
+        range: [
+            {lat: 38.147366, lng: -121.345711},
+            {lat: 38.162484, lng: -121.260567},
+            {lat: 38.060375, lng: -121.224174},
+            {lat: 37.948377, lng: -121.204948},
+            {lat: 37.899087, lng: -121.270180},
+            {lat: 37.930507, lng: -121.360130},
+            {lat: 38.073889, lng: -121.334724},
+        ],
+        phone: '209-230-9485',
+        logo: 'titan420.jpg',
+        menu: 'https://weedmaps.com/deliveries/my-green-giant-stockton#/menu'
+    },
+    {
+        name: 'Top Shelf Express',
+        range: [
+            {lat: 37.585245, lng: -122.331734},
+            {lat: 37.573273, lng: -122.294655},
+            {lat: 37.525367, lng: -122.199898},
+            {lat: 37.430007, lng: -122.061882},
+            {lat: 37.430007, lng: -121.955452},
+            {lat: 37.430552, lng: -121.868935},
+            {lat: 37.353085, lng: -121.805077},
+            {lat: 37.259145, lng: -121.791344},
+            {lat: 37.227441, lng: -121.870308},
+            {lat: 37.228534, lng: -121.980858},
+            {lat: 37.300668, lng: -122.096901},
+            {lat: 37.489961, lng: -122.307014},
+            {lat: 37.548235, lng: -122.371559},
+        ],
+        phone: '408-375-5465',
+        logo: 'topshelfexpress.png',
+        menu: 'https://weedmaps.com/deliveries/top-shelf-guaranteed-express#/menu'
     },
     {
         name: 'Valley Essentials',
