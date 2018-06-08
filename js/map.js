@@ -452,6 +452,89 @@ var allDispensaries = [
         logo: '7starshhc.png',
         website: 'http://www.7starshhc.com/',
     },
+    {
+        name: 'Patientes Care Collective',
+        address: {
+            street: '2590 Telegraph Ave',
+            city: 'Berkeley',
+            state: 'CA',
+            zip: '94704',
+        },
+        location: {lat: 37.863540, lng: -122.258877},
+        phone: '510-540-7878',
+        website: 'https://berkeleypatientscare.com/',
+    },
+    {
+        name: 'Ms. Mary Janes',
+        address: {
+            street: '1739 Yosemite Blvd',
+            city: 'Modesto',
+            state: 'CA',
+            zip: '95354',
+        },
+        location: {lat: 37.638502, lng: -120.967349},
+        phone: '209-284-0682',
+        website: 'https://weedmaps.com/dispensaries/ms-mary-jane-s',
+    },
+    {
+        name: 'The Honest Choice',
+        address: {
+            street: '4701 Main St. Suite D',
+            city: 'Denair',
+            state: 'CA',
+            zip: '95316',
+        },
+        location: {lat: 37.527301, lng: -120.795375},
+        phone: '209-427-2048',
+        website: 'https://weedmaps.com/dispensaries/the-honest-choice',
+    }
+    ,{
+        name: 'Lux',
+        address: {
+            street: '1859 Little Orchard St',
+            city: 'San Jose',
+            state: 'CA',
+            zip: '95125',
+        },
+        location: {lat: 37.304567, lng: -121.872374},
+        phone: '408-385-9600',
+    }
+    ,{
+        name: 'Medallion Wellness',
+        address: {
+            street: '4213 McHenry Ave. Suite E',
+            city: 'Modesto',
+            state: 'CA',
+            zip: '95356',
+        },
+        location: {lat: 37.700579, lng: -120.995248},
+        phone: '209-248-7472',
+        website: 'https://weedmaps.com/dispensaries/medallion-wellness',
+    }
+    ,{
+        name: 'Mercy Wellness',
+        address: {
+            street: '7950 Redwood Dr #8',
+            city: 'Cotati',
+            state: 'CA',
+            zip: '94931',
+        },
+        location: {lat: 38.332307, lng: -122.713957},
+        phone: '707-795-1600',
+        website: 'http://mercymmd.org/',
+    },
+    {
+        name: 'Riverside Wellness',
+        address: {
+            street: '15025 River Rd',
+            city: 'Guerneville',
+            state: 'CA',
+            zip: '95446',
+        },
+        location: {lat: 38.514374, lng: -122.983184},
+        phone: '707-869-8008',
+        website: 'http://riversidewellness.net/',
+    }
 ];
 
 var allDeliveryServices = [
