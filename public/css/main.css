@@ -172,7 +172,7 @@ footer {
   background-size: cover;
   min-height: 85%; }
   .section--image.section--image__left {
-    background-position: bottom right; }
+    background-position: 10% 100%; }
     @media (min-width: 992px) {
       .section--image.section--image__left {
         background-position: bottom left; } }

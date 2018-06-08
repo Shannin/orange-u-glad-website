@@ -166,7 +166,6 @@ var allDispensaries = [
         phone: '916-564-2112',
         website: 'http://doctorsordersrx.com',
     },
-/*
     {
         name: 'Flower Power',
         address: {
@@ -179,7 +178,6 @@ var allDispensaries = [
         phone: '628-444-3441',
         logo: 'flowerpower.png',
     },
-*/
     {
         name: 'Golden Health',
         address: {
@@ -229,7 +227,6 @@ var allDispensaries = [
         phone: '707-645-8303',
         logo: 'highway29.png',
     },
-/*
     {
         name: 'Holistic Healing Collective',
         address: {
@@ -243,7 +240,6 @@ var allDispensaries = [
         logo: 'holistichealing.png',
         website: 'http://www.holistichealingcollective.org',
     },
-*/
     {
         name: 'House of Organics',
         address: {
@@ -281,7 +277,7 @@ var allDispensaries = [
         logo: 'igzactly420.png',
     },
     {
-        name: '',
+        name: 'Little Trees',
         address: {
             street: '2641 Hwy 4 #7A',
             city: 'Arnold',

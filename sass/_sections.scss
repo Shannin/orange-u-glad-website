@@ -37,7 +37,7 @@ footer {
     min-height: 85%;
 
     &.section--image__left {
-        background-position: bottom right;
+        background-position: 10% 100%;
 
         @media (min-width: 992px) {
             background-position: bottom left;
